@@ -1,10 +1,21 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, rgb(0, 105, 78), rgb(68, 153, 94) 75%);
 }
 /* navbar */
 
 .navbar-brand {
     font-family: 'Great Vibes', cursive;
+    color: white;
+}
+.fas {
+    color: white;
+    font-size: 2rem;
 }
 
 .navbar-collapse {
@@ -13,4 +24,5 @@ body {
 
 .nav-link {
     font-family: 'Roboto', sans-serif;
+    color: white;
 }
