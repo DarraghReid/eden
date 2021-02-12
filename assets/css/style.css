@@ -1,0 +1,16 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* navbar */
+
+.navbar-brand {
+    font-family: 'Great Vibes', cursive;
+}
+
+.navbar-collapse {
+    text-align: right;
+}
+
+.nav-link {
+    font-family: 'Roboto', sans-serif;
+}
