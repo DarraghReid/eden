@@ -8,11 +8,13 @@ body {
     margin: 0;
     background-image: linear-gradient(to bottom right, rgb(0, 105, 78), rgb(68, 153, 94) 75%);
 }
-/* header */
+/*---------------------------------------------------header*/
 
 header {
     position: absolute;
 }
+
+/*---------------------navbar*/
 
 .navbar {
     z-index: 10;
@@ -37,10 +39,11 @@ header {
     color: white;
 }
 
-/* home-page */
+/*---------------------------------------------------home-page*/
 
 #home-screen {
     height: 100vh;
+    overflow: hidden;
 }
 
 #pics-container {
@@ -48,6 +51,8 @@ header {
     width: 100%;
     height: 100%;
 }
+
+/*---------------------grass*/
 
 #grass {
     height: 100%;
@@ -60,8 +65,10 @@ header {
     min-width: 100%;
 }
 
+/*---------------------flower-bed*/
+
 #flower-bed {
-    width: 20vw;
+    width: 100px;
     height: 50vh;
     overflow: hidden;
     position: absolute;
@@ -72,6 +79,19 @@ header {
 
 #soil {
     height: 100%;
+}
+
+#gravel {
+    height: 52.5vh;
+    width: 115px;
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+#gravel img {
+    height: 50%;
+    width: 400%;
 }
 
 #plant-1 {
@@ -96,6 +116,7 @@ header {
     width: 50px;
     position: absolute;
     bottom: 20%;
+    z-index: 9;
 }
 
 #flower-3 {
@@ -104,6 +125,115 @@ header {
     bottom: 0;
 }
 
-.img img {
+.fb-element img {
     width: 100%;
+}
+
+/*---------------------decking*/
+
+#decking {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 150px;
+    overflow: hidden;
+}
+
+#decking img {
+    position: absolute;
+    height: 100%;
+    width: 250%;
+}
+
+#deck-2 {
+    top: 0;
+    right: 0;
+}
+
+/*---------------------path*/
+
+#path {
+    width: 50%;
+    position: absolute;
+    left: 42%;
+}
+
+.stone {
+    width: 50px;
+    position: absolute;
+}
+
+#stone-1 {
+    bottom: 10px;
+    left: 60%;
+}
+
+#stone-2 {
+    bottom: 100px;
+    left: 40%;
+}
+
+#stone-3 {
+    bottom: 200px;
+    left: 25%;
+}
+#stone-4 {
+    bottom: 300px;
+    left: 15%;
+}
+#stone-5 {
+    bottom: 400px;
+    left: 6%;
+}
+
+#stone-6 {
+    bottom: 500px;
+    left: 2%;
+}
+
+#stone-7 {
+    bottom: 600px;
+    left: 2%;
+}
+
+/*---------------------------------------------------media-queries*/
+
+@media(min-width: 412px) {
+    #decking img {
+        width: 200%;
+    }
+}
+
+@media(min-width: 550px) {
+    #decking img {
+        width: 150%;
+    }
+
+    .stone {
+        width: 60px;
+    }
+}
+
+@media(min-width: 770px) {
+    #decking img {
+        width: 100%;
+    }
+
+    #path {
+        left: 35%;
+    }
+
+    #stone-1 {
+        left: 45%;
+    }
+
+    #stone-2 {
+        bottom: 120px;
+    }
+}
+
+@media(min-width: 1130px) {
+    #decking img {
+        width: 75%;
+    }
 }
