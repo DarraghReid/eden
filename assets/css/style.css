@@ -196,7 +196,35 @@ header {
     left: 2%;
 }
 
-/*---------------------------------------------------media-queries*/
+/*---------------------tree-bush*/
+
+#tree-bush {
+    position: absolute;
+    top: 0;
+    right: -80px;
+}
+
+#bush {
+    top: 20px;
+    width: 250px;
+    height: 52.5vh;
+}
+
+#bush img {
+    width: 100%;
+    transform: rotate(90deg);
+}
+
+#tree {
+    width: 65vw;
+}
+
+#tree img {
+    width: 100%;
+    transform: rotate(45deg);
+}
+
+/*---------------------------------------------------media-queries-width*/
 
 @media(min-width: 412px) {
     #decking img {
@@ -205,18 +233,17 @@ header {
 }
 
 @media(min-width: 550px) {
+    #tree-bush {
+        top: -60px;
+        right: -50px;
+    }
+
     #decking img {
         width: 150%;
     }
 
     .stone {
         width: 60px;
-    }
-}
-
-@media(min-width: 770px) {
-    #decking img {
-        width: 100%;
     }
 
     #path {
@@ -230,10 +257,97 @@ header {
     #stone-2 {
         bottom: 120px;
     }
+
+    #bush {
+        display: none;
+    }
+}
+
+@media(max-width: 550px) {
+    #tree {
+        display: none;
+    }
+}
+
+@media(min-width: 700px) {
+    #tree {
+        width: 58vw;
+    }
+}
+
+@media(min-width: 770px) {
+    #decking img {
+        width: 100%;
+    }
+}
+
+@media(min-width: 950px) {
+    #tree {
+        width: 48vw;
+    }
 }
 
 @media(min-width: 1130px) {
     #decking img {
         width: 75%;
+    }
+}
+
+/*---------------------------------------------------media-queries-height*/
+@media(max-height: 600px) {
+    #tree {
+        width: 45vw;
+    }
+
+    #decking {
+        height: 30vh;
+    }
+
+    #gravel {
+        height: 70vh;
+    }
+
+    #gravel img {
+        width: 300%;
+    }
+
+    #flower-bed {
+        height: 67vh;
+    }
+
+    .stone {
+        width: 45px;
+    }
+}
+
+@media(min-height: 1025px) {
+    #path {
+        left: 50%;
+    }
+
+    #decking {
+        width: 60%;
+        height: 15%;
+    }
+
+    .stone {
+        width: 75px;
+    }
+
+    .stone img {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #tree {
+        width: 65vw;
+    }
+
+    #gravel {
+        width: 15%;
+    }
+
+    #flower-bed {
+        width: 12%;
     }
 }
