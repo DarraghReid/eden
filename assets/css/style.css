@@ -265,6 +265,46 @@ header {
     z-index: 9;
 }
 
+/*---------------------------------------------------transitions*/
+.top {
+    transform: translateY(-100%);
+    transition-duration: 700ms;
+    transition-timing-function: ease-out;
+}
+
+.top.swoop {
+    transform: translateY(0);
+}
+
+.bottom {
+    transform: translateY(2000%);
+    transition-duration: 700ms;
+    transition-timing-function: ease-out;
+}
+
+.bottom.swoop {
+    transform: translateY(0);
+}
+
+.left {
+    transform: translateX(-100%);
+    transition-duration: 700ms;
+    transition-timing-function: ease-out;
+}
+
+.left.swoop {
+    transform: translateX(0);
+}
+
+.right {
+    transform: translateX(100%);
+    transition-duration: 700ms;
+    transition-timing-function: ease-out;
+}
+
+.right.swoop {
+    transform: translateX(0);
+}
 /*---------------------------------------------------media-queries-width*/
 
 @media(min-width: 412px) {
