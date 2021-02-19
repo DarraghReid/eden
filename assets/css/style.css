@@ -116,7 +116,7 @@ header {
     width: 50px;
     position: absolute;
     bottom: 20%;
-    z-index: 9;
+    z-index: 8;
 }
 
 #flower-3 {
@@ -224,6 +224,47 @@ header {
     transform: rotate(45deg);
 }
 
+/*---------------------callout*/
+
+#callout {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    z-index: 10;
+}
+
+#callout h1 {
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    text-shadow: 0 0 20px black;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+#callout span {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+#callout span a {
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(0, 105, 78), rgb(68, 153, 94) 75%);
+    border: 1px solid white;
+    border-radius: 23px;
+    padding: 10px 20px;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, .1);
+    position: absolute;
+    z-index: 9;
+}
+
 /*---------------------------------------------------media-queries-width*/
 
 @media(min-width: 412px) {
@@ -294,6 +335,18 @@ header {
 }
 
 /*---------------------------------------------------media-queries-height*/
+@media(max-height: 310px) {
+    #callout span {
+        margin-top: -7px;
+    }
+}
+
+@media(max-height: 390px) {
+    #callout h1 {
+        margin: 0;
+    }
+}
+
 @media(max-height: 600px) {
     #tree {
         width: 45vw;
@@ -328,6 +381,10 @@ header {
     #decking {
         width: 60%;
         height: 15%;
+    }
+
+    #decking img {
+        width: 125%;
     }
 
     .stone {
