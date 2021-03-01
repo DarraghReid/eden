@@ -337,18 +337,92 @@ header {
 /*---------------------menu*/
 #menu {
     width: 100%;
-    height: 10%;
+    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: visible;
 }
+
+#menu-items {
+    height: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.item-container {
+    min-width: 80px;
+    height: 100%;
+    margin: 3px;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.menu-item img {
+    width: 300%;
+}
+
+#menu-bush-1 img {
+    transform: translateX(-50%);
+}
+
+#menu-bush-2 img {
+    transform: translateX(-50%);
+}
+
+#menu-flower-1 img {
+    transform: translateX(-35%);
+}
+
+#menu-flower-2 img, #menu-flower-3 img {
+    transform: translateX(-20%);
+}
+
+#menu-grass img {
+    width: 1500%;
+}
+
+#menu-gravel img {
+    width: 800%;
+}
+
+#menu-path img  {
+    width: 85%;
+}
+
+#menu-plant-1 img, #menu-plant-2 img {
+    width: 200%;
+    transform: translateX(-25%);
+}
+
+#menu-tree-1 img, #menu-tree-2 img {
+    width: 200%;
+    transform: translateX(-30%);
+}
+
+.menu-item:hover {
+  background-color: #777;
+}
+
 
 /*---------------------canvas*/
 #canvas {
     background: white;
     width: 100%;
     height: 80%;
-    overflow: hidden;
 }
 
 /*---------------------controls*/
