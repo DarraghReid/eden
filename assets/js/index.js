@@ -25,15 +25,44 @@ grassBottoms.forEach(grassBottom => grassBottom.addEventListener("load", swoopIn
 // Select all menu items and save them to the menuItems variable
 let menuItems = document.getElementsByClassName("menu-item");
 
-// Creates img element, set the src of the img element to the value of the
-// data-img attribute of the menu item that has been clicked, and insert
-// the image into the canvas element in the DOM
+// Create img container containing resizers and cancel option, as well as image itself.
+// Insert all into canvas element in DOM
 function insertImg(event) {
+    // Create img-container 
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add("img-container");
+
+    // Create resizers and cancel option inside img-container
+    let tl = document.createElement("div");
+    tl.classList.add("mover", "tl");
+    imgContainer.appendChild(tl);
+
+    let tr = document.createElement("div");
+    tr.classList.add("mover", "tr");
+    imgContainer.appendChild(tr);
+
+    let br = document.createElement("div");
+    br.classList.add("mover", "br");
+    imgContainer.appendChild(br);
+
+    let bl = document.createElement("div");
+    bl.classList.add("mover", "bl");
+    imgContainer.appendChild(bl);
+
+    let remove = document.createElement("div");
+    remove.classList.add("mover", "remove");
+    let icon = document.createElement("i");
+    icon.classList.add("far", "fa-times-circle");
+    remove.appendChild(icon);
+    imgContainer.appendChild(remove);
+
+    // Create img, append to img-container, insert into canvas element in the DOM
     let newImg = document.createElement("img");
     newImg.src = event.path[1].getAttribute("data-img");
     newImg.classList.add("canvas-img");
+    imgContainer.appendChild(newImg);
     let canvas = document.getElementById("canvas");
-    canvas.appendChild(newImg);
+    canvas.appendChild(imgContainer);
 };
 
 // Add "click" event listener to each menu item
