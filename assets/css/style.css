@@ -457,6 +457,7 @@ header {
     width: 100%;
     height: 75%;
     overflow: hidden;
+    position: relative;
 }
 
 .img-container {

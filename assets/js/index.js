@@ -22,8 +22,13 @@ grassBottoms.forEach(grassBottom => grassBottom.addEventListener("load", swoopIn
 
 /*--------------------------------------------studio*/
 
+/*-----------------------------click-and-appear*/
+
 // Select all menu items and save them to the menuItems variable
 let menuItems = document.getElementsByClassName("menu-item");
+
+// Add "click" event listener to each menu item
+Array.from(menuItems).forEach(menuItem => menuItem.addEventListener("click", insertImg));
 
 // Create img container containing resizers and cancel option, as well as image itself.
 // Insert all into canvas element in DOM
@@ -63,7 +68,72 @@ function insertImg(event) {
     imgContainer.appendChild(newImg);
     let canvas = document.getElementById("canvas");
     canvas.appendChild(imgContainer);
+
+    // Call move function on each image so JS code will run after HTML appears
+    move();
 };
 
-// Add "click" event listener to each menu item
-Array.from(menuItems).forEach(menuItem => menuItem.addEventListener("click", insertImg));
+/*-----------------------------moveable elements*/
+
+/*function move() {
+    let imgs = document.querySelectorAll(".img-container");
+    imgs.forEach(img => img.addEventListener("mousedown", function mousedown(e) {
+        let initX = e.clientX;
+        let initY = e.clientY;
+
+        window.addEventListener("mousemove", function mousemove(e) {
+            let newX = initX - e.clientX;
+            let newY = initY - e.clientY;
+
+            const rect = img.getBoundingClientRect();
+            img.style.left = rect.left - newX + "px";
+            img.style.top = rect.top - newY + "px";
+
+            initX = e.clientX;
+            initY = e.clientY;
+
+        window.addEventListener("mouseup", function mouseup() {
+            window.removeEventListener("mousemove", mousemove);
+            window.removeEventListener("mouseup", mouseup)
+        })
+
+        })
+    }));
+};*/
+
+function move() {
+    let imgs = document.querySelectorAll(".img-container");
+    imgs.forEach(img => img.addEventListener("mousedown", mousedown));
+    imgs.forEach(img => img.addEventListener("touchstart", mousedown));
+    function mousedown(e) {
+        let initX = e.clientX;
+        let initY = e.clientY;
+
+        window.addEventListener("mousemove", mousemove);
+        window.addEventListener("touchmove", mousemove);
+        function mousemove(e) {
+
+            let endX = initX - e.clientX;
+            let endY = initY - e.clientY;
+
+            imgs.forEach(img => img.style.left = img.getBoundingClientRect().left - endX + "px");
+            imgs.forEach(img => img.style.top = img.getBoundingClientRect().top - endY + "px");
+
+            initX = e.clientX;
+            initY = e.clientY;
+
+        window.addEventListener("mouseup", mouseup);
+        window.addEventListener("touchend", mouseup);
+        function mouseup() {
+            window.removeEventListener("mousemove", mousemove);
+            window.removeEventListener("mouseup", mouseup)
+            window.removeEventListener("touchmove", mousemove);
+            window.removeEventListener("touchend", mouseup)
+        }
+
+        }
+    };
+};
+
+
+/*-----------------------------resizable elements*/
