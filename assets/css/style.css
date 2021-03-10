@@ -467,6 +467,10 @@ header {
     position: relative;
 }
 
+.img-container:hover {
+    border: 1px dashed;
+}
+
 .canvas-img {
     width: 100%;
 }

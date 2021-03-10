@@ -30,6 +30,10 @@ let menuItems = document.getElementsByClassName("menu-item");
 // Add "click" event listener to each menu item
 Array.from(menuItems).forEach(menuItem => menuItem.addEventListener("click", insertImg));
 Array.from(menuItems).forEach(menuItem => menuItem.addEventListener("touchend", insertImg));
+//Array.from(menuItems).forEach(menuItem => {
+//menuItem.addEventListener("touchend", insertImg)
+//menuItem.addEventListener("click", insertImg)
+//});
 
 // Create img container containing resizers and cancel option, as well as image itself.
 // Insert all into canvas element in DOM
