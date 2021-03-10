@@ -29,6 +29,7 @@ let menuItems = document.getElementsByClassName("menu-item");
 
 // Add "click" event listener to each menu item
 Array.from(menuItems).forEach(menuItem => menuItem.addEventListener("click", insertImg));
+Array.from(menuItems).forEach(menuItem => menuItem.addEventListener("touchend", insertImg));
 
 // Create img container containing resizers and cancel option, as well as image itself.
 // Insert all into canvas element in DOM
@@ -75,33 +76,76 @@ function insertImg(event) {
 
 /*-----------------------------moveable elements*/
 
+let moveImg = null; //object to be moved
+let positionX = 0; //used to prevent dragged object jumping to mouse location
+let positionY = 0;
+	
+function move()
+{
+	document.querySelectorAll(".img-container").forEach(img => img.addEventListener("mousedown", onContact, true));
+    document.querySelectorAll(".img-container").forEach(img => img.addEventListener("touchstart", onContact, true));
+    document.addEventListener("mouseup", onEndContact);
+    document.addEventListener("touchend", onEndContact);
+	//document.onmouseup = stopDrag;
+	//document.ontouchend = stopDrag;
+}
+
+function onContact(e)
+{
+	e.preventDefault();
+	e.stopPropagation();
+	moveImg = e.path[1];
+	moveImg.style.position = "absolute";
+    let rectVal = moveImg.getBoundingClientRect();
+    
+    console.log(e);
+	
+	if(e.type=="mousedown")
+	{
+		positionX = e.clientX - rectVal.left; 
+		positionY = e.clientY - rectVal.top;
+		window.addEventListener('mousemove', onDrag, true);
+	}
+	else if(e.type=="touchstart")
+	{
+		positionX = e.targetTouches[0].clientX - rectVal.left; 
+		positionY = e.targetTouches[0].clientY - rectVal.top;
+		window.addEventListener('touchmove', onDrag, true);
+	}
+}
+
+function onDrag(e)
+/*Drag object*/
+{
+	e.preventDefault();
+	e.stopPropagation();
+	
+	if(moveImg == null) return; 
+    else if(e.type=="mousemove")
+	{
+		moveImg.style.left = e.clientX-positionX +"px"; 
+		moveImg.style.top = e.clientY-positionY +"px";
+	}
+    else if(e.type=="touchmove")
+	{
+		moveImg.style.left = e.targetTouches[0].clientX-positionX +"px"; 
+		moveImg.style.top = e.targetTouches[0].clientY-positionY +"px";
+	}
+}
+
+function onEndContact(e)
+{
+	if(moveImg) 
+	{
+		moveImg = null;
+		window.removeEventListener('mousemove', onDrag, true);
+		window.removeEventListener('touchmove', onDrag, true);
+	}
+}
+
+
+
 /*function move() {
-    let imgs = document.querySelectorAll(".img-container");
-    imgs.forEach(img => img.addEventListener("mousedown", function mousedown(e) {
-        let initX = e.clientX;
-        let initY = e.clientY;
-
-        window.addEventListener("mousemove", function mousemove(e) {
-            let newX = initX - e.clientX;
-            let newY = initY - e.clientY;
-
-            const rect = img.getBoundingClientRect();
-            img.style.left = rect.left - newX + "px";
-            img.style.top = rect.top - newY + "px";
-
-            initX = e.clientX;
-            initY = e.clientY;
-
-        window.addEventListener("mouseup", function mouseup() {
-            window.removeEventListener("mousemove", mousemove);
-            window.removeEventListener("mouseup", mouseup)
-        })
-
-        })
-    }));
-};*/
-
-function move() {
     let imgs = document.querySelectorAll(".img-container");
     imgs.forEach(img => img.addEventListener("mousedown", mousedown));
     imgs.forEach(img => img.addEventListener("touchstart", mousedown));
@@ -133,7 +177,32 @@ function move() {
 
         }
     };
-};
+};*/
 
+/*function move() {
+    let imgs = document.querySelectorAll(".img-container");
+    imgs.forEach(img => img.addEventListener("mousedown", function mousedown(e) {
+        let initX = e.clientX;
+        let initY = e.clientY;
+
+        window.addEventListener("mousemove", function mousemove(e) {
+            let newX = initX - e.clientX;
+            let newY = initY - e.clientY;
+
+            const rect = img.getBoundingClientRect();
+            img.style.left = rect.left - newX + "px";
+            img.style.top = rect.top - newY + "px";
+
+            initX = e.clientX;
+            initY = e.clientY;
+
+        window.addEventListener("mouseup", function mouseup() {
+            window.removeEventListener("mousemove", mousemove);
+            window.removeEventListener("mouseup", mouseup)
+        })
+
+        })
+    }));
+};*/
 
 /*-----------------------------resizable elements*/
