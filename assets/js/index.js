@@ -96,8 +96,13 @@ function onContact(e)
 {
 	//e.preventDefault();
     //e.stopPropagation();
+    if(e.target.className == "canvas-img" || e.target.className == "img-container") {
+        moveImg = e.path[1];
+    }
+    else if(e.target.className == "far fa-times-circle") {
+        e.path[2].remove();
+    }
     
-    moveImg = e.path[1];
 	moveImg.style.position = "absolute";
     let rectVal = moveImg.getBoundingClientRect();
     	
