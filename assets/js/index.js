@@ -76,6 +76,7 @@ function insertImg(event) {
 
     // Call move function on each image so JS code will run after HTML appears
     move();
+    resize();
 };
 
 /*-----------------------------moveable elements*/
@@ -98,26 +99,24 @@ function onContact(e)
     //e.stopPropagation();
     if(e.target.className == "canvas-img" || e.target.className == "img-container") {
         moveImg = e.path[1];
+        let rectVal = moveImg.getBoundingClientRect();
+    	
+        if(e.type=="mousedown")
+        {
+            positionX = e.clientX - rectVal.left; 
+            positionY = e.clientY - rectVal.top;
+            window.addEventListener('mousemove', onDrag, true);
+        }
+        else if(e.type=="touchstart")
+        {
+            positionX = e.targetTouches[0].clientX - rectVal.left; 
+            positionY = e.targetTouches[0].clientY - rectVal.top;
+            window.addEventListener('touchmove', onDrag, true);
+        }
     }
     else if(e.target.className == "far fa-times-circle") {
         e.path[2].remove();
     }
-    
-	moveImg.style.position = "absolute";
-    let rectVal = moveImg.getBoundingClientRect();
-    	
-	if(e.type=="mousedown")
-	{
-		positionX = e.clientX - rectVal.left; 
-		positionY = e.clientY - rectVal.top;
-		window.addEventListener('mousemove', onDrag, true);
-	}
-	else if(e.type=="touchstart")
-	{
-		positionX = e.targetTouches[0].clientX - rectVal.left; 
-		positionY = e.targetTouches[0].clientY - rectVal.top;
-		window.addEventListener('touchmove', onDrag, true);
-	}
 }
 
 function onDrag(e)
@@ -139,7 +138,7 @@ function onDrag(e)
 	}
 }
 
-function onEndContact(e)
+function onEndContact()
 {
 	if(moveImg) 
 	{
@@ -151,3 +150,55 @@ function onEndContact(e)
 
 /*-----------------------------resizable elements*/
 
+function resize() {
+    let els = document.querySelectorAll(".img-container");
+    
+    els.forEach(el => {
+        const resizers = document.querySelectorAll(".mover");
+        let currentResizer;
+
+        resizers.forEach(resizer => {
+            resizer.addEventListener("mousedown", mousedown);
+
+            function mousedown(e) {
+                currentResizer = e.target;
+                el = e.target.parentElement;
+                let prevX = e.clientX;
+                let prevY = e.clientY;
+
+                window.addEventListener("mousemove", mousemove);
+                window.addEventListener("mouseup", mouseup);
+
+                function mousemove(e) {
+                    const rect = el.getBoundingClientRect();
+                    console.log(e)
+
+                    if(currentResizer.classList.contains("br")) {
+                        el.style.width = rect.width - (prevX - e.clientX) + "px";
+                        el.style.height = rect.height - (prevY - e.clientY) + "px";
+                    }
+                    else if(currentResizer.classList.contains("bl")) {
+                        el.style.width = rect.width + (prevX - e.clientX) + "px";
+                        el.style.height = rect.height - (prevY - e.clientY) + "px";
+                    }
+                    else if(currentResizer.classList.contains("tr")) {
+                        el.style.width = rect.width - (prevX - e.clientX) + "px";
+                        el.style.height = rect.height + (prevY - e.clientY) + "px";
+                    }
+                    else {
+                        el.style.width = rect.width + (prevX - e.clientX) + "px";
+                        el.style.height = rect.height + (prevY - e.clientY) + "px";
+                    }
+
+                    prevX = e.clientX;
+                    prevY = e.clientY;
+                }
+
+                function mouseup() {
+                    window.removeEventListener("mousemove", mousemove);
+                    window.removeEventListener("mouseup", mouseup);
+                }
+            }
+        })
+    })
+}
