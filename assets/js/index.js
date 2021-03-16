@@ -149,5 +149,5 @@ function onEndContact(e)
 	}
 }
 
-
+/*-----------------------------resizable elements*/
 

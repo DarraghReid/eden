@@ -34,11 +34,29 @@ header {
 
 .navbar-brand {
     font-family: 'Great Vibes', cursive;
+    font-size: 50px;
     color: white;
+    text-decoration: none;
 }
+
+.logo a {
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: rgb(201, 197, 197);
+}
+
 .fas {
     color: white;
     font-size: 2rem;
+}
+
+.fas:hover {
+    color: rgb(201, 197, 197);
 }
 
 .navbar-collapse {
@@ -48,6 +66,10 @@ header {
 .nav-link {
     font-family: 'Roboto', sans-serif;
     color: white;
+}
+
+.nav-link:hover {
+    color: rgb(201, 197, 197);
 }
 
 /*---------------------------------------------------home-page*/
@@ -305,6 +327,12 @@ header {
     border: 1px solid white;
     border-radius: 23px;
     padding: 10px 20px;
+}
+
+#callout span a:hover {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(75%, rgb(68, 153, 94)), color-stop(rgb(0, 105, 78)));
+    background-image: -o-linear-gradient(top left, rgb(68, 153, 94), rgb(0, 105, 78) 75%);
+    background-image: linear-gradient(to bottom right, rgb(68, 153, 94), rgb(0, 105, 78) 75%);
 }
 
 #overlay {
@@ -595,7 +623,9 @@ header {
     left: 15px;
     top: 15px;
     width: 100px;
+    max-height: 100px;
     position: relative;
+    overflow: hidden;
 }
 
 .img-container:hover {
@@ -606,45 +636,62 @@ header {
     width: 100%;
 }
 
+.canvas-img[src="assets/images/decking-1.jpg"] {
+    min-width: 300%;
+}
+
+.canvas-img[src="assets/images/grass-2.png"] {
+    min-width: 1500%;
+}
+
+.canvas-img[src="assets/images/gravel-4.png"] {
+    min-width: 400%;
+}
+
+.canvas-img[src="assets/images/soil-1.png"] {
+    min-width: 300%;
+}
+
 .mover {
     position: absolute;
     padding: 0;
     margin: 0;
     display: none;
+    background-color: black;
+    width: 5px;
+    height: 5px;
 }
 
 .img-container:hover .mover {
     display: block;
 }
 
-.mover {
-    background-color: black;
-    width: 5px;
-    height: 5px;
-}
-
 .tl {
     left: -1px;
     top: -1px;
+    cursor: nw-resize;
 }
 
 .tr {
     top: -1px;
     right: -1px;
+    cursor: ne-resize;
 }
 
 .bl {
     bottom: -1px;
     left: -1px;
+    cursor: sw-resize;
 }
 
 .br {
     bottom: -1px;
     right: -1px;
+    cursor: se-resize;
 }
 
 .remove {
-    top: -10px;
+    top: -5px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
