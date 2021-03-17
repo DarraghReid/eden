@@ -438,7 +438,7 @@ header {
 /*---------------------------------------------------studio*/
 #studio {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: relative;
 }
 
@@ -704,12 +704,50 @@ header {
     display: flex;
     align-items: center;
 }
-
-#controls div a {
-    font-size: 20px;
-    margin-top: 10px;
+#controls div {
+    display: inline-block;
 }
 
+#controls .logo {
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+#controls .logo a {
+    font-size: 20px;
+}
+
+#back-to-top {
+    margin-right: 20px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#back-to-top a {
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    font-size: 10px;
+}
+
+#back-to-top a:hover .fa-arrow-circle-up {
+    color: rgb(201, 197, 197);
+}
+
+.fa-arrow-circle-up {
+    font-size: 20px;
+}
+
+#back-to-top span {
+    display: block;
+    clear: both;
+}
+
+#back-to-top a:hover {
+    color: rgb(201, 197, 197);
+}
 
 /*---------------------------------------------------media-queries-width*/
 

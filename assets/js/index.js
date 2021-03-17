@@ -64,6 +64,13 @@ function insertImg(event) {
     remove.appendChild(icon);
     imgContainer.appendChild(remove);
 
+    let rotate = document.createElement("div");
+    rotate.classList.add("mover", "rotate");
+    let icon2 = document.createElement("i");
+    icon2.classList.add("fas", "fa-sync-alt");
+    remove.appendChild(icon2);
+    imgContainer.appendChild(rotate);
+
     // Create img, append to img-container, insert into canvas element in the DOM
     let newImg = document.createElement("img");
     newImg.src = event.path[1].getAttribute("data-img");
