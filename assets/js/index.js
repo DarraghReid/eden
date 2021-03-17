@@ -64,12 +64,12 @@ function insertImg(event) {
     remove.appendChild(icon);
     imgContainer.appendChild(remove);
 
-    let rotate = document.createElement("div");
+    /*let rotate = document.createElement("div");
     rotate.classList.add("mover", "rotate");
     let icon2 = document.createElement("i");
     icon2.classList.add("fas", "fa-sync-alt");
-    remove.appendChild(icon2);
-    imgContainer.appendChild(rotate);
+    rotate.appendChild(icon2);
+    imgContainer.appendChild(rotate);*/
 
     // Create img, append to img-container, insert into canvas element in the DOM
     let newImg = document.createElement("img");
@@ -100,6 +100,7 @@ function move()
 
 function onContact(e)
 {
+    let currentRotate = 0;
 	//e.preventDefault();
     //e.stopPropagation();
     if(e.target.className == "canvas-img" || e.target.className == "img-container") {
@@ -122,6 +123,13 @@ function onContact(e)
     else if(e.target.className == "far fa-times-circle") {
         e.path[2].remove();
     }
+    /*else if(e.target.className == "fas fa-sync-alt") {
+        console.log(e); 
+        
+            currentRotate += 1;
+            e.path[2].style.transform = `rotate(${currentRotate}deg)`;
+        
+    }*/
 }
 
 function onDrag(e)

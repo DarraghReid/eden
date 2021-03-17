@@ -696,6 +696,33 @@ header {
     background-color: transparent;
 }
 
+/*.rotate {
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-sync-alt {
+    font-size: 10px;
+    color: black;
+}
+
+.fa-sync-alt:hover {
+    color: black;
+}*/
+
 
 /*---------------------controls*/
 #controls {
