@@ -28,12 +28,10 @@ grassBottoms.forEach(grassBottom => grassBottom.addEventListener("load", swoopIn
 let menuItems = document.getElementsByClassName("menu-item");
 
 // Add "click" event listener to each menu item
-Array.from(menuItems).forEach(menuItem => menuItem.addEventListener("click", insertImg));
-Array.from(menuItems).forEach(menuItem => menuItem.addEventListener("touchend", insertImg));
-//Array.from(menuItems).forEach(menuItem => {
-//menuItem.addEventListener("touchend", insertImg)
-//menuItem.addEventListener("click", insertImg)
-//});
+Array.from(menuItems).forEach(menuItem => {
+menuItem.addEventListener("touchend", insertImg);
+menuItem.addEventListener("click", insertImg);
+});
 
 // Create img container containing resizers and cancel option, as well as image itself.
 // Insert all into canvas element in DOM
@@ -122,8 +120,8 @@ function onContact(e)
 function onDrag(e)
 /*Drag object*/
 {
-	//e.preventDefault();
-	//e.stopPropagation();
+	e.preventDefault();
+	e.stopPropagation();
 	
 	if(moveImg == null) return; 
     else if(e.type=="mousemove")
@@ -151,52 +149,52 @@ function onEndContact()
 /*-----------------------------resizable elements*/
 
 function resize() {
-    let els = document.querySelectorAll(".img-container");
+    let imgs = document.querySelectorAll(".img-container");
     
-    els.forEach(el => {
-        const resizers = document.querySelectorAll(".mover");
-        let currentResizer;
+    imgs.forEach(img => {
+        const movers = document.querySelectorAll(".mover");
+        let currentMover;
 
-        resizers.forEach(resizer => {
-            resizer.addEventListener("mousedown", mousedown);
+        movers.forEach(mover => {
+            mover.addEventListener("mousedown", onClick);
 
-            function mousedown(e) {
-                currentResizer = e.target;
-                el = e.target.parentElement;
-                let prevX = e.clientX;
-                let prevY = e.clientY;
+            function onClick(e) {
+                currentMover = e.target;
+                img = e.target.parentElement;
+                let posX = e.clientX;
+                let posY = e.clientY;
 
-                window.addEventListener("mousemove", mousemove);
-                window.addEventListener("mouseup", mouseup);
+                window.addEventListener("mousemove", onStartResize);
+                window.addEventListener("mouseup", onStopResize);
 
-                function mousemove(e) {
-                    const rect = el.getBoundingClientRect();
+                function onStartResize(e) {
+                    const rect = img.getBoundingClientRect();
                     console.log(e)
 
-                    if(currentResizer.classList.contains("br")) {
-                        el.style.width = rect.width - (prevX - e.clientX) + "px";
-                        el.style.height = rect.height - (prevY - e.clientY) + "px";
+                    if(currentMover.classList.contains("br")) {
+                        img.style.width = rect.width - (posX - e.clientX) + "px";
+                        img.style.height = rect.height - (posY - e.clientY) + "px";
                     }
-                    else if(currentResizer.classList.contains("bl")) {
-                        el.style.width = rect.width + (prevX - e.clientX) + "px";
-                        el.style.height = rect.height - (prevY - e.clientY) + "px";
+                    else if(currentMover.classList.contains("bl")) {
+                        img.style.width = rect.width + (posX - e.clientX) + "px";
+                        img.style.height = rect.height - (posY - e.clientY) + "px";
                     }
-                    else if(currentResizer.classList.contains("tr")) {
-                        el.style.width = rect.width - (prevX - e.clientX) + "px";
-                        el.style.height = rect.height + (prevY - e.clientY) + "px";
+                    else if(currentMover.classList.contains("tr")) {
+                        img.style.width = rect.width - (posX - e.clientX) + "px";
+                        img.style.height = rect.height + (posY - e.clientY) + "px";
                     }
                     else {
-                        el.style.width = rect.width + (prevX - e.clientX) + "px";
-                        el.style.height = rect.height + (prevY - e.clientY) + "px";
+                        img.style.width = rect.width + (posX - e.clientX) + "px";
+                        img.style.height = rect.height + (posY - e.clientY) + "px";
                     }
 
-                    prevX = e.clientX;
-                    prevY = e.clientY;
+                    posX = e.clientX;
+                    posY = e.clientY;
                 }
 
-                function mouseup() {
-                    window.removeEventListener("mousemove", mousemove);
-                    window.removeEventListener("mouseup", mouseup);
+                function onStopResize() {
+                    window.removeEventListener("mousemove", onStartResize);
+                    window.removeEventListener("mouseup", onStopResize);
                 }
             }
         })
