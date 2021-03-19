@@ -1,4 +1,4 @@
-/*--------------------------------------------home-page*/
+/*------------------------------------------------------------------------------------------------home-page*/
 
 // Store classes in variables 
 let tops = document.querySelectorAll(".top");
@@ -7,20 +7,24 @@ let grassBottoms = document.querySelectorAll(".grassBottom");
 let lefts = document.querySelectorAll(".left");
 let rights = document.querySelectorAll(".right");
 
+// Add an event listener of "load" to each item in variable
+// Call swoopIn() and pass in each item of the variable when page loads 
+window.setTimeout(onLoad, 500);
+function onLoad(){
+    tops.forEach(top => top.addEventListener("load", swoopIn(top)));
+    bottoms.forEach(bottom => bottom.addEventListener("load", swoopIn(bottom)));
+    lefts.forEach(left => left.addEventListener("load", swoopIn(left)));
+    rights.forEach(right => right.addEventListener("load", swoopIn(right)));
+    grassBottoms.forEach(grassBottom => grassBottom.addEventListener("load", swoopIn(grassBottom)));
+}
+
 // Takes in each class item and adds a class of .swoop 
+// The .swoop class positions elements on screen
 function swoopIn(item) {
         item.classList.add("swoop");
 };
 
-// Add an event listener of "load" to each item in variable
-// Call swoopIn() and pass in each item of the variable when page loads 
-tops.forEach(top => top.addEventListener("load", swoopIn(top)));
-bottoms.forEach(bottom => bottom.addEventListener("load", swoopIn(bottom)));
-lefts.forEach(left => left.addEventListener("load", swoopIn(left)));
-rights.forEach(right => right.addEventListener("load", swoopIn(right)));
-grassBottoms.forEach(grassBottom => grassBottom.addEventListener("load", swoopIn(grassBottom)));
-
-/*--------------------------------------------studio*/
+/*------------------------------------------------------------------------------------------------studio*/
 
 /*-----------------------------click-and-appear*/
 
@@ -33,63 +37,61 @@ menuItem.addEventListener("touchend", insertImg);
 menuItem.addEventListener("click", insertImg);
 });
 
-// Create img container containing resizers and cancel option, as well as image itself.
+// Create img container containing resizers and cancel option, as well as image itself
 // Insert all into canvas element in DOM
+// Call move() and resize() functions
 function insertImg(event) {
-    // Create img-container 
-    let imgContainer = document.createElement("div");
-    imgContainer.classList.add("img-container");
+    if(event.type == "touchend" || event.type == "click"){ 
+// Create img-container 
+        let imgContainer = document.createElement("div");
+        imgContainer.classList.add("img-container");
 
-    // Create resizers and cancel option inside img-container
-    let tl = document.createElement("div");
-    tl.classList.add("mover", "tl");
-    imgContainer.appendChild(tl);
+// Create resizers and cancel option inside img-container
+        let tl = document.createElement("div");
+        tl.classList.add("mover", "tl");
+        imgContainer.appendChild(tl);
 
-    let tr = document.createElement("div");
-    tr.classList.add("mover", "tr");
-    imgContainer.appendChild(tr);
+        let tr = document.createElement("div");
+        tr.classList.add("mover", "tr");
+        imgContainer.appendChild(tr);
 
-    let br = document.createElement("div");
-    br.classList.add("mover", "br");
-    imgContainer.appendChild(br);
+        let br = document.createElement("div");
+        br.classList.add("mover", "br");
+        imgContainer.appendChild(br);
 
-    let bl = document.createElement("div");
-    bl.classList.add("mover", "bl");
-    imgContainer.appendChild(bl);
+        let bl = document.createElement("div");
+        bl.classList.add("mover", "bl");
+        imgContainer.appendChild(bl);
 
-    let remove = document.createElement("div");
-    remove.classList.add("mover", "remove");
-    let icon = document.createElement("i");
-    icon.classList.add("far", "fa-times-circle");
-    remove.appendChild(icon);
-    imgContainer.appendChild(remove);
+        let remove = document.createElement("div");
+        remove.classList.add("mover", "remove");
+        let icon = document.createElement("i");
+        icon.classList.add("far", "fa-times-circle");
+        remove.appendChild(icon);
+        imgContainer.appendChild(remove);
 
-    /*let rotate = document.createElement("div");
-    rotate.classList.add("mover", "rotate");
-    let icon2 = document.createElement("i");
-    icon2.classList.add("fas", "fa-sync-alt");
-    rotate.appendChild(icon2);
-    imgContainer.appendChild(rotate);*/
+// Create img, append to img-container, insert into canvas element in the DOM
+        let newImg = document.createElement("img");
+        newImg.src = event.path[1].getAttribute("data-img");
+        newImg.classList.add("canvas-img");
+        imgContainer.appendChild(newImg);
+        let canvas = document.getElementById("canvas");
+        canvas.appendChild(imgContainer);
 
-    // Create img, append to img-container, insert into canvas element in the DOM
-    let newImg = document.createElement("img");
-    newImg.src = event.path[1].getAttribute("data-img");
-    newImg.classList.add("canvas-img");
-    imgContainer.appendChild(newImg);
-    let canvas = document.getElementById("canvas");
-    canvas.appendChild(imgContainer);
-
-    // Call move function on each image so JS code will run after HTML appears
-    move();
-    resize();
+// Call move() and resize() functions for JS to run on new elements
+        move();
+        resize();
+    }
 };
 
 /*-----------------------------moveable elements*/
 
-let moveImg = null; //object to be moved
-let positionX = 0; //used to prevent dragged object jumping to mouse location
+let moveImg = null; 
+let positionX = 0; 
 let positionY = 0;
-	
+    
+// Select each canvas element and set "mousedown" and "touchstart" event listeners on them, after which event, onContact() function will be called
+// Add "mouseup" and "touchend" event listener on the document, after which event, onEndContact() function will be called. 
 function move()
 {
 	document.querySelectorAll(".img-container").forEach(img => img.addEventListener("mousedown", onContact, true));
@@ -98,11 +100,12 @@ function move()
     document.addEventListener("touchend", onEndContact);
 }
 
+// Target img to be moved, set cursor/pointer position
+// Add "mousemove" event listener, after which event, onDrag() function will be called
+// Remove img if cancel icon is clicked
 function onContact(e)
 {
-    let currentRotate = 0;
-	//e.preventDefault();
-    //e.stopPropagation();
+    
     if(e.target.className == "canvas-img" || e.target.className == "img-container") {
         moveImg = e.path[1];
         let rectVal = moveImg.getBoundingClientRect();
@@ -123,21 +126,11 @@ function onContact(e)
     else if(e.target.className == "far fa-times-circle") {
         e.path[2].remove();
     }
-    /*else if(e.target.className == "fas fa-sync-alt") {
-        console.log(e); 
-        
-            currentRotate += 1;
-            e.path[2].style.transform = `rotate(${currentRotate}deg)`;
-        
-    }*/
 }
 
+// Set img's location to cursor/pointer position
 function onDrag(e)
-/*Drag object*/
 {
-	e.preventDefault();
-	e.stopPropagation();
-	
 	if(moveImg == null) return; 
     else if(e.type=="mousemove")
 	{
@@ -151,6 +144,7 @@ function onDrag(e)
 	}
 }
 
+// Remove "mousemove" and "touchmove" event listeners and call onDrag() function
 function onEndContact()
 {
 	if(moveImg) 
@@ -164,52 +158,88 @@ function onEndContact()
 /*-----------------------------resizable elements*/
 
 function resize() {
+// Select imgs to be resized
     let imgs = document.querySelectorAll(".img-container");
     
     imgs.forEach(img => {
+// Select .mover divs to be used to resize each img
         const movers = document.querySelectorAll(".mover");
         let currentMover;
 
         movers.forEach(mover => {
+// Add "mousedown" and "touchstart" listeners to each mover, after which event, onClick() function will be called
             mover.addEventListener("mousedown", onClick);
+            mover.addEventListener("touchstart", onClick);
 
             function onClick(e) {
+// Target current mover and appropriate parent, set cursor position
                 currentMover = e.target;
                 img = e.target.parentElement;
                 let posX = e.clientX;
                 let posY = e.clientY;
-
+                let psX;
+                let psY;
+                if(e.type == "touchstart"){
+                    psX = e.targetTouches[0].clientX;
+                    psY = e.targetTouches[0].clientY;
+                }
+// Add "touchmove" and "mousemove" event listener on window, after which onStartResize() function will be called
+// Add "mouseup" and "touchend" event listener on window, after which onStopResize() function will be called
+                window.addEventListener("touchmove", onStartResize);
                 window.addEventListener("mousemove", onStartResize);
                 window.addEventListener("mouseup", onStopResize);
+                window.addEventListener("touchend", onStopResize);
 
+// Set size of img to increase with respect to cursor position
                 function onStartResize(e) {
                     const rect = img.getBoundingClientRect();
-                    console.log(e)
-
-                    if(currentMover.classList.contains("br")) {
-                        img.style.width = rect.width - (posX - e.clientX) + "px";
-                        img.style.height = rect.height - (posY - e.clientY) + "px";
+                    if(e.type == "mousemove") {
+                        if(currentMover.classList.contains("br")) {
+                            img.style.width = rect.width - (posX - e.clientX) + "px";
+                            img.style.height = rect.height - (posY - e.clientY) + "px";
+                        }
+                        else if(currentMover.classList.contains("bl")) {
+                            img.style.width = rect.width + (posX - e.clientX) + "px";
+                            img.style.height = rect.height - (posY - e.clientY) + "px";
+                        }
+                        else if(currentMover.classList.contains("tr")) {
+                            img.style.width = rect.width - (posX - e.clientX) + "px";
+                            img.style.height = rect.height + (posY - e.clientY) + "px";
+                        }
+                        else {
+                            img.style.width = rect.width + (posX - e.clientX) + "px";
+                            img.style.height = rect.height + (posY - e.clientY) + "px";
+                        }
                     }
-                    else if(currentMover.classList.contains("bl")) {
-                        img.style.width = rect.width + (posX - e.clientX) + "px";
-                        img.style.height = rect.height - (posY - e.clientY) + "px";
+                    else if(e.type == "touchmove") {
+                        if(currentMover.classList.contains("br")) {
+                            img.style.width = rect.width - (psX - e.targetTouches[0].clientX) + "px";
+                            img.style.height = rect.height - (psY - e.targetTouches[0].clientY) + "px";
+                        }
+                        else if(currentMover.classList.contains("bl")) {
+                            img.style.width = rect.width + (psX - e.targetTouches[0].clientX) + "px";
+                            img.style.height = rect.height - (psY - e.targetTouches[0].clientY) + "px";
+                        }
+                        else if(currentMover.classList.contains("tr")) {
+                            img.style.width = rect.width - (psX - e.targetTouches[0].clientX) + "px";
+                            img.style.height = rect.height + (psY - e.targetTouches[0].clientY) + "px";
+                        }
+                        else {
+                            img.style.width = rect.width + (psX - e.targetTouches[0].clientX) + "px";
+                            img.style.height = rect.height + (psY - e.targetTouches[0].clientY) + "px";
+                        }
                     }
-                    else if(currentMover.classList.contains("tr")) {
-                        img.style.width = rect.width - (posX - e.clientX) + "px";
-                        img.style.height = rect.height + (posY - e.clientY) + "px";
-                    }
-                    else {
-                        img.style.width = rect.width + (posX - e.clientX) + "px";
-                        img.style.height = rect.height + (posY - e.clientY) + "px";
-                    }
-
                     posX = e.clientX;
                     posY = e.clientY;
                 }
 
+// Remove "mousemove" and "touchmove" event listeners, after which event, onStartResize() function will be called
+// Remove "mouseup" and "touchend" event listeners, after which event, onStopResize() function will be called
                 function onStopResize() {
                     window.removeEventListener("mousemove", onStartResize);
+                    window.removeEventListener("touchmove", onStartResize);
                     window.removeEventListener("mouseup", onStopResize);
+                    window.removeEventListener("touchend", onStopResize);
                 }
             }
         })
