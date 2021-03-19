@@ -1,33 +1,32 @@
 /*------------------------------------------------------------------------------------------------home-page*/
-
-// Store classes in variables 
-let tops = document.querySelectorAll(".top");
-let bottoms = document.querySelectorAll(".bottom");
-let grassBottoms = document.querySelectorAll(".grassBottom");
-let lefts = document.querySelectorAll(".left");
-let rights = document.querySelectorAll(".right");
+window.setTimeout(onLoadHome, 500);
 
 // Add an event listener of "load" to each item in variable
 // Call swoopIn() and pass in each item of the variable when page loads 
-window.setTimeout(onLoad, 500);
-function onLoad(){
+// Use setTimeout() to fix bug of swoopIn() function not working on Safari
+function onLoadHome(){
+// Store classes in variables 
+    let tops = document.querySelectorAll(".top");
+    let bottoms = document.querySelectorAll(".bottom");
+    let grassBottoms = document.querySelectorAll(".grassBottom");
+    let lefts = document.querySelectorAll(".left");
+    let rights = document.querySelectorAll(".right");
+
     tops.forEach(top => top.addEventListener("load", swoopIn(top)));
     bottoms.forEach(bottom => bottom.addEventListener("load", swoopIn(bottom)));
     lefts.forEach(left => left.addEventListener("load", swoopIn(left)));
     rights.forEach(right => right.addEventListener("load", swoopIn(right)));
     grassBottoms.forEach(grassBottom => grassBottom.addEventListener("load", swoopIn(grassBottom)));
-}
 
 // Takes in each class item and adds a class of .swoop 
 // The .swoop class positions elements on screen
-function swoopIn(item) {
+    function swoopIn(item) {
         item.classList.add("swoop");
-};
-
+    };
+}
 /*------------------------------------------------------------------------------------------------studio*/
 
 /*-----------------------------click-and-appear*/
-
 // Select all menu items and save them to the menuItems variable
 let menuItems = document.getElementsByClassName("menu-item");
 
@@ -40,8 +39,8 @@ menuItem.addEventListener("click", insertImg);
 // Create img container containing resizers and cancel option, as well as image itself
 // Insert all into canvas element in DOM
 // Call move() and resize() functions
-function insertImg(event) {
-    if(event.type == "touchend" || event.type == "click"){ 
+function insertImg(e) {
+    if(e.type == "touchend" || e.type == "click"){ 
 // Create img-container 
         let imgContainer = document.createElement("div");
         imgContainer.classList.add("img-container");
@@ -72,7 +71,7 @@ function insertImg(event) {
 
 // Create img, append to img-container, insert into canvas element in the DOM
         let newImg = document.createElement("img");
-        newImg.src = event.path[1].getAttribute("data-img");
+        newImg.src = e.srcElement.offsetParent.getAttribute("data-img");
         newImg.classList.add("canvas-img");
         imgContainer.appendChild(newImg);
         let canvas = document.getElementById("canvas");
@@ -105,18 +104,17 @@ function move()
 // Remove img if cancel icon is clicked
 function onContact(e)
 {
-    
     if(e.target.className == "canvas-img" || e.target.className == "img-container") {
-        moveImg = e.path[1];
+        moveImg = e.target.offsetParent;
         let rectVal = moveImg.getBoundingClientRect();
-    	
-        if(e.type=="mousedown")
+        
+        if(e.type == "mousedown")
         {
             positionX = e.clientX - rectVal.left; 
             positionY = e.clientY - rectVal.top;
             window.addEventListener('mousemove', onDrag, true);
         }
-        else if(e.type=="touchstart")
+        else if(e.type == "touchstart")
         {
             positionX = e.targetTouches[0].clientX - rectVal.left; 
             positionY = e.targetTouches[0].clientY - rectVal.top;
@@ -124,7 +122,7 @@ function onContact(e)
         }
     }
     else if(e.target.className == "far fa-times-circle") {
-        e.path[2].remove();
+        e.target.offsetParent.offsetParent.remove();
     }
 }
 
