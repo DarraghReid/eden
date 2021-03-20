@@ -3,6 +3,8 @@
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
+* This was done while trouble shooting the bug that was preventing CSS and JS from working sufficiently on Apple devices. 
+* See README.md for more details
 */
 
 html {
@@ -50,6 +52,7 @@ header {
     color: rgb(201, 197, 197);
 }
 
+/* includes arrow icon in footer */
 .fas {
     color: white;
     font-size: 2rem;
@@ -85,6 +88,7 @@ header {
     height: 100%;
 }
 
+/*------------------------------------images*/
 /*---------------------grass*/
 
 #grass {
@@ -283,7 +287,7 @@ header {
             transform: rotate(45deg);
 }
 
-/*---------------------callout*/
+/*------------------------------------callout*/
 
 #callout {
     position: absolute;
@@ -344,7 +348,11 @@ header {
     z-index: 9;
 }
 
-/*---------------------------------------------------transitions*/
+/*------------------------------------transitions*/
+/*
+* .top, .bottom, grassBottom .left, and .right classes position home page elements outside of viewport
+* .swoop class is added to each home page element on page load by the swoopIn() function in index.js, and gradually positions elements within the viewport
+*/
 .top {
     -webkit-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
@@ -442,7 +450,8 @@ header {
     position: relative;
 }
 
-/*---------------------menu*/
+/*------------------------------------img-menu*/
+/*---------------------header*/
 #header {
     display: flex;
     align-items: center;
@@ -468,6 +477,7 @@ header {
     color: white;
 }
 
+/*---------------------menu*/
 #menu {
     width: 100%;
     height: 15vh;
@@ -495,6 +505,7 @@ header {
             align-items: center;
 }
 
+/*---------------------menu-item-settings*/
 .item-container {
     min-width: 80px;
     max-width: 80px;
@@ -528,6 +539,7 @@ header {
     background-color: white;
 }
 
+/*---------------------individual-settings*/
 #menu-bush-1 img {
     -webkit-transform: translate(-50%, -13%);
         -ms-transform: translate(-50%, -13%);
@@ -585,6 +597,7 @@ header {
             transform: translate(-30%, -29%);
 }
 
+/*---------------------hover-settings*/
 .label {
     position: absolute;
     top: 50%;
@@ -616,7 +629,7 @@ header {
     display: block;
 }
 
-/*---------------------canvas*/
+/*---------------------------------------------------canvas*/
 #canvas {
     background: white;
     width: 100%;
@@ -625,6 +638,11 @@ header {
     position: relative;
 }
 
+/*------------------------------------canvas-img-settings*/
+/* 
+* canvas images will only appear on canvas once user selects a menu item 
+* insertImg() function in index.js inserts the image of each menu item onto canvas once that menu item is clicked
+*/
 .img-container {
     margin-top: 5px;
     left: 15px;
@@ -644,8 +662,7 @@ header {
     min-height: 100%;
 }
 
-
-
+/* .mover, .tl, .tr, .bl, .br are classes for the div elements that are responsible for resizing the images by being targeted in the resize() function in index.js */
 .mover {
     position: absolute;
     padding: 0;
@@ -684,6 +701,7 @@ header {
     cursor: se-resize;
 }
 
+/* .remove is the class for the cancel icon element that is responsible for removing the canvas image to which it belongs, by being targeted in onContact() function in index.js */
 .remove {
     top: -5px;
     left: 50%;
@@ -696,35 +714,7 @@ header {
     background-color: transparent;
 }
 
-/*.rotate {
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-            transform: translateX(-50%);
-    width: 16px;
-    height: 16px;
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fa-sync-alt {
-    font-size: 10px;
-    color: black;
-}
-
-.fa-sync-alt:hover {
-    color: black;
-}*/
-
-
-/*---------------------footer*/
+/*---------------------------------------------------footer*/
 #footer {
     width: 100%;
     height: 10vh;
