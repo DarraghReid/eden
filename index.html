@@ -11,20 +11,20 @@
 </head>
 <body>
     <header id="home">
-        <!--navbar-->
+    <!--navbar - using Bootstrap-->
         <nav class="navbar sticky-top navbar-expand-sm">
             <div class="container-fluid">
-        <!--logo-->
+    <!--logo-->
                 <div class="logo">
                     <a class="navbar-brand" href="#home">Eden</a>
                 </div>
         
-        <!--menu-->
+    <!--menu-->
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                 </button>
 
-        <!--menu-items-->
+    <!--menu-items-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -39,52 +39,65 @@
         </nav>
     </header>
 
-        <!--home-page-->
+    <!--home-page-->
     <section id="home-screen">
-        <!--background-images-->
+    <!--background-images 
+        - images are positioned off the screen, and will be brought onto the screen gradually using the swoopIn() function in index.js
+        - some images may appear on this web page more than once, and will be credited on their first appearance only
+        - for more information on the images used in this site, see README.md-->
         <div id="pics-container">
             <div id="grass" class="grassBottom">
+    <!--credit for image: Philipp Pilz https://www.freeimages.com/photo/grass-1508240-->
                 <img src="assets/images/grass-2.png" alt="picture of grass">
             </div>
         
-        <!--flower-bed-->
+    <!--flower-bed-->
             <div id="gravel" class="top">
+    <!--credit for image: _Alicja_ https://pixabay.com/photos/pebbles-decking-texture-model-3212192/-->
                 <img src="assets/images/gravel-4.png" alt="picture of gravel">
                 <img src="assets/images/gravel-4.png" alt="picture of gravel">
             </div>
 
             <div id="flower-bed" class="top">
+    <!--credit for image: Mike Berg https://www.freeimages.com/photo/fresh-soil-1468423-->
                 <img id="soil" src="assets/images/soil-1.png" alt="picture of soil">
 
                 <div class="fb-element" id="plant-1">
+    <!--credit for image: photographer unnamed https://www.pngjoy.com/preview/w3z5l3p1l6j9b4_palm-palm-tree-top-view-png-hd-png/-->
                     <img src="assets/images/plant-1.png" alt="picture of a plant">
                 </div>
 
                 <div class="fb-element" id="flower-1">
+    <!--credit for image: Buntysmum https://pixabay.com/photos/flower-tropical-bougainvillea-3271195/-->
                     <img src="assets/images/flower-1.png" alt="picture of flowers">
                 </div>
 
                 <div class="fb-element" id="plant-2">
+    <!--credit for image: photographer unnamed https://www.pngjoy.com/preview/u9f1d4c1b0f6v1_hanging-plants-scientific-names-of-plants-animals-and/-->
                     <img src="assets/images/plant-2.png" alt="picture of a plant">
                 </div>
 
                 <div class="fb-element" id="flower-2">
+    <!--credit for image: photgrapher unnamed https://www.pngjoy.com/preview/u5r5n3a6e7k8f7_white-rose-white-and-yellow-roses-png-transparent/-->
                     <img src="assets/images/flowers-3.png" alt="picture of flowers">
                 </div>
 
                 <div class="fb-element" id="flower-3">
+    <!--credit for image: photographer unnamed https://www.pngjoy.com/preview/f2k8p5x5a2p7j0_flower-crown-png-tumblr-white-flower-crown-transpa/-->
                     <img src="assets/images/flowers-6.png" alt="picture of flowers">
                 </div>
             </div>
 
-        <!--decking-->
+    <!--decking-->
             <div id="decking" class="left">
+    <!--credit for image: Petr Kovar https://www.freeimages.com/photo/old-wood-texture-1154441-->
                 <img src="assets/images/decking-1.jpg" alt="picture of decking">
                 <img id="deck-2" src="assets/images/decking-1.jpg" alt="picture of decking">
             </div>
         
-        <!--path-->
+    <!--path-->
             <div id="path">
+    <!--credit for image: photographer unnamed https://www.pngjoy.com/preview/z7m2e9e9x6z4h5_stone-path-nail-polish-transparent-png/-->
                 <img class="stone bottom" id="stone-1" src="assets/images/path-3.png" alt="picture of stepping stone">
                 <img class="stone bottom" id="stone-2" src="assets/images/path-3.png" alt="picture of stepping stone">
                 <img class="stone bottom" id="stone-3" src="assets/images/path-3.png" alt="picture of stepping stone">
@@ -94,21 +107,23 @@
                 <img class="stone bottom" id="stone-7" src="assets/images/path-3.png" alt="picture of stepping stone">
             </div>
 
-        <!--tree-bush-->
+    <!--tree-bush-->
             <div id="tree-bush" class="right">
-            <!--bush (seen on screen sizes below 550px width only)-->
+    <!--bush (seen on screen sizes below 550px width only)-->
                 <div id="bush">
+    <!--credit for image: photographer unnamed https://www.pngjoy.com/preview/z1l9n7s4a8p6r8_bush-bush-png-transparent-png/-->
                     <img src="assets/images/bush-1.png" alt="picture of bush">
                     <img src="assets/images/bush-1.png" alt="picture of bush">
                     <img src="assets/images/bush-1.png" alt="picture of bush">
                 </div>
-            <!--tree (seen on screen sizes above 550px width only)-->
+    <!--tree (seen on screen sizes above 550px width only)-->
                 <div id="tree">
+    <!--credit for image: photographer unnamed https://www.pngjoy.com/preview/x1k3u4f2u0q7r8_tree-top-mango-tree-top-view-transparent-png/-->
                     <img src="assets/images/tree-1.png" alt="picture of tree">
                 </div>
             </div>
         </div>
-        
+    <!--callout-->
         <article id="callout">
             <h1 class="right">DISCOVER YOUR GARDEN'S POTENTIAL
                 <br>
@@ -129,9 +144,9 @@
                 <p>Click an item below to start experimenting with different garden elements</p>
             </div>
         </div>
-        <!--menu-->
+    <!--menu - when each menu item is clicked, the image of that menu item will appear on canvas below, using the insertImg function in index.js-->
         <div id="menu">
-            <!--inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll-->
+    <!--credit for scrollable menu: inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll-->
             <div id="menu-items">
                 <div class="item-container">
                     <a class="menu-item" id="menu-bush-1" data-img="assets/images/bush-1.png">
@@ -139,14 +154,17 @@
                         <div class="img-overlay"></div>
                         <p class="label">BUSH(yellow)</p>
                     </a>
-                </div>    
+                </div>  
+
                 <div class="item-container">
                     <a class="menu-item" id="menu-bush-2" data-img="assets/images/bush-2.png">
+    <!--credit for image: photographer unnamed https://www.pngjoy.com/preview/m5y3d1u8d3q6r2_bush-bushes-png-png-download/-->
                         <img class="image" src="assets/images/bush-2.png" alt="picture of green bush">
                         <div class="img-overlay"></div>
                         <p class="label">BUSH(green)</p>
                     </a>
                 </div>
+
                 <div class="item-container">
                     <a class="menu-item" id="menu-decking" data-img="assets/images/decking-1.jpg">
                         <img class="image" src="assets/images/decking-1.jpg" alt="picture of decking">
@@ -154,6 +172,7 @@
                         <p class="label">DECKING</p>
                     </a>
                 </div>
+
                 <div class="item-container">
                     <a class="menu-item" id="menu-flower-1" data-img="assets/images/flower-1.png">
                         <img class="image" src="assets/images/flower-1.png" alt="picture of pink flowers">
@@ -161,13 +180,15 @@
                         <p class="label">FLOWERS(pink)</p>
                     </a>
                 </div>
+
                 <div class="item-container">    
                     <a class="menu-item" id="menu-flower-2" data-img="assets/images/flowers-3.png">
                         <img class="image" src="assets/images/flowers-3.png" alt="picture of yellow flowers">
                         <div class="img-overlay"></div>
                         <p class="label">FLOWERS<br>(yellow)</p>
                     </a>
-                </div>   
+                </div>  
+
                 <div class="item-container"> 
                     <a class="menu-item" id="menu-flower-3" data-img="assets/images/flowers-6.png">
                         <img class="image" src="assets/images/flowers-6.png" alt="picture of blue flowers">
@@ -175,48 +196,55 @@
                         <p class="label">FLOWERS(blue)</p>
                     </a>
                 </div>  
+
                 <div class="item-container"> 
                     <a class="menu-item" id="menu-grass" data-img="assets/images/grass-2.png">
                         <img class="image" src="assets/images/grass-2.png" alt="picture of grass">
                         <div class="img-overlay"></div>
                         <p class="label">GRASS</p>
                     </a>
-                </div>    
+                </div> 
+
                 <div class="item-container"> 
                     <a class="menu-item" id="menu-gravel" data-img="assets/images/gravel-4.png">
                         <img class="image" src="assets/images/gravel-4.png" alt="picture of gravel">
                         <div class="img-overlay"></div>
                         <p class="label">GRAVEL</p>
                     </a>
-                </div>   
+                </div> 
+
                 <div class="item-container"> 
                     <a class="menu-item" id="menu-path" data-img="assets/images/path-3.png">
                         <img class="image" src="assets/images/path-3.png" alt="picture of stepping stone">
                         <div class="img-overlay"></div>
                         <p class="label">STEPPING <br> STONE</p>
                     </a>
-                </div>  
+                </div> 
+
                 <div class="item-container"> 
                     <a class="menu-item" id="menu-plant-1" data-img="assets/images/plant-1.png">
                         <img class="image" src="assets/images/plant-1.png" alt="picture of dark-green plant">
                         <div class="img-overlay"></div>
                         <p class="label">PLANT<br>(dark-green)</p>
                     </a>
-                </div>    
+                </div>  
+
                 <div class="item-container">
                     <a class="menu-item" id="menu-plant-2" data-img="assets/images/plant-2.png">
                         <img class="image" src="assets/images/plant-2.png" alt="picture of light-green plant">
                         <div class="img-overlay"></div>
                         <p class="label">PLANT<br>(light-green)</p>
                     </a>
-                </div>     
+                </div> 
+
                 <div class="item-container">
                     <a class="menu-item" id="menu-soil" data-img="assets/images/soil-1.png">
                         <img class="image" src="assets/images/soil-1.png" alt="picture of soil">
                         <div class="img-overlay"></div>
                         <p class="label">SOIL</p>
                     </a>
-                </div>   
+                </div>  
+
                 <div class="item-container"> 
                     <a class="menu-item" id="menu-tree-1" data-img="assets/images/tree-1.png">
                         <img class="image" src="assets/images/tree-1.png" alt="picture of green tree">
@@ -224,8 +252,10 @@
                         <p class="label">TREE(green)</p>
                     </a>
                 </div>
+
                 <div class="item-container">
                     <a class="menu-item" id="menu-tree-2" data-img="assets/images/tree-2.png">
+    <!--credit for image: photographer unnamed https://www.pngjoy.com/preview/f3t5j5r2f9h7g0_tree-plan-fruit-tree-top-view-png-png/-->
                         <img class="image" src="assets/images/tree-2.png" alt="picture of red tree">
                         <div class="img-overlay"></div>
                         <p class="label">TREE(red)</p>
@@ -234,18 +264,18 @@
             </div>
         </div>
 
+    <!--canvas - images to be inserted here by by the user by clicking on the above menu items which call the insertImg() function in index.js-->
         <div id="canvas">
             
         </div>
     </section>
-    <footer>
-        <div id="controls">
-            <div class="logo">
-                <a href="#home">Eden</a>
-            </div>
-            <div id="back-to-top">
-                <a href="#home"><span><i class="fas fa-arrow-circle-up"></i></span>Back to top</a>
-            </div>
+    <!--footer-->
+    <footer id="footer">
+        <div class="logo">
+            <a href="#home">Eden</a>
+        </div>
+        <div id="back-to-top">
+            <a href="#home"><span><i class="fas fa-arrow-circle-up"></i></span>Back to top</a>
         </div>
     </footer>
 

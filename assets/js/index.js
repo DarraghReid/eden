@@ -40,7 +40,14 @@ menuItem.addEventListener("click", insertImg);
 // Insert all into canvas element in DOM
 // Call move() and resize() functions
 function insertImg(e) {
-    if(e.type == "touchend" || e.type == "click"){ 
+    if(e.type == "touchend" || e.type == "click"){
+// Stop duplicate images being inserted on touch screens
+        if(e.type == "touchend") {
+            Array.from(menuItems).forEach(menuItem => {
+            menuItem.removeEventListener("click", insertImg);
+            });
+        }
+
 // Create img-container 
         let imgContainer = document.createElement("div");
         imgContainer.classList.add("img-container");
