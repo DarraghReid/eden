@@ -9,8 +9,8 @@ The purpose of this project is to demonstrate the student's knowledge and skills
 This includes skills in HTML, CSS, JavaScript as well as other User Centric Design skills as outlined in the [Technologies Used](#Technologies-Used) section.
 This project marks my first time writing JavaScript.
 
-The purpose of this site is to be a platform on which users can design gardens. The idea was given to me by landscape gardening student who expressed a desire
-for an application on which he could design gardens in front of customers in real time. I decided to create [Eden](https://darraghreid.github.io/eden/) with him
+The purpose of this site is to be a platform on which users can experiment with garden designs. The idea was given to me by landscape gardening student who expressed a desire
+for an application on which he could make rough garden designs in front of customers in real time. I decided to create [Eden](https://darraghreid.github.io/eden/) with him
 in mind as the site owner where both he and potential customers could use this software to experiment with their ideas.
 
 ## User Experience (UX)
@@ -30,7 +30,7 @@ in mind as the site owner where both he and potential customers could use this s
 
     * Site Owner Goals:
         1. As the site owner, I want to be able to design gardens in real time for potential customers.
-        2. As the site owner, I want potential customers and general users to be able to design their own gardens and express their own ideas.
+        2. As the site owner, I want potential customers to be able to design their own gardens and express their own ideas.
         3. As the site owner, I want to have a selection of garden elements so both I and users can create varying designs.
         4. As the site owner, I want the garden elements to be able to be manipulated in size and position so both I and the user can create designs with ease.
         5. As the site owner, I want the site to be simple, intuitive, and user-friendly.
@@ -84,3 +84,99 @@ This makes it so each section is never more than a click away and results in fas
     
     * It was important to find png images without any backgrounds in order for users to seemlessly place images on top of one another
     to give the impression that the garden elements are real.
+
+## Wireframes
+* Wireframe of Home Page
+![Wireframe of Home Page](assets/images/wireframe-home-page.png)
+
+* Wireframe of Studio
+![Wireframe of Studio](assets/images/wireframe-studio.png)
+
+* Wireframe of Tutorial Section (Not included in final product)
+![Wireframe of Studio](assets/images/wireframe-tutorial.png)
+
+### Difference between wireframes and final product
+* The most obvious differnce between the wireframes and the final product is that the Tutorial section in the final product.
+I had originally planned to record a tutorial of how to use the software. Upon completion of the software, however, I found that
+it was intuitive enough that a tutorial was not required. 
+
+I feel a tutorial section would have been of no benefit to the product and would not have contributed to the requirements set out 
+in the Assessment Handbook.
+
+This ommision had a minor impact on the Home Page where the "Watch Tutorial" call-to-action button and the "Tutorial" link 
+in the navbar are not present in the final product.
+
+* Another difference between the wireframe and the final product is the menu in the Studio section. The wireframe displays a 
+text-based menu where each menu item would have a drop down menu of related images of garden elements.
+
+I felt it was more intuitive to lead with images rather than text. I felt that this is more in line with modern design software
+such as Balsamiq, for example.
+
+The text is only present when the user hovers over the image-based menu item.
+
+* Finally, I chose to omit the social links from the footer as they would have served no purpose to the site and would not have 
+contributed to the requirements set out in the Assessment Handbook.
+
+## Features
+* Home Page
+The Home Page is where the user is introduced to the site an takes up 100vh.
+    * The Home Page includes a responsive Bootstrap navbar disaplying the logo as well as links to the two sections of the site.
+    These links collapse into a dropdown button on smaller screens. The button that is seen on smaller screens is represented 
+    by a fontawesome icon, as the original button was having trouble displaying.
+
+    These links, along with all clickable links throughout the site, highlight upon hover.
+
+    * The main feature of the Home Page is the background image of a garden that gradually builds itself on page load.
+    The scene is comprised of multiple good resolution images. Therefore, when the site is first loaded (without cache),
+    the images may not have fully loaded by the time they are brought onto the screen. However, this transition effect is 
+    seemless upon further reloads.
+
+    The self-building image of a garden was designed with user intuition in mind. The user should immediately understand the 
+    purpose of the site upon seeing it. It is designed to be an exciting introduction to the Eden site.
+
+    The garden scene is also responsive. The images change change in size and position depending on the screen size. On particularly
+    small screens, the tree is replaced with a bush.
+
+    NOTE: Each image in the garden scene has a different CSS transition period. Therefore, when resizing in Dev Tools,
+    allow a few seconds for each image to transition to its appropriate size and position.
+
+    * The callout, which along with the call-to-action button, is brought on screen by the transition mentioned above, 
+    provides further affirmation as to the purpose of the site.
+
+    * The call-to-action button brings the user straight to the Studio section where they can immediately begin designing.
+
+* Studio Section
+The Studio section is where users can design their gardens. It takes up 90vh, with the remaining 10vh being occupied by the footer.
+    * At the very top of the Studio section is the header which introduces and concisely details the purpose of the section.
+    * Beneath the header is a visually appealing, scrollable, image-based menu comprised of images of each of the garden elements
+    available for the user to experiment with.
+
+    This menu was designed to be intuitive for the user. The user should immediately understand that these images are clickable.
+    Once clicked, the image displayed on that menu item should appear on the canvas below, ready to be manipulated.
+
+    The menu is resonsive. On larger screens the menu items are centered within the menu section. On smaller screens, it is 
+    laterally scrollable.
+
+    This menu was inpired by a [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable
+    menu, which underwent a good deal of editing due to significant differences in the site menu and the w3School example.
+
+    Aside from all classes and ids being renamed, there are major structural differences. For example, the w3schools example is simply
+    a list of anchor tags. Each menu item in the Studio section of Eden is comprised of four different elements including a two divs,
+    and anchor tag, an image, and a paragraph tag. This required significantly more editing in style.css.
+
+    * The canvas section of the Studio is where users can manipulate the various garden elements that they have selected from the 
+    menu above. Each element that appears on the canvas is removable, moveable, and resizable. This allows the user to be 
+    creative in their designs. The canvas section has an overflow of hidden, thus the images cannot be moved onto other section of the site.
+
+* Footer
+The footer occupies the remaining 10vh and is comprised of two links, the Logo, and a back-to-top link, which encompasses an "up" fontawesome
+arrow icon. These links are located and the left and right of the footer, respectively. Both links lead to the Home Page.
+
+### Potential Future Features
+Although the initial goal of creating a platform on which users can create rough garden designs has been achieved, a few possible additional features 
+that could be implemented in future versions of the site came to mind throughout the creation process. These include:
+    * A larger selection of garden elements. These would, of course, be subject to the site owners preferences.
+    * The ability of the user to rotate images. This would be useful for rectangular elements, such as bushes.
+    * The ability of the user to crop images.
+    * The ability of the user to increase or decrease the z-index of the elements.
+    * The ability of the user to save their work. This could possibly involve the creation of an account.
