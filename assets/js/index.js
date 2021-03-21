@@ -2,7 +2,7 @@
 window.setTimeout(onLoadHome, 500);
 
 // Add an event listener of "load" to each item in variable
-// Call swoopIn() and pass in each item of the variable when page loads 
+// Call swoopIn() and pass in each item of the below variables when page loads 
 // Use setTimeout() to fix bug of swoopIn() function not working on Safari
 function onLoadHome(){
 // Store classes in variables 

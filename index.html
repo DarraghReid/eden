@@ -42,8 +42,8 @@
     <!--home-page-->
     <section id="home-screen">
     <!--background-images 
-        - images are positioned off the screen, and will be brought onto the screen gradually using the swoopIn() function in index.js
-        - some images may appear on this web page more than once, and will be credited on their first appearance only
+        - images are positioned outside of the viewport, and will be brought onto the screen gradually using the swoopIn() function in index.js, which adds the class of .swoop to each image
+        - some images may appear on this web page more than once, and will be credited here in index.html on their first appearance only
         - for more information on the images used in this site, see README.md-->
         <div id="pics-container">
             <div id="grass" class="grassBottom">
@@ -123,6 +123,7 @@
                 </div>
             </div>
         </div>
+
     <!--callout-->
         <article id="callout">
             <h1 class="right">DISCOVER YOUR GARDEN'S POTENTIAL
@@ -144,7 +145,8 @@
                 <p>Click an item below to start experimenting with different garden elements</p>
             </div>
         </div>
-    <!--menu - when each menu item is clicked, the image of that menu item will appear on canvas below, using the insertImg function in index.js-->
+
+    <!--menu - when each menu item is clicked, the image of that menu item will appear on canvas below, using the insertImg() function in index.js-->
         <div id="menu">
     <!--credit for scrollable menu: inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll-->
             <div id="menu-items">
@@ -274,6 +276,7 @@
         <div class="logo">
             <a href="#home">Eden</a>
         </div>
+        
         <div id="back-to-top">
             <a href="#home"><span><i class="fas fa-arrow-circle-up"></i></span>Back to top</a>
         </div>
