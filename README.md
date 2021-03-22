@@ -126,6 +126,7 @@ contributed to the requirements set out in the Assessment Handbook.
 
 ## Features
 * Home Page
+
 The Home Page is where the user is introduced to the site an takes up 100vh.
     * The Home Page includes a responsive Bootstrap navbar disaplying the logo as well as links to the two sections of the site.
     These links collapse into a dropdown button on smaller screens. The button that is seen on smaller screens is represented 
@@ -145,6 +146,7 @@ The Home Page is where the user is introduced to the site an takes up 100vh.
         small screens, the tree is replaced with a bush.
 
         NOTE: 
+
             * Each image in the garden scene has a different CSS transition period. Therefore, when resizing in Dev Tools,
             allow a few seconds for each image to transition to its appropriate size and position.
 
@@ -154,6 +156,7 @@ The Home Page is where the user is introduced to the site an takes up 100vh.
     * The call-to-action button brings the user straight to the Studio section where they can immediately begin designing.
 
 * Studio Section
+
 The Studio section is where users can design their gardens. It takes up 90vh, with the remaining 10vh being occupied by the footer.
     * At the very top of the Studio section is the header which introduces and concisely details the purpose of the section.
     * Beneath the header is a visually appealing, scrollable, image-based menu comprised of images of each of the garden elements
@@ -177,6 +180,7 @@ The Studio section is where users can design their gardens. It takes up 90vh, wi
     creative in their designs. The canvas section has an overflow of hidden, thus the images cannot be moved onto other section of the site.
 
 * Footer
+
 The footer occupies the remaining 10vh and is comprised of two links, the Logo, and a back-to-top link, which encompasses an "up" fontawesome
 arrow icon. These links are located and the left and right of the footer, respectively. Both links lead to the Home Page.
 
@@ -184,12 +188,12 @@ arrow icon. These links are located and the left and right of the footer, respec
 Although the initial goal of creating a platform on which users can create rough garden designs has been achieved, a few possible additional features 
 that could be implemented in future versions of the site came to mind throughout the creation process. These include:
 
-    * A larger selection of garden elements. These would, of course, be subject to the site owners preferences.
-    * The ability of the user to rotate images. This would be useful for rectangular elements, such as bushes.
-    * The ability of the user to crop images.
-    * The ability of the user to increase or decrease the z-index of the elements.
-    * The ability of the user to save their work. This could possibly involve the creation of an account.
-    * The ability of the user to shape their garden to suit their preference.
+* A larger selection of garden elements. These would, of course, be subject to the site owners preferences.
+* The ability of the user to rotate images. This would be useful for rectangular elements, such as bushes.
+* The ability of the user to crop images.
+* The ability of the user to increase or decrease the z-index of the elements.
+* The ability of the user to save their work. This could possibly involve the creation of an account.
+* The ability of the user to shape their garden to suit their preference.
 
 
 ## Technologies Used 
@@ -229,11 +233,11 @@ was ultimately removed.
 
 * [Autoprefixer](http://autoprefixer.github.io/) was used for the same reason as babel. I used Autoprefixer to add vendor 
 prefixes to make it more compatible with various browsers and devices. It was also unsuccessful in addressing the bug. As well as this, 
-as you will see in the [testing](#Testing) section, it caused errors when put through the W3C CSS Validator. For these reasons,
+as you will see in the Known Bugs section of [TESTING.md](/TESTING.md) section, it caused errors when put through the W3C CSS Validator. For these reasons,
 the prefixes were removed.
 
 ## Testing
-Information on testing can be found in a separate [TESTING.md]() file
+Information on testing can be found in a separate [TESTING.md](/TESTING.md) file
 
 ## Deployment
 
@@ -286,17 +290,7 @@ To do this, follow these steps:
 [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable menu, and was heavily edited.
 
 * I would also like to credit YouTuber [Jonas Grøndahl](https://www.youtube.com/channel/UCVrchtz0z4it4JZjIS1D03A) whose 
-videos on creating moveable and resizeable divs I watched. As is evident from seeing his code and my code, my code is vastly 
-different to Jonas'. 
-
-    This is partly because of the complexity of my project as opposed to his tutorial. Of course, all functions, variable, 
-    classes and ids have been changed. However, much more needed to be done to implement moveable and resizeable functionality 
-    into my project. 
-    
-    Much effort and extra code was put into my project to compensate for multiple moveable and draggable divs, and also to 
-    accommodate for touch screens. Extra functionality was also written in my code to accommodate the removable functionaltiy. 
-    In oder for all of this functionality to work in my project, the move() and resize() functions had to be called inside the 
-    insertImg() function so the code could be run on the new elements being inserted into the DOM.
+videos on creating moveable and resizeable divs I watched. 
 
     Jonas' videos can be viewed here:
     * https://www.youtube.com/watch?v=NyZSIhzz5Do
@@ -306,6 +300,18 @@ different to Jonas'.
 [part 1](https://www.youtube.com/watch?v=NyZSIhzz5Do) video which added to my understanding of targeting multiple elements for 
 moving.
 
+* [Stack Overflow](https://stackoverflow.com/) member, Jor, contributed some code in the comments of [this post](https://stackoverflow.com/questions/13152578/create-a-draggable-div-in-native-javascript) 
+which greatly helped in my understanding of how to target elements on touch screens.
+
+As is evident from comparing my code to the code from the sources above, my code is very different. 
+
+    This is partly because of the complexity of my project as opposed to the explanatory code referenced above. Of course, 
+    all functions, variables, classes and ids have been changed. However, much more needed to be done to implement moveable 
+    and resizeable functionality into my project, as well as to include the removable functionality. An added layer of complexity 
+    of the functionality being written for elements that don't yet exist in the DOM also had to be dealt with.
+
+    Further details of the bugs encountered in the project can be found in the Known Bugs Section of the [TESTING.md](/TESTING.md)
+
 ### Content 
 * All content is was created by the developer.
 
@@ -314,4 +320,5 @@ moving.
 
 ### Acknowledgements
 I would like to thank my mentor Gurjot Singh for his continuous support throughout the project.
+I would like to thank friend John Brett for his hands-off advice.
 I would like to thank the slack community for their assistance, particularly Daisy Mc Girr who was always willing to share her wisdom and advice.
