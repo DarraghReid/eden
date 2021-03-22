@@ -15,8 +15,6 @@ body {
     position: relative;
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(0, 105, 78)), color-stop(75%, rgb(68, 153, 94)));
-    background-image: -o-linear-gradient(top left, rgb(0, 105, 78), rgb(68, 153, 94) 75%);
     background-image: linear-gradient(to bottom right, rgb(0, 105, 78), rgb(68, 153, 94) 75%);
 }
 /*---------------------------------------------------header*/
@@ -30,7 +28,6 @@ header {
 .navbar {
     z-index: 10;
     width: 100vw;
-    position: -webkit-sticky;
     position: sticky;
 }
 
@@ -95,9 +92,7 @@ header {
     height: 100%;
     overflow: hidden;
     position: relative;
-    -webkit-transition-delay: 3s;
-         -o-transition-delay: 3s;
-            transition-delay: 3s;
+    transition-delay: 3s;
 }
 
 #grass img {
@@ -113,15 +108,9 @@ header {
     overflow: hidden;
     position: absolute;
     top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-transition-delay: 4s;
-         -o-transition-delay: 4s;
-            transition-delay: 4s;
+    justify-content: center;
+    transition-delay: 4s;
 }
 
 #soil {
@@ -134,9 +123,7 @@ header {
     top: 0;
     position: absolute;
     overflow: hidden;
-    -webkit-transition-delay: 4s;
-         -o-transition-delay: 4s;
-            transition-delay: 4s;
+    transition-delay: 4s;
 }
 
 #gravel img {
@@ -187,9 +174,7 @@ header {
     width: 50%;
     height: 150px;
     overflow: hidden;
-    -webkit-transition-delay: 6s;
-         -o-transition-delay: 6s;
-            transition-delay: 6s;
+    transition-delay: 6s;
 }
 
 #decking img {
@@ -214,9 +199,7 @@ header {
 .stone {
     width: 50px;
     position: absolute;
-    -webkit-transition-delay: 4.5s;
-         -o-transition-delay: 4.5s;
-            transition-delay: 4.5s;
+    transition-delay: 4.5s;
 }
 
 #stone-1 {
@@ -233,10 +216,12 @@ header {
     bottom: 200px;
     left: 25%;
 }
+
 #stone-4 {
     bottom: 300px;
     left: 15%;
 }
+
 #stone-5 {
     bottom: 400px;
     left: 6%;
@@ -258,9 +243,7 @@ header {
     position: absolute;
     top: 0;
     right: -80px;
-    -webkit-transition-delay: 6s;
-         -o-transition-delay: 6s;
-            transition-delay: 6s;
+    transition-delay: 6s;
 }
 
 #bush {
@@ -271,9 +254,7 @@ header {
 
 #bush img {
     width: 100%;
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 #tree {
@@ -282,9 +263,7 @@ header {
 
 #tree img {
     width: 100%;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 /*------------------------------------callout*/
@@ -303,30 +282,20 @@ header {
     text-shadow: 0 0 20px black;
     text-align: center;
     margin-bottom: 10vh;
-    -webkit-transition-duration: 1s;
-         -o-transition-duration: 1s;
-            transition-duration: 1s;
-    -webkit-transition-delay: 1s;
-         -o-transition-delay: 1s;
-            transition-delay: 1s;
+    transition-duration: 1s;
+    transition-delay: 1s;
 }
 #callout span {
     width: 100%;
     text-align: center;
     display: block;
-    -webkit-transition-duration: 1s;
-         -o-transition-duration: 1s;
-            transition-duration: 1s;
-    -webkit-transition-delay: 1s;
-         -o-transition-delay: 1s;
-            transition-delay: 1s;
+    transition-duration: 1s;
+    transition-delay: 1s;
 }
 
 #callout span a {
     text-decoration: none;
     color: white;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(0, 105, 78)), color-stop(75%, rgb(68, 153, 94)));
-    background-image: -o-linear-gradient(top left, rgb(0, 105, 78), rgb(68, 153, 94) 75%);
     background-image: linear-gradient(to bottom right, rgb(0, 105, 78), rgb(68, 153, 94) 75%);
     border: 1px solid white;
     border-radius: 23px;
@@ -334,8 +303,6 @@ header {
 }
 
 #callout span a:hover {
-    background-image: -webkit-gradient(linear, left top, right bottom, from(75%, rgb(68, 153, 94)), color-stop(rgb(0, 105, 78)));
-    background-image: -o-linear-gradient(top left, rgb(68, 153, 94), rgb(0, 105, 78) 75%);
     background-image: linear-gradient(to bottom right, rgb(68, 153, 94), rgb(0, 105, 78) 75%);
 }
 
@@ -354,93 +321,53 @@ header {
 * .swoop class is added to each home page element on page load by the swoopIn() function in index.js, and gradually positions elements within the viewport
 */
 .top {
-    -webkit-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-            transform: translateY(-100%);
-    -webkit-transition-duration: 700ms;
-         -o-transition-duration: 700ms;
-            transition-duration: 700ms;
-    -webkit-transition-timing-function: ease-out;
-         -o-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
+    transform: translateY(-100%);
+    transition-duration: 700ms;
+    transition-timing-function: ease-out;
 }
 
 .top.swoop {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
 }
 
 .bottom {
-    -webkit-transform: translateY(2000%);
-        -ms-transform: translateY(2000%);
-            transform: translateY(2000%);
-    -webkit-transition-duration: 1400ms;
-         -o-transition-duration: 1400ms;
-            transition-duration: 1400ms;
-    -webkit-transition-timing-function: ease-out;
-         -o-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
+    transform: translateY(2000%);
+    transition-duration: 1400ms;
+    transition-timing-function: ease-out;
 }
 
 .grassBottom {
-    -webkit-transform: translateY(100%);
-        -ms-transform: translateY(100%);
-            transform: translateY(100%);
-    -webkit-transition-duration: 800ms;
-         -o-transition-duration: 800ms;
-            transition-duration: 800ms;
-    -webkit-transition-timing-function: ease-out;
-         -o-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
+    transform: translateY(100%);
+    transition-duration: 800ms;
+    transition-timing-function: ease-out;
 }
 
 .bottom.swoop {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
 }
 
 .grassBottom.swoop {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
 }
 
 .left {
-    -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-            transform: translateX(-100%);
-    -webkit-transition-duration: 700ms;
-         -o-transition-duration: 700ms;
-            transition-duration: 700ms;
-    -webkit-transition-timing-function: ease-out;
-         -o-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
+    transform: translateX(-100%);
+    transition-duration: 700ms;
+    transition-timing-function: ease-out;
 }
 
 .left.swoop {
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
 }
 
 .right {
-    -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition-duration: 700ms;
-         -o-transition-duration: 700ms;
-            transition-duration: 700ms;
-    -webkit-transition-timing-function: ease-out;
-         -o-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
+    transform: translateX(100%);
+    transition-duration: 700ms;
+    transition-timing-function: ease-out;
 }
 
 .right.swoop {
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
 }
 
 /*---------------------------------------------------studio*/
@@ -481,15 +408,9 @@ header {
 #menu {
     width: 100%;
     height: 15vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     overflow-y: visible;
 }
 
@@ -497,12 +418,8 @@ header {
     height: 90%;
     overflow: auto;
     white-space: nowrap;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
 }
 
 /*---------------------menu-item-settings*/
@@ -513,12 +430,8 @@ header {
     max-height: 80px;
     margin: 3px;
     overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
 }
 
 .menu-item {
@@ -541,27 +454,19 @@ header {
 
 /*---------------------individual-menu-item-settings*/
 #menu-bush-1 img {
-    -webkit-transform: translate(-50%, -13%);
-        -ms-transform: translate(-50%, -13%);
-            transform: translate(-50%, -13%);
+    transform: translate(-50%, -13%);
 }
 
 #menu-bush-2 img {
-    -webkit-transform: translate(-50%, -20%);
-        -ms-transform: translate(-50%, -20%);
-            transform: translate(-50%, -20%);
+    transform: translate(-50%, -20%);
 }
 
 #menu-flower-1 img {
-    -webkit-transform: translate(-30%, -20%);
-        -ms-transform: translate(-30%, -20%);
-            transform: translate(-30%, -20%);
+    transform: translate(-30%, -20%);
 }
 
 #menu-flower-2 img, #menu-flower-3 img {
-    -webkit-transform: translate(-25%, -20%);
-        -ms-transform: translate(-25%, -20%);
-            transform: translate(-25%, -20%);
+    transform: translate(-25%, -20%);
 }
 
 #menu-grass img {
@@ -578,23 +483,17 @@ header {
 
 #menu-plant-1 img {
     width: 200%;
-    -webkit-transform: translate(-25%, -27%);
-        -ms-transform: translate(-25%, -27%);
-            transform: translate(-25%, -27%);
+    transform: translate(-25%, -27%);
 }
 
 #menu-plant-2 img {
     width: 200%;
-    -webkit-transform: translate(-25%, -17%);
-        -ms-transform: translate(-25%, -17%);
-            transform: translate(-25%, -17%);
+    transform: translate(-25%, -17%);
 }
 
 #menu-tree-1 img, #menu-tree-2 img {
     width: 200%;
-    -webkit-transform: translate(-30%, -29%);
-        -ms-transform: translate(-30%, -29%);
-            transform: translate(-30%, -29%);
+    transform: translate(-30%, -29%);
 }
 
 /*---------------------hover-settings*/
@@ -602,9 +501,7 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -40%);
-        -ms-transform: translate(-50%, -40%);
-            transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
     color: white;
     font-size: 10px;
     display: none;
@@ -615,8 +512,6 @@ header {
     height: 100%;
     position: absolute;
     top: 0;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 105, 78, .5)), color-stop(75%, rgba(68, 153, 94, .5)));
-    background-image: -o-linear-gradient(top left, rgba(0, 105, 78, .5), rgba(68, 153, 94, .5) 75%);
     background-image: linear-gradient(to bottom right, rgba(0, 105, 78, .5), rgba(68, 153, 94, .5) 75%);
     display: none;
 }
@@ -705,9 +600,7 @@ header {
 .remove {
     top: -5px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     width: 16px;
     padding: 0;
     margin: 0;
