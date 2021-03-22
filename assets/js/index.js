@@ -85,6 +85,7 @@ function insertImg(e) {
         canvas.appendChild(imgContainer);
 
 // Call move() and resize() functions for JS to run on new elements
+// Credit: moveable and resizable functionality inpired by YouTuber Jonas Grøndahl, YouTuber Fl05k8r, and Stack Overflow member Jor. See Credits section in README.md for further details.
         move();
         resize();
     }
@@ -197,41 +198,41 @@ function resize() {
 
 // Set size of img to increase with respect to cursor position
                 function onStartResize(e) {
-                    const rect = img.getBoundingClientRect();
+                    const rectV = img.getBoundingClientRect();
                     if(e.type == "mousemove") {
                         if(currentMover.classList.contains("br")) {
-                            img.style.width = rect.width - (posX - e.clientX) + "px";
-                            img.style.height = rect.height - (posY - e.clientY) + "px";
+                            img.style.width = rectV.width - (posX - e.clientX) + "px";
+                            img.style.height = rectV.height - (posY - e.clientY) + "px";
                         }
                         else if(currentMover.classList.contains("bl")) {
-                            img.style.width = rect.width + (posX - e.clientX) + "px";
-                            img.style.height = rect.height - (posY - e.clientY) + "px";
+                            img.style.width = rectV.width + (posX - e.clientX) + "px";
+                            img.style.height = rectV.height - (posY - e.clientY) + "px";
                         }
                         else if(currentMover.classList.contains("tr")) {
-                            img.style.width = rect.width - (posX - e.clientX) + "px";
-                            img.style.height = rect.height + (posY - e.clientY) + "px";
+                            img.style.width = rectV.width - (posX - e.clientX) + "px";
+                            img.style.height = rectV.height + (posY - e.clientY) + "px";
                         }
                         else {
-                            img.style.width = rect.width + (posX - e.clientX) + "px";
-                            img.style.height = rect.height + (posY - e.clientY) + "px";
+                            img.style.width = rectV.width + (posX - e.clientX) + "px";
+                            img.style.height = rectV.height + (posY - e.clientY) + "px";
                         }
                     }
                     else if(e.type == "touchmove") {
                         if(currentMover.classList.contains("br")) {
-                            img.style.width = rect.width - (psX - e.targetTouches[0].clientX) + "px";
-                            img.style.height = rect.height - (psY - e.targetTouches[0].clientY) + "px";
+                            img.style.width = rectV.width - (psX - e.targetTouches[0].clientX) + "px";
+                            img.style.height = rectV.height - (psY - e.targetTouches[0].clientY) + "px";
                         }
                         else if(currentMover.classList.contains("bl")) {
-                            img.style.width = rect.width + (psX - e.targetTouches[0].clientX) + "px";
-                            img.style.height = rect.height - (psY - e.targetTouches[0].clientY) + "px";
+                            img.style.width = rectV.width + (psX - e.targetTouches[0].clientX) + "px";
+                            img.style.height = rectV.height - (psY - e.targetTouches[0].clientY) + "px";
                         }
                         else if(currentMover.classList.contains("tr")) {
-                            img.style.width = rect.width - (psX - e.targetTouches[0].clientX) + "px";
-                            img.style.height = rect.height + (psY - e.targetTouches[0].clientY) + "px";
+                            img.style.width = rectV.width - (psX - e.targetTouches[0].clientX) + "px";
+                            img.style.height = rectV.height + (psY - e.targetTouches[0].clientY) + "px";
                         }
                         else {
-                            img.style.width = rect.width + (psX - e.targetTouches[0].clientX) + "px";
-                            img.style.height = rect.height + (psY - e.targetTouches[0].clientY) + "px";
+                            img.style.width = rectV.width + (psX - e.targetTouches[0].clientX) + "px";
+                            img.style.height = rectV.height + (psY - e.targetTouches[0].clientY) + "px";
                         }
                     }
                     posX = e.clientX;

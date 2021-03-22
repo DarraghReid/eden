@@ -1,6 +1,6 @@
 # Eden
 
-![DaRa Website](assets/images/amiresponsive1.png)
+![DaRa Website](assets/images/readme-imgs/amiresponsive1.png)
 
 View the live project [here](https://darraghreid.github.io/eden/)
 
@@ -49,7 +49,7 @@ This makes it so each section is never more than a click away and results in fas
 
         I chose the colour palette using [coolers.co](https://coolors.co/)
 
-    ![colour palette](assets/images/coolers.png)
+    ![colour palette](assets/images/readme-imgs/coolers.png)
 
 * Typeography
     * The fonts used throughout the site are Roboto and Great Vibes.
@@ -94,13 +94,13 @@ This makes it so each section is never more than a click away and results in fas
 
 ## Wireframes
 * Wireframe of Home Page
-![Wireframe of Home Page](assets/images/wireframe-home-page.png)
+![Wireframe of Home Page](assets/images/readme-imgs/wireframe-home-page.png)
 
 * Wireframe of Studio
-![Wireframe of Studio](assets/images/wireframe-studio.png)
+![Wireframe of Studio](assets/images/readme-imgs/wireframe-studio.png)
 
 * Wireframe of Tutorial Section (Not included in final product)
-![Wireframe of Studio](assets/images/wireframe-tutorial.png)
+![Wireframe of Studio](assets/images/readme-imgs/wireframe-tutorial.png)
 
 ### Difference between wireframes and final product
 * The most obvious differnce between the wireframes and the final product is that the Tutorial section in the final product.
@@ -144,8 +144,9 @@ The Home Page is where the user is introduced to the site an takes up 100vh.
         The garden scene is also responsive. The images change change in size and position depending on the screen size. On particularly
         small screens, the tree is replaced with a bush.
 
-        NOTE: Each image in the garden scene has a different CSS transition period. Therefore, when resizing in Dev Tools,
-        allow a few seconds for each image to transition to its appropriate size and position.
+        NOTE: 
+            * Each image in the garden scene has a different CSS transition period. Therefore, when resizing in Dev Tools,
+            allow a few seconds for each image to transition to its appropriate size and position.
 
     * The callout, which along with the call-to-action button, is brought on screen by the transition mentioned above, 
     provides further affirmation as to the purpose of the site.
@@ -231,59 +232,86 @@ prefixes to make it more compatible with various browsers and devices. It was al
 as you will see in the [testing](#Testing) section, it caused errors when put through the W3C CSS Validator. For these reasons,
 the prefixes were removed.
 
-
 ## Testing
-The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Services](https://jigsaw.w3.org/css-validator/) 
-were used to validate this project's code and to make sure there were no syntax errors in the project.
+Information on testing can be found in a separate [TESTING.md]() file
 
-### W3C Markup Validator 
+## Deployment
 
-Two warnings arose from the W3C validator:
+### Project Creation
+This project was created by using the following steps:
 
-* Starting with the second warning; it stated that the section element with the id "home-screen" lacked a heading. 
-It doesn't seem to recognise that the h1 callout is the heading for this section. This may be beacause I opted to 
-implement the background garden images before I wrote and positioned the callout in the foreground.
+1. Log in to GitHub.
+2. In the Repositories section, click the green "New" button.
+3. Under "Repository template", select "Code-Institute-Org/gitpod-full-template".
+4. Enter repository name (dara-MS1).
+5. Click "Create repository".
+6. When re-directed, select the green "Gitpod" button. 
 
-* Relating to the second warning, the first warning suggested that the callout was not an appropriate use of a h1 tag.
-However, this is the most important, indeed, the only, heading on the Home Page.
+### GitHub Pages
+This project was deployed to GitHub Pages using the following steps:
 
-![W3C Markup Validator](assets/images/html-val.png)
+1. Log in to GitHub.
+2. Select repository.
+3. Navigate to and click the "Settings" button.
+4. When re-directed, scroll down to the "GitHub Pages" section.
+5. Under "Source", click the dropdown named "None" and select "Master Branch".
+6. Click the "Save" button.
+7. Upon page refresh, scroll down and locate the link to the live deployed page.
 
-I figured the issue lay in the fact that I had enclosed the callout in article tags. 
+### Forking the GitHub Repository
 
-![Callout with articl tags](assets/images/callout.png)
+Forking the GitHub repository allows us to make a copy of our original repository where changes can be made without affect the original copy.
+To do this, follow these steps:
 
-I changed the article tags to div tags ran the site through the validator again. It passed without issue.
+1. Log in to GitHub.
+2. Select your repository.
+3. Locate and click the "Fork" in the top right corner, under the nav bar.
+4. A copy of the original repository should have been created in your GitHub account.
 
-![W3C Markup Validator](assets/images/html-val-1.png)
 
-### W3C CSS Validator 
+### Run Locally
 
-Intially, I put the site URI through the W3C CSS Validator. This flagged 18 errors and hundreds of warnings.
-Most of these were related to the URI "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css".
-However, some were related to the prefixes added by Autoprefixer. 
+1. Log in to GitHub.
+2. Locate repository.
+3. Locate and click the "Code" dropdown menu.
+4. Under HTTPS, copy the URL.
+5. Open your development editor and a terminal window in your chosen directory.
+6. In the terminal, type "git clone " followed by the URL you copied in step 4 and press enter.
+7. A clone of the project should have been created.
 
-![W3C Markup Validator](assets/images/css-val.png)
+## Credits
 
-![W3C Markup Validator](assets/images/css-val-1.png)
+### Code 
+* As discussed in the [Features Section](#Features), the scrollable menu in the Studio section was ispired by a 
+[w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable menu, and was heavily edited.
 
-I removed the prefixes added by Autoprefixer, and this 
-time I directly input my CSS code into the validator. It passed without issue.
+* I would also like to credit YouTuber [Jonas Grøndahl](https://www.youtube.com/channel/UCVrchtz0z4it4JZjIS1D03A) whose 
+videos on creating moveable and resizeable divs I watched. As is evident from seeing his code and my code, my code is vastly 
+different to Jonas'. 
 
-![W3C Markup Validator](assets/images/css-val-2.png)
+    This is partly because of the complexity of my project as opposed to his tutorial. Of course, all functions, variable, 
+    classes and ids have been changed. However, much more needed to be done to implement moveable and resizeable functionality 
+    into my project. 
+    
+    Much effort and extra code was put into my project to compensate for multiple moveable and draggable divs, and also to 
+    accommodate for touch screens. Extra functionality was also written in my code to accommodate the removable functionaltiy. 
+    In oder for all of this functionality to work in my project, the move() and resize() functions had to be called inside the 
+    insertImg() function so the code could be run on the new elements being inserted into the DOM.
 
-### JSHint
+    Jonas' videos can be viewed here:
+    * https://www.youtube.com/watch?v=NyZSIhzz5Do
+    * https://www.youtube.com/watch?v=4qyuNBlc8ho
 
-The JSHint tool flagged 42 warnings which were mostly related to the ES6 syntax I used to write my JavaScript code.
-This included my use of arrow functions as well as 'let' and 'const' variable names.
+* A YouTube account by the name of [Fl05k8r](https://www.youtube.com/channel/UCQlg1ZNEkVGZ8aUB4gcu-Sg) made a comment on Jonas' 
+[part 1](https://www.youtube.com/watch?v=NyZSIhzz5Do) video which added to my understanding of targeting multiple elements for 
+moving.
 
-There were two warnings related to unnecessary semicolons, and two warnings to missing semi-colons. Once, the semi-colon 
-issues were addressed, there were 38 warning remaining which all related to ES6 syntax.
+### Content 
+* All content is was created by the developer.
 
-![W3C Markup Validator](assets/images/jshint.png)
+### Media
+* All videos and images were created by the developer.
 
-![W3C Markup Validator](assets/images/jshint-1.png)
-
-![W3C Markup Validator](assets/images/jshint-2.png)
-
-### Testing User Stories from User Experience (UX) Section
+### Acknowledgements
+I would like to thank my mentor Gurjot Singh for his continuous support throughout the project.
+I would like to thank the slack community for their assistance, particularly Daisy Mc Girr who was always willing to share her wisdom and advice.
