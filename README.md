@@ -47,15 +47,22 @@ This makes it so each section is never more than a click away and results in fas
     represented the garden design ethos of the site well, while the white offered a good contrast to the text. I also found that the light grey 
     provided a sufficient dulling effect to the clickable text while hovered over.
 
+        I chose the colour palette using [coolers.co](https://coolors.co/)
+
+    ![colour palette](assets/images/coolers.png)
+
 * Typeography
     * The fonts used throughout the site are Roboto and Great Vibes.
     Great Vibes is a cursive font and gives an elegent appearance to the logo.
     Roboto is used in all other instances and works well with the font of the logo.
 
+        The fonts were chosen from [Google Fonts](https://fonts.google.com/)
+
 * Imagery
     * All images were sourced from websites which provide images for free.
-    These websites are listed below along with the images that were sourced from them:
-        * https://www.pngjoy.com/
+    These websites are listed below along with the images that were sourced from them 
+    as well as photgrapher details (where applicable):
+        * [pngjoy.com](https://www.pngjoy.com/)
             * https://www.pngjoy.com/preview/w3z5l3p1l6j9b4_palm-palm-tree-top-view-png-hd-png/ (photographer unnamed)
             * https://www.pngjoy.com/preview/u9f1d4c1b0f6v1_hanging-plants-scientific-names-of-plants-animals-and/ (photographer unnamed)
             * https://www.pngjoy.com/preview/u5r5n3a6e7k8f7_white-rose-white-and-yellow-roses-png-transparent/ (photographer unnamed)
@@ -66,12 +73,12 @@ This makes it so each section is never more than a click away and results in fas
             * https://www.pngjoy.com/preview/m5y3d1u8d3q6r2_bush-bushes-png-png-download/ (photographer unnamed)
             * https://www.pngjoy.com/preview/f3t5j5r2f9h7g0_tree-plan-fruit-tree-top-view-png-png/ (photographer unnamed)
             
-        * https://www.freeimages.com/
+        * [freeimages.com](https://www.freeimages.com/)
             * https://www.freeimages.com/photo/grass-1508240 (photographer: Philipp Pilz)
             * https://www.freeimages.com/photo/fresh-soil-1468423 (photographer: Mike Berg)
             * https://www.freeimages.com/photo/old-wood-texture-1154441 (photographer: Petr Kovar)
             
-        * https://pixabay.com/
+        * [pixaboy.com](https://pixabay.com/)
             * https://pixabay.com/photos/pebbles-decking-texture-model-3212192/ (photographer: _Alicja_)
             * https://pixabay.com/photos/flower-tropical-bougainvillea-3271195/ (photographer: Buntysmum)
     
@@ -151,18 +158,18 @@ The Studio section is where users can design their gardens. It takes up 90vh, wi
     * Beneath the header is a visually appealing, scrollable, image-based menu comprised of images of each of the garden elements
     available for the user to experiment with.
 
-    This menu was designed to be intuitive for the user. The user should immediately understand that these images are clickable.
-    Once clicked, the image displayed on that menu item should appear on the canvas below, ready to be manipulated.
+        This menu was designed to be intuitive for the user. The user should immediately understand that these images are clickable.
+        Once clicked, the image displayed on that menu item should appear on the canvas below, ready to be manipulated.
 
-    The menu is resonsive. On larger screens the menu items are centered within the menu section. On smaller screens, it is 
-    laterally scrollable.
+        The menu is resonsive. On larger screens the menu items are centered within the menu section. On smaller screens, it is 
+        laterally scrollable.
 
-    This menu was inpired by a [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable
-    menu, which underwent a good deal of editing due to significant differences in the site menu and the w3School example.
+        This menu was inpired by a [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable
+        menu, which underwent a good deal of editing due to significant differences in the site menu and the w3School example.
 
-    Aside from all classes and ids being renamed, there are major structural differences. For example, the w3schools example is simply
-    a list of anchor tags. Each menu item in the Studio section of Eden is comprised of four different elements including a two divs,
-    and anchor tag, an image, and a paragraph tag. This required significantly more editing in style.css.
+        Aside from all classes and ids being renamed, there are major structural differences. For example, the w3schools example is simply
+        a list of anchor tags. Each menu item in the Studio section of Eden is comprised of four different elements including a two divs,
+        and anchor tag, an image, and a paragraph tag. This required significantly more editing in style.css.
 
     * The canvas section of the Studio is where users can manipulate the various garden elements that they have selected from the 
     menu above. Each element that appears on the canvas is removable, moveable, and resizable. This allows the user to be 
@@ -180,3 +187,76 @@ that could be implemented in future versions of the site came to mind throughout
     * The ability of the user to crop images.
     * The ability of the user to increase or decrease the z-index of the elements.
     * The ability of the user to save their work. This could possibly involve the creation of an account.
+    * The ability of the user to shape their garden to suit their preference.
+
+
+## Technologies Used 
+
+### Languages Used 
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries & Programs Used
+* [Balsamiq](https://balsamiq.com/)
+    * Balsamiq was used to make the wireframes for the project
+
+* [Bootstrap 5.0.0](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+    * Bootstrap was used in conjunction with [jQuery](https://jquery.com/) on the Navbar to make it responsive and to collapse the menu items into a single button at smaller screen sizes.  
+
+* [Font Awesome](https://fontawesome.com/)
+    * As mentioned in the [features](#features) section, the dropdown menu button in the navbar is represented by a fontawesome icon.
+    There is also a fontawesome icon used in the "back to top" link in the footer.
+    
+* [Git](https://git-scm.com/)
+    * The Gitpod terminal was used to commit to Git and push to Github.
+
+* [GitHub](https://github.com/)
+    * Github was used to store the code from the project.
+
+* [Google Fonts](https://fonts.google.com/)
+    * The two fonts used in the project (Roboto and Great Vibes) were imported from Google Fonts.
+
+* [jQuery](https://jquery.com/)
+    * jQuery was used in conjuction with Boostrap on the Navbar.
+
+### Other Technologies
+* [babel](https://babeljs.io/) compiler was used while trouble-shooting a bug where the site functionality wouldn't work on
+Apple devices. I used babel to convert my JavaScript code ES5. This was unsuccessful in solving the issue, and the ES5 code 
+was ultimately removed.
+
+* [Autoprefixer](http://autoprefixer.github.io/) was used for the same reason as babel. I used Autoprefixer to add vendor 
+prefixes to make it more compatible with various browsers and devices. It was also unsuccessful in addressingthe bug. However, 
+I opted to keep the prefixes as I felt they would be beneficial to the site.
+
+
+## Testing
+The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Services](https://jigsaw.w3.org/css-validator/) 
+were used to validate this project's code and to make sure there were no syntax errors in the project.
+
+W3C Markup Validator 
+
+![W3C Markup Validator](assets/images/html-val.png)
+
+Two warnings arose from the W3C validator:
+
+* Starting with the second warning; it stated that the <section> element with the id "home-screen" lacked a heading. 
+It doesn't seem to recognise that the <h1> callout is the heading for this section. This may be beacause I opted to 
+implement the background garden images before I wrote and positioned the callout in the foreground.
+
+* Relating to the second warning, the first warning suggested that the callout was not an appropriate use of a <h1> tag.
+However, this is the most important, indeed, the only, heading on the Home Page.
+
+I figured the issue lay in the fact that I had enclosed the callout in <article> tags. 
+
+![Callout with <articl> tags](assets/images/callout.png)
+
+I changed the <article> tags to <div> tags ran the site through the validator again. It passed with no issues.
+
+![W3C Markup Validator](assets/images/html-val-1.png)
+
+W3C CSS Validator 
+
+![W3C Markup Validator](assets/images/css-val.png)
+
+### Testing User Stories from User Experience (UX) Section
