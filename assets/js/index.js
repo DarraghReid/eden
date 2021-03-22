@@ -22,7 +22,7 @@ function onLoadHome(){
 // The .swoop class positions elements on screen
     function swoopIn(item) {
         item.classList.add("swoop");
-    };
+    }
 }
 /*------------------------------------------------------------------------------------------------studio*/
 
@@ -88,7 +88,7 @@ function insertImg(e) {
         move();
         resize();
     }
-};
+}
 
 /*-----------------------------moveable elements*/
 
@@ -247,6 +247,6 @@ function resize() {
                     window.removeEventListener("touchend", onStopResize);
                 }
             }
-        })
-    })
+        });
+    });
 }

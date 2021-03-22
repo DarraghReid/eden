@@ -107,19 +107,19 @@ This makes it so each section is never more than a click away and results in fas
 I had originally planned to record a tutorial of how to use the software. Upon completion of the software, however, I found that
 it was intuitive enough that a tutorial was not required. 
 
-I feel a tutorial section would have been of no benefit to the product and would not have contributed to the requirements set out 
-in the Assessment Handbook.
+    I felt a tutorial section would have been of no benefit to the product and would not have contributed to the requirements set out 
+    in the Assessment Handbook.
 
-This ommision had a minor impact on the Home Page where the "Watch Tutorial" call-to-action button and the "Tutorial" link 
-in the navbar are not present in the final product.
+    This ommision had a minor impact on the Home Page where the "Watch Tutorial" call-to-action button and the "Tutorial" link 
+    in the navbar are not present in the final product.
 
 * Another difference between the wireframe and the final product is the menu in the Studio section. The wireframe displays a 
 text-based menu where each menu item would have a drop down menu of related images of garden elements.
 
-I felt it was more intuitive to lead with images rather than text. I felt that this is more in line with modern design software
-such as Balsamiq, for example.
+    I felt it was more intuitive to lead with images rather than text. I felt that this is more in line with modern design software
+    such as Balsamiq, for example.
 
-The text is only present when the user hovers over the image-based menu item.
+    The text is only present when the user hovers over the image-based menu item.
 
 * Finally, I chose to omit the social links from the footer as they would have served no purpose to the site and would not have 
 contributed to the requirements set out in the Assessment Handbook.
@@ -131,21 +131,21 @@ The Home Page is where the user is introduced to the site an takes up 100vh.
     These links collapse into a dropdown button on smaller screens. The button that is seen on smaller screens is represented 
     by a fontawesome icon, as the original button was having trouble displaying.
 
-    These links, along with all clickable links throughout the site, highlight upon hover.
+        These links, along with all clickable links throughout the site, highlight upon hover.
 
     * The main feature of the Home Page is the background image of a garden that gradually builds itself on page load.
     The scene is comprised of multiple good resolution images. Therefore, when the site is first loaded (without cache),
     the images may not have fully loaded by the time they are brought onto the screen. However, this transition effect is 
     seemless upon further reloads.
 
-    The self-building image of a garden was designed with user intuition in mind. The user should immediately understand the 
-    purpose of the site upon seeing it. It is designed to be an exciting introduction to the Eden site.
+        The self-building image of a garden was designed with user intuition in mind. The user should immediately understand the 
+        purpose of the site upon seeing it. It is designed to be an exciting introduction to the Eden site.
 
-    The garden scene is also responsive. The images change change in size and position depending on the screen size. On particularly
-    small screens, the tree is replaced with a bush.
+        The garden scene is also responsive. The images change change in size and position depending on the screen size. On particularly
+        small screens, the tree is replaced with a bush.
 
-    NOTE: Each image in the garden scene has a different CSS transition period. Therefore, when resizing in Dev Tools,
-    allow a few seconds for each image to transition to its appropriate size and position.
+        NOTE: Each image in the garden scene has a different CSS transition period. Therefore, when resizing in Dev Tools,
+        allow a few seconds for each image to transition to its appropriate size and position.
 
     * The callout, which along with the call-to-action button, is brought on screen by the transition mentioned above, 
     provides further affirmation as to the purpose of the site.
@@ -182,6 +182,7 @@ arrow icon. These links are located and the left and right of the footer, respec
 ### Potential Future Features
 Although the initial goal of creating a platform on which users can create rough garden designs has been achieved, a few possible additional features 
 that could be implemented in future versions of the site came to mind throughout the creation process. These include:
+
     * A larger selection of garden elements. These would, of course, be subject to the site owners preferences.
     * The ability of the user to rotate images. This would be useful for rectangular elements, such as bushes.
     * The ability of the user to crop images.
@@ -226,37 +227,63 @@ Apple devices. I used babel to convert my JavaScript code ES5. This was unsucces
 was ultimately removed.
 
 * [Autoprefixer](http://autoprefixer.github.io/) was used for the same reason as babel. I used Autoprefixer to add vendor 
-prefixes to make it more compatible with various browsers and devices. It was also unsuccessful in addressingthe bug. However, 
-I opted to keep the prefixes as I felt they would be beneficial to the site.
+prefixes to make it more compatible with various browsers and devices. It was also unsuccessful in addressing the bug. As well as this, 
+as you will see in the [testing](#Testing) section, it caused errors when put through the W3C CSS Validator. For these reasons,
+the prefixes were removed.
 
 
 ## Testing
 The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator Services](https://jigsaw.w3.org/css-validator/) 
 were used to validate this project's code and to make sure there were no syntax errors in the project.
 
-W3C Markup Validator 
-
-![W3C Markup Validator](assets/images/html-val.png)
+### W3C Markup Validator 
 
 Two warnings arose from the W3C validator:
 
-* Starting with the second warning; it stated that the <section> element with the id "home-screen" lacked a heading. 
-It doesn't seem to recognise that the <h1> callout is the heading for this section. This may be beacause I opted to 
+* Starting with the second warning; it stated that the section element with the id "home-screen" lacked a heading. 
+It doesn't seem to recognise that the h1 callout is the heading for this section. This may be beacause I opted to 
 implement the background garden images before I wrote and positioned the callout in the foreground.
 
-* Relating to the second warning, the first warning suggested that the callout was not an appropriate use of a <h1> tag.
+* Relating to the second warning, the first warning suggested that the callout was not an appropriate use of a h1 tag.
 However, this is the most important, indeed, the only, heading on the Home Page.
 
-I figured the issue lay in the fact that I had enclosed the callout in <article> tags. 
+![W3C Markup Validator](assets/images/html-val.png)
 
-![Callout with <articl> tags](assets/images/callout.png)
+I figured the issue lay in the fact that I had enclosed the callout in article tags. 
 
-I changed the <article> tags to <div> tags ran the site through the validator again. It passed with no issues.
+![Callout with articl tags](assets/images/callout.png)
+
+I changed the article tags to div tags ran the site through the validator again. It passed without issue.
 
 ![W3C Markup Validator](assets/images/html-val-1.png)
 
-W3C CSS Validator 
+### W3C CSS Validator 
+
+Intially, I put the site URI through the W3C CSS Validator. This flagged 18 errors and hundreds of warnings.
+Most of these were related to the URI "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css".
+However, some were related to the prefixes added by Autoprefixer. 
 
 ![W3C Markup Validator](assets/images/css-val.png)
+
+![W3C Markup Validator](assets/images/css-val-1.png)
+
+I removed the prefixes added by Autoprefixer, and this 
+time I directly input my CSS code into the validator. It passed without issue.
+
+![W3C Markup Validator](assets/images/css-val-2.png)
+
+### JSHint
+
+The JSHint tool flagged 42 warnings which were mostly related to the ES6 syntax I used to write my JavaScript code.
+This included my use of arrow functions as well as 'let' and 'const' variable names.
+
+There were two warnings related to unnecessary semicolons, and two warnings to missing semi-colons. Once, the semi-colon 
+issues were addressed, there were 38 warning remaining which all related to ES6 syntax.
+
+![W3C Markup Validator](assets/images/jshint.png)
+
+![W3C Markup Validator](assets/images/jshint-1.png)
+
+![W3C Markup Validator](assets/images/jshint-2.png)
 
 ### Testing User Stories from User Experience (UX) Section
