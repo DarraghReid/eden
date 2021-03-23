@@ -1,10 +1,38 @@
 # Testing
+
+## Contents
+* [Validation](#validation)
+    * [W3C Markup Validator](#W3C-Markup-Validator)
+    * [W3C CSS Validator Services](#W3C-CSS-Validator-Services)
+    * [JSHint](#JSHint)
+    * [Lighthouse](#lighthouse)
+
+* [Testing User Stories](#Testing-User-Stories)
+    * [First Time User Goals](#First-Time-User-Goals)
+    * [Returning User Goals](#Returning-User-Goals)
+    * [Site Owner Goals](#Site-Owner-Goals)
+
+* [Testing Features](#Testing-Features)
+    * [Navigation](#Navigation)
+    * [Home Page Functionality](#Home-Page-Functionality)
+    * [Hover Effects](#Hover-Effects)
+    * [Click and Appear Functionality](#Click-and-Appear-Functionality)
+    * [Removable Functionality](#Removable-Functionality)
+    * [Moveable Functionality](#Moveable-Functionality)
+    * [Resizable Functionality](#Resizable-Functionality)
+
+* [Site Responsiveness](#Site-Responsiveness)
+* [User Testing](#User-Testing)
+* [Known Bugs and Issues Section](#known-bugs-and-issues)
+
+## Validation
+
 The [W3C Markup Validator](https://validator.w3.org/), the [W3C CSS Validator Services](https://jigsaw.w3.org/css-validator/) 
 and [JSHint](https://jshint.com/) were used to validate this project's code and to make sure there were no syntax errors in the project.
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the site's performance.
 
-## [W3C Markup Validator](https://validator.w3.org/)  
+### W3C Markup Validator  
 
 Two warnings arose from the W3C validator:
 
@@ -22,7 +50,7 @@ I changed the article tags to div tags and ran the site through the validator ag
 
 ![W3C Markup Validator](assets/images/testing-imgs/html-val-1.png)
 
-## [W3C CSS Validator Services](https://jigsaw.w3.org/css-validator/)
+### W3C CSS Validator Services
 
 Initially, I put the site URI through the W3C CSS Validator. This flagged 18 errors and hundreds of warnings.
 Most of these were related to the URI "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css".
@@ -37,7 +65,7 @@ time I directly input my CSS code into the validator. It passed without issue.
 
 ![W3C Markup Validator](assets/images/testing-imgs/css-val-2.png)
 
-## JSHint
+### JSHint
 
 The JSHint tool flagged 42 warnings which were mostly related to the ES6 syntax I used to write my JavaScript code.
 This included my use of arrow functions as well as 'let' and 'const' variable names.
@@ -51,7 +79,7 @@ issues were addressed, there were 38 warning remaining which all related to ES6 
 
 ![W3C Markup Validator](assets/images/testing-imgs/jshint-2.png)
 
-## [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+### Lighthouse
 The results from Lighthouse were generally good. As expected points were lost on the performance metrics due to the size 
 of the images and the time it takes to fully load the site.
 
@@ -68,8 +96,8 @@ More details about the Lighthouse report can be seen below:
 
 ![W3C Markup Validator](assets/images/testing-imgs/lighthouse-3.png)
 
-## Testing User Stories from User Experience (UX) Section
-* First Time User Goals
+## Testing User Stories
+### First Time User Goals
     1. As a first time user, I want to immediately understand the purpose of the site.
         * Upon page load, a garden scene builds itself in front of the user. A prominent heading concisely explains the purpose of the site. A call-to-action button displaying "Design Your Eden" leads the user directly to the Studio where they can begin designing.
     ![First Time User Goals 1](assets/images/testing-imgs/user-stories-2.png)
@@ -101,14 +129,14 @@ More details about the Lighthouse report can be seen below:
     6. As a first time user, I want to have the choice of adding and removing different garden elements from my design.
         * The user can add and remove as many garden elements as they like.
 
-* Returning User Goals
+### Returning User Goals
     1. As a returning user, I want to be immediately familiar with the layout of the site.
         * The simple, minimal design is easy to become familiar with.
 
     2. As a returning user, I want to be able to make new designs.
         * Each user can start afresh building new and creative designs.
 
-* Site Owner Goals
+### Site Owner Goals
     1. As the site owner, I want to be able to design gardens in real time for potential customers.
         * The studio provides immediate feedback to user input. Designs can be made quickly and easily.
     ![Instant Feedback](assets/images/testing-imgs/feedback.png)
@@ -154,7 +182,7 @@ More details about the Lighthouse report can be seen below:
 
     The above test resulted in a pass.
 
-### Hover/tap Effects
+### Hover Effects
 
 ![Logo](assets/images/testing-imgs/feat-logo-1.png)
 
@@ -183,7 +211,7 @@ More details about the Lighthouse report can be seen below:
 
     Each of the above tests resulted in a pass.
 
-### Click-and-Appear Functionality
+### Click and Appear Functionality
 
 ![Click-and-Appear](assets/images/testing-imgs/click-appear.png)
 
