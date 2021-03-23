@@ -87,7 +87,7 @@ This makes it so each section is never more than a click away and results in fas
         * gravel-4.png was edited from https://pixabay.com/photos/pebbles-decking-texture-model-3212192/ (photographer: _Alicja_)
         * soil-1.png was edited from https://www.freeimages.com/photo/fresh-soil-1468423 (photographer: Mike Berg)
 
-    These images were edited by cutting and pasting different parts of the images to create a larger image using [Google Slides](https://www.google.com/slides/about/)
+        These images were edited by cutting and pasting different parts of the images to create a larger image using [Google Slides](https://www.google.com/slides/about/)
     
     * It was important to find png images without any backgrounds in order for users to seemlessly place images on top of one another
     to give the impression that the garden elements are real.
@@ -125,69 +125,50 @@ text-based menu where each menu item would have a drop down menu of related imag
 contributed to the requirements set out in the Assessment Handbook.
 
 ## Features
-* Home Page
+#### Home Page
 
 The Home Page is where the user is introduced to the site an takes up 100vh.
-    * The Home Page includes a responsive Bootstrap navbar disaplying the logo as well as links to the two sections of the site.
-    These links collapse into a dropdown button on smaller screens. The button that is seen on smaller screens is represented 
-    by a fontawesome icon, as the original button was having trouble displaying.
+* The Home Page includes a responsive Bootstrap navbar disaplying the logo as well as links to the two sections of the site. These links collapse into a dropdown button on smaller screens. The button that is seen on smaller screens is represented by a fontawesome icon, as the original button was having trouble displaying.
 
-        These links, along with all clickable links throughout the site, highlight upon hover.
+    These links, along with all clickable links throughout the site, highlight upon hover.
 
-    * The main feature of the Home Page is the background image of a garden that gradually builds itself on page load.
-    The scene is comprised of multiple good resolution images. Therefore, when the site is first loaded (without cache),
-    the images may not have fully loaded by the time they are brought onto the screen. However, this transition effect is 
-    seemless upon further reloads.
+* The main feature of the Home Page is the background image of a garden that gradually builds itself on page load. The scene is comprised of multiple good resolution images. Therefore, when the site is first loaded (without cache), the images may not have fully loaded by the time they are brought onto the screen. However, this transition effect is seemless upon further reloads.
 
-        The self-building image of a garden was designed with user intuition in mind. The user should immediately understand the 
-        purpose of the site upon seeing it. It is designed to be an exciting introduction to the Eden site.
+    The self-building image of a garden was designed with user intuition in mind. The user should immediately understand the purpose of the site upon seeing it. It is designed to be an exciting introduction to the Eden site.
 
-        The garden scene is also responsive. The images change change in size and position depending on the screen size. On particularly
-        small screens, the tree is replaced with a bush.
+    The garden scene is also responsive. The images change change in size and position depending on the screen size. On particularlysmall screens, the tree is replaced with a bush.
 
-        NOTE: 
+    NOTE: 
+    * Each image in the garden scene has a different CSS transition period. Therefore, when resizing in Dev Tools, allow a few seconds for each image to transition to its appropriate size and position.
 
-            * Each image in the garden scene has a different CSS transition period. Therefore, when resizing in Dev Tools,
-            allow a few seconds for each image to transition to its appropriate size and position.
+* The callout, which along with the call-to-action button, is brought on screen by the transition mentioned above, provides further affirmation as to the purpose of the site.
 
-    * The callout, which along with the call-to-action button, is brought on screen by the transition mentioned above, 
-    provides further affirmation as to the purpose of the site.
+* The call-to-action button brings the user straight to the Studio section where they can immediately begin designing.
 
-    * The call-to-action button brings the user straight to the Studio section where they can immediately begin designing.
-
-* Studio Section
+#### Studio Section
 
 The Studio section is where users can design their gardens. It takes up 90vh, with the remaining 10vh being occupied by the footer.
-    * At the very top of the Studio section is the header which introduces and concisely details the purpose of the section.
-    * Beneath the header is a visually appealing, scrollable, image-based menu comprised of images of each of the garden elements
-    available for the user to experiment with.
+* At the very top of the Studio section is the header which introduces and concisely details the purpose of the section.
 
-        This menu was designed to be intuitive for the user. The user should immediately understand that these images are clickable.
-        Once clicked, the image displayed on that menu item should appear on the canvas below, ready to be manipulated.
+* Beneath the header is a visually appealing, scrollable, image-based menu comprised of images of each of the garden elements available for the user to experiment with.
 
-        The menu is resonsive. On larger screens the menu items are centered within the menu section. On smaller screens, it is 
-        laterally scrollable.
+    This menu was designed to be intuitive for the user. The user should immediately understand that these images are clickable.Once clicked, the image displayed on that menu item should appear on the canvas below, ready to be manipulated.
 
-        This menu was inpired by a [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable
-        menu, which underwent a good deal of editing due to significant differences in the site menu and the w3School example.
+    The menu is resonsive. On larger screens the menu items are centered within the menu section. On smaller screens, it is laterally scrollable.
 
-        Aside from all classes and ids being renamed, there are major structural differences. For example, the w3schools example is simply
-        a list of anchor tags. Each menu item in the Studio section of Eden is comprised of four different elements including a two divs,
-        and anchor tag, an image, and a paragraph tag. This required significantly more editing in style.css.
+    This menu was inpired by a [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable menu, which underwent a good deal of editing due to significant differences in the site menu and the w3School example.
 
-    * The canvas section of the Studio is where users can manipulate the various garden elements that they have selected from the 
-    menu above. Each element that appears on the canvas is removable, moveable, and resizable. This allows the user to be 
-    creative in their designs. The canvas section has an overflow of hidden, thus the images cannot be moved onto other section of the site.
+    Aside from all classes and ids being renamed, there are major structural differences. For example, the w3schools example is simply a list of anchor tags. Each menu item in the Studio section of Eden is comprised of four different elements including a two divs, and anchor tag, an image, and a paragraph tag. This required significantly more editing in style.css.
 
-* Footer
+* The canvas section of the Studio is where users can manipulate the various garden elements that they have selected from the menu above. Each element that appears on the canvas is removable, moveable, and resizable. This allows the user to be creative in their designs. The canvas section has an overflow of hidden, thus the images cannot be moved onto other section of the site.
 
-The footer occupies the remaining 10vh and is comprised of two links, the Logo, and a back-to-top link, which encompasses an "up" fontawesome
-arrow icon. These links are located and the left and right of the footer, respectively. Both links lead to the Home Page.
+#### Footer
+
+The footer occupies the remaining 10vh and is comprised of two links, the Logo, and a back-to-top link, which encompasses an "up" fontawesome arrow icon. These links are located and the left and right of the footer, respectively. Both links lead to the Home Page.
 
 ### Potential Future Features
 Although the initial goal of creating a platform on which users can create rough garden designs has been achieved, a few possible additional features 
 that could be implemented in future versions of the site came to mind throughout the creation process. These include:
-
 * A larger selection of garden elements. These would, of course, be subject to the site owners preferences.
 * The ability of the user to rotate images. This would be useful for rectangular elements, such as bushes.
 * The ability of the user to crop images.
