@@ -1,36 +1,29 @@
 ## Contents
 * [Introduction](#Eden)
-
-* [User Experience (UX)](#User-Experience-(UX))
+* [UX](#UX)
     * [User Stories](#User-Stories)
-
+        * [First Time User Goals](#First-Time-User-Goals)
+        * [Returning User Goals](#Returning-User-Goals)
+        * [Site Owner Goals](#Site-Owner-Goals)
 * [Structure](#Structure)
-
 * [Design](#Design)
-
 * [Wireframes](#Wireframes)
     * [Differences Between Wireframes and Final Product](#Differences-Between-Wireframes-and-Final-Product)
-
 * [Features](#Features)
     * [Home Page](#Home-Page)
     * [Studio Section](#Studio-Section)
     * [Footer](#Footer)
     * [Potential Future Features](#Potential-Future-Features)
-
 * [Technologies Used](#Technologies-Used)
-    * [Languages Used](#Languages Used)
-    * [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
+    * [Languages Used](#Languages-Used)
+    * [Frameworks, Libraries & Programs Used](#Frameworks-,-Libraries-&-Programs-Used)
     * [Other Technologies](#Other-Technologies)
-
 * [Testing](#Testing)
-
 * [Deployment](#Deployment)
     * [Project Creation](#Project-Creation)
     * [GitHub Pages](#GitHub-Pages)
     * [Forking the GitHub Repository](#Forking-the-GitHub-Repository)
-    * [Run Locally](#Run Locally)
-
-
+    * [Run Locally](#Run-Locally)
 * [Credits](#Credits)
     * [Code](#Code)
     * [Content](#Content)
@@ -48,10 +41,10 @@ This project marks the developer's first time writing JavaScript.
 
 The purpose of this site is to be a platform on which users can experiment with garden designs. The idea was inspired by landscape gardening student who expressed a desirefor an application on which he could make rough garden designs in front of customers in real time. I decided to create [Eden](https://darraghreid.github.io/eden/) with him in mind as the site owner, where both he and potential customers could use this software to experiment with their ideas.
 
-## User Experience (UX)
+## UX
 ### User Stories
 
-* First Time User Goals: 
+#### First Time User Goals 
 1. As a first time user, I want to immediately understand the purpose of the site.
 2. As a first time user, I want to be able to easily navigate through the site to find what I'm looking for.
 3. As a first time user, I want to instinctively know what to do in order to get started on designing my garden.
@@ -60,11 +53,11 @@ The purpose of this site is to be a platform on which users can experiment with 
 6. As a first time user, I want to have the choice of adding and removing different garden elements from my design.
 7. As a first time user, I want to be able to move and resize different garden elements.
 
-* Returning User Goals:
+#### Returning User Goals
 1. As a returning user, I want to be immediately familiar with the layout of the site.
 2. As a returning user, I want to be able to make new designs.
 
-* Site Owner Goals:
+#### Site Owner Goals
 1. As the site owner, I want to be able to design gardens in real time for potential customers.
 2. As the site owner, I want potential customers to be able to design their own gardens and express their own ideas.
 3. As the site owner, I want to have a selection of garden elements so both I and users can create varying designs.

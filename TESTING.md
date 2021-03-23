@@ -6,12 +6,10 @@
     * [W3C CSS Validator Services](#W3C-CSS-Validator-Services)
     * [JSHint](#JSHint)
     * [Lighthouse](#lighthouse)
-
 * [Testing User Stories](#Testing-User-Stories)
     * [First Time User Goals](#First-Time-User-Goals)
     * [Returning User Goals](#Returning-User-Goals)
     * [Site Owner Goals](#Site-Owner-Goals)
-
 * [Testing Features](#Testing-Features)
     * [Navigation](#Navigation)
     * [Home Page Functionality](#Home-Page-Functionality)
@@ -20,7 +18,6 @@
     * [Removable Functionality](#Removable-Functionality)
     * [Moveable Functionality](#Moveable-Functionality)
     * [Resizable Functionality](#Resizable-Functionality)
-
 * [Site Responsiveness](#Site-Responsiveness)
 * [User Testing](#User-Testing)
 * [Known Bugs and Issues Section](#known-bugs-and-issues)
