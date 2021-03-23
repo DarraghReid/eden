@@ -75,13 +75,15 @@ More details about the Lighthouse report can be seen below:
 * First Time User Goals
     1. As a first time user, I want to immediately understand the purpose of the site.
         * Upon page load, a garden scene builds itself in front of the user. A prominent heading concisely explains the purpose of the site. A call-to-action button displaying "Design Your Eden" leads the user directly to the Studio where they can begin designing.
-    ![First Time User Goals 1](assets/images/testing-imgs/user-stories.png)
+    ![First Time User Goals 1](assets/images/testing-imgs/user-stories-2.png)
+
     ![First Time User Goals 1](assets/images/testing-imgs/user-stories-1 .png)
 
     2. As a first time user, I want to be able to easily navigate through the site to find what I'm looking for.
         * The Home Page contains two clearly visible and self-explanatory links (one in navigation bar, the other a call-to-action btton) that lead to the Studio section. The Home Page also has two links (one in navigation bar, the other the logo) which reaffirm to the user that they are on the Home Page.
         * The footer, which shares the viewport with the Studio, contains two clearly visible links which lead directly to the Home Page.
     ![First Time User Goals 2](assets/images/testing-imgs/nav.png)
+
     ![First Time User Goals 2](assets/images/testing-imgs/nav-1 .png)
 
     3. As a first time user, I want to instinctively know what to do in order to get started on designing my garden.
@@ -148,7 +150,7 @@ More details about the Lighthouse report can be seen below:
 
 ### Home Page Functionality
 
-![Swoop Functionality](assets/images/testing-imgs/swoop.png)
+![Swoop Functionality](assets/images/testing-imgs/swoop-1.png)
 
 * Load the page and validate that the elements of the Home Page are brought onto the screen in stages.
 
@@ -157,7 +159,11 @@ More details about the Lighthouse report can be seen below:
 ### Hover/tap Effects
 
 ![Logo](assets/images/testing-imgs/feat-logo.png)
+
+
 ![Back-to-top ](assets/images/testing-imgs/feat-top.png)
+
+
 ![Menu](assets/images/testing-imgs/menu-hover.png)
 ![Item](assets/images/testing-imgs/item-hover.png)
 
