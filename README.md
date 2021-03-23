@@ -1,6 +1,45 @@
+## Contents
+* [Introduction](#Eden)
+
+* [User Experience (UX)](#User-Experience-(UX))
+    * [User Stories](#User-Stories)
+
+* [Structure](#Structure)
+
+* [Design](#Design)
+
+* [Wireframes](#Wireframes)
+    * [Differences Between Wireframes and Final Product](#Differences-Between-Wireframes-and-Final-Product)
+
+* [Features](#Features)
+    * [Home Page](#Home-Page)
+    * [Studio Section](#Studio-Section)
+    * [Footer](#Footer)
+    * [Potential Future Features](#Potential-Future-Features)
+
+* [Technologies Used](#Technologies-Used)
+    * [Languages Used](#Languages Used)
+    * [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
+    * [Other Technologies](#Other-Technologies)
+
+* [Testing](#Testing)
+
+* [Deployment](#Deployment)
+    * [Project Creation](#Project-Creation)
+    * [GitHub Pages](#GitHub-Pages)
+    * [Forking the GitHub Repository](#Forking-the-GitHub-Repository)
+    * [Run Locally](#Run Locally)
+
+
+* [Credits](#Credits)
+    * [Code](#Code)
+    * [Content](#Content)
+    * [Media](#Media)
+    * [Acknowledgements](#Acknowledgements)
+
 # Eden
 
-![DaRa Website](assets/images/readme-imgs/amiresponsive1.png)
+![Eden Wbsite](assets/images/readme-imgs/amiresponsive1.png)
 
 View the live project [here](https://darraghreid.github.io/eden/)
 
@@ -10,27 +49,28 @@ This project marks the developer's first time writing JavaScript.
 The purpose of this site is to be a platform on which users can experiment with garden designs. The idea was inspired by landscape gardening student who expressed a desirefor an application on which he could make rough garden designs in front of customers in real time. I decided to create [Eden](https://darraghreid.github.io/eden/) with him in mind as the site owner, where both he and potential customers could use this software to experiment with their ideas.
 
 ## User Experience (UX)
-* User Stories
-    * First Time User Goals: 
-        1. As a first time user, I want to immediately understand the purpose of the site.
-        2. As a first time user, I want to be able to easily navigate through the site to find what I'm looking for.
-        3. As a first time user, I want to instinctively know what to do in order to get started on designing my garden.
-        4. As a first time user, I want to have a selection of different garden elements to experiment with.
-        5. As a first time user, I want to be able select and manipulate different garden elements in order to create my own design.
-        6. As a first time user, I want to have the choice of adding and removing different garden elements from my design.
-        7. As a first time user, I want to be able to move and resize different garden elements.
+### User Stories
 
-    * Returning User Goals:
-        1. As a returning user, I want to be immediately familiar with the layout of the site.
-        2. As a returning user, I want to be able to make new designs.
+* First Time User Goals: 
+1. As a first time user, I want to immediately understand the purpose of the site.
+2. As a first time user, I want to be able to easily navigate through the site to find what I'm looking for.
+3. As a first time user, I want to instinctively know what to do in order to get started on designing my garden.
+4. As a first time user, I want to have a selection of different garden elements to experiment with.
+5. As a first time user, I want to be able select and manipulate different garden elements in order to create my own design.
+6. As a first time user, I want to have the choice of adding and removing different garden elements from my design.
+7. As a first time user, I want to be able to move and resize different garden elements.
 
-    * Site Owner Goals:
-        1. As the site owner, I want to be able to design gardens in real time for potential customers.
-        2. As the site owner, I want potential customers to be able to design their own gardens and express their own ideas.
-        3. As the site owner, I want to have a selection of garden elements so both I and users can create varying designs.
-        4. As the site owner, I want the garden elements to be able to be manipulated in size and position so both I and the user can create designs with ease.
-        5. As the site owner, I want the site to be simple, intuitive, and user-friendly.
-        6. As the site owner, I want the design of the site the reflect its purpose.
+* Returning User Goals:
+1. As a returning user, I want to be immediately familiar with the layout of the site.
+2. As a returning user, I want to be able to make new designs.
+
+* Site Owner Goals:
+1. As the site owner, I want to be able to design gardens in real time for potential customers.
+2. As the site owner, I want potential customers to be able to design their own gardens and express their own ideas.
+3. As the site owner, I want to have a selection of garden elements so both I and users can create varying designs.
+4. As the site owner, I want the garden elements to be able to be manipulated in size and position so both I and the user can create designs with ease.
+5. As the site owner, I want the site to be simple, intuitive, and user-friendly.
+6. As the site owner, I want the design of the site the reflect its purpose.
 
 ## Structure
 The site is designed as a single webpage with two sections; the Home Page and the Studio.
@@ -95,7 +135,7 @@ This makes it so each section is never more than a click away and results in fas
 * Wireframe of Tutorial Section (Not included in final product)
 ![Wireframe of Studio](assets/images/readme-imgs/wireframe-tutorial.png)
 
-### Difference between wireframes and final product
+### Differences Between Wireframes and Final Product
 * The most obvious difference between the wireframes and the final product is that the Tutorial section in the final product has been omitted. I had originally planned to record a tutorial of how to use the software. Upon completion of the software, however, I found that it was intuitive enough that a tutorial was not required. 
 
     I felt a tutorial section would have been of no benefit to the product and would not have contributed to the requirements set out 
@@ -157,7 +197,7 @@ The Studio section is where users can design their gardens. It takes up 90vh, wi
 
 The footer occupies the remaining 10vh and is comprised of two links, the Logo, and a back-to-top link, which encompasses an "up" fontawesome arrow icon. These links are located at the left and right of the footer, respectively. Both links lead to the Home Page.
 
-### Potential Future Features
+#### Potential Future Features
 Although the initial goal of creating a platform on which users can create rough garden designs has been achieved, a few possible additional features 
 that could be implemented in future versions of the site came to mind throughout the creation process. These include:
 * A larger selection of garden elements. These would, of course, be subject to the site owners preferences.
@@ -240,7 +280,6 @@ To do this, follow these steps:
 2. Select your repository.
 3. Locate and click the "Fork" in the top right corner, under the nav bar.
 4. A copy of the original repository should have been created in your GitHub account.
-
 
 ### Run Locally
 

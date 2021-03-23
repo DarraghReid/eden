@@ -98,64 +98,75 @@ More details about the Lighthouse report can be seen below:
 
 ## Testing User Stories
 ### First Time User Goals
-    1. As a first time user, I want to immediately understand the purpose of the site.
-        * Upon page load, a garden scene builds itself in front of the user. A prominent heading concisely explains the purpose of the site. A call-to-action button displaying "Design Your Eden" leads the user directly to the Studio where they can begin designing.
-    ![First Time User Goals 1](assets/images/testing-imgs/user-stories-2.png)
 
-    ![First Time User Goals 1](assets/images/testing-imgs/user-stories-1.png)
+1. As a first time user, I want to immediately understand the purpose of the site.
+* Upon page load, a garden scene builds itself in front of the user. A prominent heading concisely explains the purpose of the site. A call-to-action button displaying "Design Your Eden" leads the user directly to the Studio where they can begin designing.
 
-    2. As a first time user, I want to be able to easily navigate through the site to find what I'm looking for.
-        * The Home Page contains two clearly visible and self-explanatory links (one in navigation bar, the other a call-to-action button) that lead to the Studio section. The Home Page also has two links (one in navigation bar, the other the logo) which reaffirm to the user that they are on the Home Page.
-        * The footer, which shares the viewport with the Studio, contains two clearly visible links which lead directly to the Home Page.
-    ![First Time User Goals 2](assets/images/testing-imgs/nav.png)
+![First Time User Goals 1](assets/images/testing-imgs/user-stories-2.png)
 
-    ![First Time User Goals 2](assets/images/testing-imgs/nav-1.png)
+![First Time User Goals 1](assets/images/testing-imgs/user-stories-1.png)
 
-    3. As a first time user, I want to instinctively know what to do in order to get started on designing my garden.
-        * The studio is designed to be maximally intuitive. It was designed with an image-first approach, with minimal text. The user should instinctively know to press the images in the menu to get started on designing their garden.
-        * The images that appear on the canvas have visual cues for the user to follow in order to manipulate the images, including a dashed border, highlighted corners with specific resizing cursors, and a cancel/delete icon to indicate that the image is removable.
-    ![Intuitive Menu](assets/images/testing-imgs/intu-menu.png)
-    ![Image Cues](assets/images/testing-imgs/img-cues.png)
+2. As a first time user, I want to be able to easily navigate through the site to find what I'm looking for.
+* The Home Page contains two clearly visible and self-explanatory links (one in navigation bar, the other a call-to-action button) that lead to the Studio section. The Home Page also has two links (one in navigation bar, the other the logo) which reaffirm to the user that they are on the Home Page.
 
-    4. As a first time user, I want to have a selection of different garden elements to experiment with.
-        * There are 14 garden elements to chose from in the Studio menu.
+* The footer, which shares the viewport with the Studio, contains two clearly visible links which lead directly to the Home Page.
 
-    5. As a first time user, I want to be able select and manipulate different garden elements in order to create my own design.
-        * Each garden element can be resized by clicking and dragging their corners.
-        * Each garden element can be moved by clicking and dragging them.
-        * Each garden element can be removed by clicking on the cancel/delete icon.
-    ![Manipulate Image](assets/images/testing-imgs/item-hover-1.png)
+![First Time User Goals 2](assets/images/testing-imgs/nav.png)
 
-    6. As a first time user, I want to have the choice of adding and removing different garden elements from my design.
-        * The user can add and remove as many garden elements as they like.
+![First Time User Goals 2](assets/images/testing-imgs/nav-1.png)
+
+3. As a first time user, I want to instinctively know what to do in order to get started on designing my garden.
+* The studio is designed to be maximally intuitive. It was designed with an image-first approach, with minimal text. The user should instinctively know to press the images in the menu to get started on designing their garden.
+    
+* The images that appear on the canvas have visual cues for the user to follow in order to manipulate the images, including a dashed border, highlighted corners with specific resizing cursors, and a cancel/delete icon to indicate that the image is removable.
+
+![Intuitive Menu](assets/images/testing-imgs/intu-menu.png)
+![Image Cues](assets/images/testing-imgs/img-cues.png)
+
+4. As a first time user, I want to have a selection of different garden elements to experiment with.
+* There are 14 garden elements to chose from in the Studio menu.
+
+5. As a first time user, I want to be able select and manipulate different garden elements in order to create my own design.
+* Each garden element can be resized by clicking and dragging their corners.
+
+* Each garden element can be moved by clicking and dragging them.
+    
+* Each garden element can be removed by clicking on the cancel/delete icon.
+
+![Manipulate Image](assets/images/testing-imgs/item-hover-1.png)
+
+6. As a first time user, I want to have the choice of adding and removing different garden elements from my design.
+* The user can add and remove as many garden elements as they like.
 
 ### Returning User Goals
-    1. As a returning user, I want to be immediately familiar with the layout of the site.
-        * The simple, minimal design is easy to become familiar with.
+1. As a returning user, I want to be immediately familiar with the layout of the site.
+* The simple, minimal design is easy to become familiar with.
 
-    2. As a returning user, I want to be able to make new designs.
-        * Each user can start afresh building new and creative designs.
+2. As a returning user, I want to be able to make new designs.
+* Each user can start afresh building new and creative designs.
 
 ### Site Owner Goals
-    1. As the site owner, I want to be able to design gardens in real time for potential customers.
-        * The studio provides immediate feedback to user input. Designs can be made quickly and easily.
-    ![Instant Feedback](assets/images/testing-imgs/feedback.png)
+1. As the site owner, I want to be able to design gardens in real time for potential customers.
+* The studio provides immediate feedback to user input. Designs can be made quickly and easily.
 
-    2. As the site owner, I want potential customers to be able to design their own gardens and express their own ideas.
-        * The software is easy to use, and can therefore be use by both professionals and amateurs.
+![Instant Feedback](assets/images/testing-imgs/feedback.png)
 
-    3. As the site owner, I want to have a selection of garden elements so both I and users can create varying designs.
-        * The site currently support garden elements to make dynamic designs. These can easily be updated in line with the owners preferences.
+2. As the site owner, I want potential customers to be able to design their own gardens and express their own ideas.
+* The software is easy to use, and can therefore be use by both professionals and amateurs.
 
-    4. As the site owner, I want the garden elements to be able to be manipulated in size and position so both I and the user can create designs with ease.
-        * The elements which appear on the canvas can be sufficiently manipulated in size and position for both the owner and the user to create their vision.
+3. As the site owner, I want to have a selection of garden elements so both I and users can create varying designs.
+* The site currently support garden elements to make dynamic designs. These can easily be updated in line with the owners preferences.
 
-    5. As the site owner, I want the site to be simple, intuitive, and user-friendly.
-        * The studio is designed to be as intuitive as possible. It is image based and all element manipulations have visual cues.
+4. As the site owner, I want the garden elements to be able to be manipulated in size and position so both I and the user can create designs with ease.
+* The elements which appear on the canvas can be sufficiently manipulated in size and position for both the owner and the user to create their vision.
 
-    6. As the site owner, I want the design of the site the reflect its purpose.
-        * The design of the site, from colours to imagery, reflects nature and garden design.
-    ![Site Design](assets/images/readme-imgs/amiresponsive1.png)
+5. As the site owner, I want the site to be simple, intuitive, and user-friendly.
+* The studio is designed to be as intuitive as possible. It is image based and all element manipulations have visual cues.
+
+6. As the site owner, I want the design of the site the reflect its purpose.
+* The design of the site, from colours to imagery, reflects nature and garden design.
+
+![Site Design](assets/images/readme-imgs/amiresponsive1.png)
 
 ## Testing Features
 ### Navigation
