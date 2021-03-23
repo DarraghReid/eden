@@ -77,14 +77,14 @@ More details about the Lighthouse report can be seen below:
         * Upon page load, a garden scene builds itself in front of the user. A prominent heading concisely explains the purpose of the site. A call-to-action button displaying "Design Your Eden" leads the user directly to the Studio where they can begin designing.
     ![First Time User Goals 1](assets/images/testing-imgs/user-stories-2.png)
 
-    ![First Time User Goals 1](assets/images/testing-imgs/user-stories-1 .png)
+    ![First Time User Goals 2](assets/images/testing-imgs/user-stories-1 .png)
 
     2. As a first time user, I want to be able to easily navigate through the site to find what I'm looking for.
         * The Home Page contains two clearly visible and self-explanatory links (one in navigation bar, the other a call-to-action btton) that lead to the Studio section. The Home Page also has two links (one in navigation bar, the other the logo) which reaffirm to the user that they are on the Home Page.
         * The footer, which shares the viewport with the Studio, contains two clearly visible links which lead directly to the Home Page.
-    ![First Time User Goals 2](assets/images/testing-imgs/nav.png)
+    ![First Time User Goals 3](assets/images/testing-imgs/nav.png)
 
-    ![First Time User Goals 2](assets/images/testing-imgs/nav-1 .png)
+    ![First Time User Goals 4](assets/images/testing-imgs/nav-1 .png)
 
     3. As a first time user, I want to instinctively know what to do in order to get started on designing my garden.
         * The studio is designed to be maximally intuitive. It was designed with an image-first approach, with minimal text. The user should instinctively know to press the images in the menu to get started on designing their garden.
@@ -158,14 +158,12 @@ More details about the Lighthouse report can be seen below:
 
 ### Hover/tap Effects
 
-![Logo](assets/images/testing-imgs/feat-logo.png)
+![Logo](assets/images/testing-imgs/feat-logo-1.png)
 
+![Back-to-top ](assets/images/testing-imgs/feat-top-1.png)
 
-![Back-to-top ](assets/images/testing-imgs/feat-top.png)
-
-
-![Menu](assets/images/testing-imgs/menu-hover.png)
-![Item](assets/images/testing-imgs/item-hover.png)
+![Menu](assets/images/testing-imgs/menu-hover-1.png)
+![Item](assets/images/testing-imgs/item-hover-1.png)
 
 * On the Home Page, hover over the logo and validate that it dulls to the expected rgb(201, 197, 197) color.
 * On the Home Page, hover over the "Home" button and validate that it dulls to the expected rgb(201, 197, 197) color.
@@ -225,7 +223,7 @@ More details about the Lighthouse report can be seen below:
 
 ## Site Responsiveness
 
-![Responsive](assets/images/testing-imgs/responsive.png)
+![Responsive](assets/images/testing-imgs/responsive-1.png)
 
 [Eden](https://darraghreid.github.io/eden/) site was tested across a range of devices and intenet browsers to assess the responsiveness of the site. The site was also tested on all available devices in Google Dev Tools to ensure it was visually appropriate on all screen sizes.
 
