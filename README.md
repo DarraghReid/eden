@@ -51,9 +51,9 @@ This makes it so each section is never more than a click away and results in fas
 
     ![colour palette](assets/images/readme-imgs/coolers.png)
 
-* Typeography
+* Typography
     * The fonts used throughout the site are Roboto and Great Vibes.
-    Great Vibes is a cursive font and gives an elegent appearance to the logo.
+    Great Vibes is a cursive font and gives an elegant appearance to the logo.
     Roboto is used in all other instances and works well with the font of the logo.
 
         The fonts were chosen from [Google Fonts](https://fonts.google.com/)
@@ -61,7 +61,7 @@ This makes it so each section is never more than a click away and results in fas
 * Imagery
     * All images were sourced from websites which provide images for free.
     These websites are listed below along with the images that were sourced from them 
-    as well as photgrapher details (where applicable):
+    as well as photographer details (where applicable):
         * [pngjoy.com](https://www.pngjoy.com/)
             * https://www.pngjoy.com/preview/w3z5l3p1l6j9b4_palm-palm-tree-top-view-png-hd-png/ (photographer unnamed)
             * https://www.pngjoy.com/preview/u9f1d4c1b0f6v1_hanging-plants-scientific-names-of-plants-animals-and/ (photographer unnamed)
@@ -89,7 +89,7 @@ This makes it so each section is never more than a click away and results in fas
 
         These images were edited by cutting and pasting different parts of the images to create a larger image using [Google Slides](https://www.google.com/slides/about/)
     
-    * It was important to find png images without any backgrounds in order for users to seemlessly place images on top of one another
+    * It was important to find png images without any backgrounds in order for users to seamlessly place images on top of one another
     to give the impression that the garden elements are real.
 
 ## Wireframes
@@ -103,14 +103,14 @@ This makes it so each section is never more than a click away and results in fas
 ![Wireframe of Studio](assets/images/readme-imgs/wireframe-tutorial.png)
 
 ### Difference between wireframes and final product
-* The most obvious differnce between the wireframes and the final product is that the Tutorial section in the final product.
+* The most obvious difference between the wireframes and the final product is that the Tutorial section in the final product.
 I had originally planned to record a tutorial of how to use the software. Upon completion of the software, however, I found that
 it was intuitive enough that a tutorial was not required. 
 
     I felt a tutorial section would have been of no benefit to the product and would not have contributed to the requirements set out 
     in the Assessment Handbook.
 
-    This ommision had a minor impact on the Home Page where the "Watch Tutorial" call-to-action button and the "Tutorial" link 
+    This omission had a minor impact on the Home Page where the "Watch Tutorial" call-to-action button and the "Tutorial" link 
     in the navbar are not present in the final product.
 
 * Another difference between the wireframe and the final product is the menu in the Studio section. The wireframe displays a 
@@ -127,16 +127,16 @@ contributed to the requirements set out in the Assessment Handbook.
 ## Features
 #### Home Page
 
-The Home Page is where the user is introduced to the site an takes up 100vh.
-* The Home Page includes a responsive Bootstrap navbar disaplying the logo as well as links to the two sections of the site. These links collapse into a dropdown button on smaller screens. The button that is seen on smaller screens is represented by a fontawesome icon, as the original button was having trouble displaying.
+The Home Page is where the user is introduced to the site and takes up 100vh.
+* The Home Page includes a responsive Bootstrap navbar displaying the logo as well as links to the two sections of the site. These links collapse into a dropdown button on smaller screens. The button that is seen on smaller screens is represented by a fontawesome icon, as the original button was having trouble displaying.
 
     These links, along with all clickable links throughout the site, highlight upon hover.
 
-* The main feature of the Home Page is the background image of a garden that gradually builds itself on page load. The scene is comprised of multiple good resolution images. Therefore, when the site is first loaded (without cache), the images may not have fully loaded by the time they are brought onto the screen. However, this transition effect is seemless upon further reloads.
+* The main feature of the Home Page is the background image of a garden that gradually builds itself on page load. The scene is comprised of multiple good resolution images. Therefore, when the site is first loaded (without cache), the images may not have fully loaded by the time they are brought onto the screen. However, this transition effect is seamless upon further reloads.
 
     The self-building image of a garden was designed with user intuition in mind. The user should immediately understand the purpose of the site upon seeing it. It is designed to be an exciting introduction to the Eden site.
 
-    The garden scene is also responsive. The images change change in size and position depending on the screen size. On particularlysmall screens, the tree is replaced with a bush.
+    The garden scene is also responsive. The images change change in size and position depending on the screen size. On particularly small screens, the tree is replaced with a bush.
 
     NOTE: 
     * Each image in the garden scene has a different CSS transition period. Therefore, when resizing in Dev Tools, allow a few seconds for each image to transition to its appropriate size and position.
@@ -154,9 +154,9 @@ The Studio section is where users can design their gardens. It takes up 90vh, wi
 
     This menu was designed to be intuitive for the user. The user should immediately understand that these images are clickable.Once clicked, the image displayed on that menu item should appear on the canvas below, ready to be manipulated.
 
-    The menu is resonsive. On larger screens the menu items are centered within the menu section. On smaller screens, it is laterally scrollable.
+    The menu is responsive. On larger screens the menu items are centred within the menu section. On smaller screens, it is laterally scrollable.
 
-    This menu was inpired by a [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable menu, which underwent a good deal of editing due to significant differences in the site menu and the w3School example.
+    This menu was inspired by a [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable menu, which underwent a good deal of editing due to significant differences in the site menu and the w3School example.
 
     Aside from all classes and ids being renamed, there are major structural differences. For example, the w3schools example is simply a list of anchor tags. Each menu item in the Studio section of Eden is comprised of four different elements including a two divs, and anchor tag, an image, and a paragraph tag. This required significantly more editing in style.css.
 
@@ -164,7 +164,7 @@ The Studio section is where users can design their gardens. It takes up 90vh, wi
 
 #### Footer
 
-The footer occupies the remaining 10vh and is comprised of two links, the Logo, and a back-to-top link, which encompasses an "up" fontawesome arrow icon. These links are located and the left and right of the footer, respectively. Both links lead to the Home Page.
+The footer occupies the remaining 10vh and is comprised of two links, the Logo, and a back-to-top link, which encompasses an "up" fontawesome arrow icon. These links are located at the left and right of the footer, respectively. Both links lead to the Home Page.
 
 ### Potential Future Features
 Although the initial goal of creating a platform on which users can create rough garden designs has been achieved, a few possible additional features 
@@ -205,7 +205,7 @@ that could be implemented in future versions of the site came to mind throughout
     * The two fonts used in the project (Roboto and Great Vibes) were imported from Google Fonts.
 
 * [jQuery](https://jquery.com/)
-    * jQuery was used in conjuction with Boostrap on the Navbar.
+    * jQuery was used in conjunction with Bootstrap on the Navbar.
 
 ### Other Technologies
 * [babel](https://babeljs.io/) compiler was used while trouble-shooting a bug where the site functionality wouldn't work on
@@ -228,7 +228,7 @@ This project was created by using the following steps:
 1. Log in to GitHub.
 2. In the Repositories section, click the green "New" button.
 3. Under "Repository template", select "Code-Institute-Org/gitpod-full-template".
-4. Enter repository name (dara-MS1).
+4. Enter repository name (eden).
 5. Click "Create repository".
 6. When re-directed, select the green "Gitpod" button. 
 
@@ -267,18 +267,15 @@ To do this, follow these steps:
 ## Credits
 
 ### Code 
-* As discussed in the [Features Section](#Features), the scrollable menu in the Studio section was ispired by a 
-[w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable menu, and was heavily edited.
+* As discussed in the [Features Section](#Features), the scrollable menu in the Studio section was inspired by a [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll) scrollable menu, and was heavily edited.
 
-* I would also like to credit YouTuber [Jonas Grøndahl](https://www.youtube.com/channel/UCVrchtz0z4it4JZjIS1D03A) whose 
-videos on creating moveable and resizeable divs I watched. 
+* I would also like to credit YouTuber [Jonas Grøndahl](https://www.youtube.com/channel/UCVrchtz0z4it4JZjIS1D03A) whose videos on creating moveable and resizable divs I watched. 
 
     Jonas' videos can be viewed here:
     * https://www.youtube.com/watch?v=NyZSIhzz5Do
     * https://www.youtube.com/watch?v=4qyuNBlc8ho
 
-* A YouTube account by the name of [Fl05k8r](https://www.youtube.com/channel/UCQlg1ZNEkVGZ8aUB4gcu-Sg) made a comment on Jonas' 
-[part 1](https://www.youtube.com/watch?v=NyZSIhzz5Do) video which added to my understanding of targeting multiple elements for 
+* A YouTube account by the name of [Fl05k8r](https://www.youtube.com/channel/UCQlg1ZNEkVGZ8aUB4gcu-Sg) made a comment on Jonas' [part 1](https://www.youtube.com/watch?v=NyZSIhzz5Do) video which added to my understanding of targeting multiple elements for 
 moving.
 
 * [Stack Overflow](https://stackoverflow.com/) member, Jor, contributed some code in the comments of [this post](https://stackoverflow.com/questions/13152578/create-a-draggable-div-in-native-javascript) 
@@ -286,7 +283,7 @@ which greatly helped in my understanding of how to target elements on touch scre
 
 As is evident from comparing my code to the code from the sources above, my code is very different. 
 
-This is partly because of the complexity of my project as opposed to the explanatory code referenced above. Of course, all functions, variables, classes and ids have been changed. However, much more needed to be done to implement moveable and resizeable functionality into my project, as well as to include the removable functionality. An added layer of complexity of the functionality being written for elements that don't yet exist in the DOM also had to be dealt with.
+This is partly because of the complexity of my project as opposed to the explanatory code referenced above. Of course, all functions, variables, classes and ids have been changed. However, much more needed to be done to implement moveable and resizable functionality into my project, as well as to include the removable functionality. An added layer of complexity of the functionality being written for elements that don't yet exist in the DOM also had to be dealt with.
 
 Further details of the bugs encountered in the project can be found in the Known Bugs Section of the [TESTING.md](/TESTING.md)
 

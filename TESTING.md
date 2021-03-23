@@ -9,7 +9,7 @@ and [JSHint](https://jshint.com/) were used to validate this project's code and 
 Two warnings arose from the W3C validator:
 
 * Starting with the second warning; it stated that the section element with the id "home-screen" lacked a heading. 
-It doesn't seem to recognise that the h1 callout is the heading for this section. This may be beacause I opted to 
+It doesn't seem to recognise that the h1 callout is the heading for this section. This may be because I opted to 
 implement the background garden images before I wrote and positioned the callout in the foreground.
 
 * Relating to the second warning, the first warning suggested that the callout was not an appropriate use of a h1 tag.
@@ -19,7 +19,7 @@ However, this is the most important, indeed, the only, heading on the Home Page.
 
 I figured the issue lay in the fact that I had enclosed the callout in article tags. 
 
-![Callout with articl tags](assets/images/testing-imgs/callout.png)
+![Callout with article tags](assets/images/testing-imgs/callout.png)
 
 I changed the article tags to div tags ran the site through the validator again. It passed without issue.
 
@@ -27,7 +27,7 @@ I changed the article tags to div tags ran the site through the validator again.
 
 ## [W3C CSS Validator Services](https://jigsaw.w3.org/css-validator/)
 
-Intially, I put the site URI through the W3C CSS Validator. This flagged 18 errors and hundreds of warnings.
+Initially, I put the site URI through the W3C CSS Validator. This flagged 18 errors and hundreds of warnings.
 Most of these were related to the URI "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css".
 However, some were related to the prefixes added by Autoprefixer. 
 
@@ -59,7 +59,7 @@ The results from Lighthouse were generally good. As expected points were lost on
 of the images and the time it takes to fully load the site.
 
 Points were also lost in the SEO metrics, partly due to smaller font sizes that are used on smaller screens. Upon personal 
-testing, this didn't apprear to be an issue.
+testing, this didn't appear to be an issue.
 
 More details about the Lighthouse report can be seen below:
 
@@ -80,7 +80,7 @@ More details about the Lighthouse report can be seen below:
     ![First Time User Goals 1](assets/images/testing-imgs/user-stories-1.png)
 
     2. As a first time user, I want to be able to easily navigate through the site to find what I'm looking for.
-        * The Home Page contains two clearly visible and self-explanatory links (one in navigation bar, the other a call-to-action btton) that lead to the Studio section. The Home Page also has two links (one in navigation bar, the other the logo) which reaffirm to the user that they are on the Home Page.
+        * The Home Page contains two clearly visible and self-explanatory links (one in navigation bar, the other a call-to-action button) that lead to the Studio section. The Home Page also has two links (one in navigation bar, the other the logo) which reaffirm to the user that they are on the Home Page.
         * The footer, which shares the viewport with the Studio, contains two clearly visible links which lead directly to the Home Page.
     ![First Time User Goals 2](assets/images/testing-imgs/nav.png)
 
@@ -113,7 +113,7 @@ More details about the Lighthouse report can be seen below:
 * Site Owner Goals
     1. As the site owner, I want to be able to design gardens in real time for potential customers.
         * The studio provides immediate feedback to user input. Designs can be made quickly and easily.
-    ![Instant Feeback](assets/images/testing-imgs/feedback.png)
+    ![Instant Feedback](assets/images/testing-imgs/feedback.png)
 
     2. As the site owner, I want potential customers to be able to design their own gardens and express their own ideas.
         * The software is easy to use, and can therefore be use by both professionals and amateurs.
@@ -122,7 +122,7 @@ More details about the Lighthouse report can be seen below:
         * The site currently support garden elements to make dynamic designs. These can easily be updated in line with the owners preferences.
 
     4. As the site owner, I want the garden elements to be able to be manipulated in size and position so both I and the user can create designs with ease.
-        * The elements which appear on the canvas can be sufficiently manipulated in size and position for both the oswer and the user to create their vision.
+        * The elements which appear on the canvas can be sufficiently manipulated in size and position for both the owner and the user to create their vision.
 
     5. As the site owner, I want the site to be simple, intuitive, and user-friendly.
         * The studio is designed to be as intuitive as possible. It is image based and all element manipulations have visual cues.
@@ -165,27 +165,27 @@ More details about the Lighthouse report can be seen below:
 ![Menu](assets/images/testing-imgs/menu-hover-1.png)
 ![Item](assets/images/testing-imgs/item-hover-1.png)
 
-* On the Home Page, hover over the logo and validate that it dulls to the expected rgb(201, 197, 197) color.
-* On the Home Page, hover over the "Home" button and validate that it dulls to the expected rgb(201, 197, 197) color.
-* On the Home Page, hover over the "Design" and validate that it dulls to the expected rgb(201, 197, 197) color.
+* On the Home Page, hover over the logo and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* On the Home Page, hover over the "Home" button and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* On the Home Page, hover over the "Design" and validate that it dulls to the expected rgb(201, 197, 197) colour.
 * On the Home Page, hover over the "Design Your Eden" call-to-action button and validate that it changes its background image to "linear-gradient(to bottom right, rgb(68, 153, 94), rgb(0, 105, 78) 75%)".
-* On the Home Page, on smaller screens, tap the burger icon and validate that it dulls to the expected rgb(201, 197, 197) color.
-* On the Home Page, on smaller screens, tap the "Home" button and validate that it dulls to the expected rgb(201, 197, 197) color.
-* On the Home Page, on smaller screens, tap the "Design" button and validate that it dulls to the expected rgb(201, 197, 197) color.
+* On the Home Page, on smaller screens, tap the burger icon and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* On the Home Page, on smaller screens, tap the "Home" button and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* On the Home Page, on smaller screens, tap the "Design" button and validate that it dulls to the expected rgb(201, 197, 197) colour.
 * On the Home Page, on smaller screens, tap the "Design Your Eden" call-to-action button and validate that it changes its background image to "linear-gradient(to bottom right, rgb(68, 153, 94), rgb(0, 105, 78) 75%)".
 * In the Studio, hover over each of the menu items, and validate that the label and image overlay appear.
 * In the Studio, hover over an image on the canvas and validate that the border, and ".mover" divs appear.
 * In the Studio, hover over the ".tl", ".tr", ".bl" and ".br" divs and validate that the appropriate cursor appears
 * In the Studio, on smaller screens, tap an image on the canvas and validate that the border, and ".mover" divs appear.
 * In the Studio, on smaller screens, tap each of the menu items, and validate that the label and image overlay appear.
-* In the footer, hover over the logo and validate that it dulls to the expected rgb(201, 197, 197) color.
-* In the footer, hover over the "back-to-top" button and validate that it dulls to the expected rgb(201, 197, 197) color.
-* In the footer, on smaller screens, tap the logo and validate that it dulls to the expected rgb(201, 197, 197) color.
-* In the footer, on smaller screens, tap the "back-to-top" button and validate that it dulls to the expected rgb(201, 197, 197) color.
+* In the footer, hover over the logo and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* In the footer, hover over the "back-to-top" button and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* In the footer, on smaller screens, tap the logo and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* In the footer, on smaller screens, tap the "back-to-top" button and validate that it dulls to the expected rgb(201, 197, 197) colour.
 
     Each of the above tests resulted in a pass.
 
-### Click-and-Appear Functionaltiy
+### Click-and-Appear Functionality
 
 * In the studio, click each of the menu items and validate the the image of the clicked menu item appears on the canvas below.
 * In the studio, on smaller screens, tap each of the menu items and validate the the image of the clicked menu item appears on the canvas below.
@@ -226,7 +226,7 @@ More details about the Lighthouse report can be seen below:
 
 ![Responsive](assets/images/testing-imgs/responsive-1.png)
 
-[Eden](https://darraghreid.github.io/eden/) site was tested across a range of devices and intenet browsers to assess the responsiveness of the site. The site was also tested on all available devices in Google Dev Tools to ensure it was visually appropriate on all screen sizes.
+[Eden](https://darraghreid.github.io/eden/) site was tested across a range of devices and internet browsers to assess the responsiveness of the site. The site was also tested on all available devices in Google Dev Tools to ensure it was visually appropriate on all screen sizes.
 
 NOTE:
 * Each element in the Home Screen has its own transition period set in style.css. Please allow a few seconds for each element to transition to its appropriate size and position when inspecting it Dev Tools.
@@ -251,32 +251,32 @@ And on the following browsers:
 
 The site was tested by the landscape gardening student who inspired by the idea. He appreciated the simplicity of the site, its accessibility, that the software uses coloured elements, and noted that there would be demand for such software.
 
-The site was also tested by members of the Slack community who also experessed appreciation for the project and confirmed some bugs that had been appearing. For more details on bugs, please see the [bugs](#Known Bugs and issues) section.
+The site was also tested by members of the Slack community who also expressed appreciation for the project and confirmed some bugs that had been appearing. For more details on bugs, please see the [bugs](#Known Bugs and issues) section.
 
 ## Known Bugs and issues
 
-* The biggest and most persistent bug encountered in this project involved some CSS and JS features and functionality not working on Apple Devices (specifically Safari on Mac, all broswers on iPad and iPhone). When the page loaded on one of these devices, the images of the Home Page were already on the screen and did not transition on. Also, in the Studio, the images wouldn't appear on the canvas when the menu items were clicked.
+* The biggest and most persistent bug encountered in this project involved some CSS and JS features and functionality not working on Apple Devices (specifically Safari on Mac, all browsers on iPad and iPhone). When the page loaded on one of these devices, the images of the Home Page were already on the screen and did not transition on. Also, in the Studio, the images wouldn't appear on the canvas when the menu items were clicked.
 
     To remedy this, I used [Autoprefixer](http://autoprefixer.github.io/) to add prefixes to my CSS to ensure that my code was as readable on all browsers as possible. I also transpiled by code to ES5 using [babel](https://babeljs.io/) to ensure that my JavaScript code was maximally readable across all browsers. Neither of these fixes worked.
 
     I consulted my mentor, tutor support, the Slack community and Apple Support multiple times. I also posted in Apple developer forums and consulted other developers. I was unsuccessful in finding an answer. After about a week and a half of failed attempts to address the bug, I finally solved the issue.
 
-    The bug turned out to be two separate issues. The first issue seems to be that the "load" event listener that was put on each of the elements in the home page wasn't being read on Mac broswers. The .swoop class, which is designed to bring the elements onto the page was automatically being added to the elements, bofore the "load" event listener was read. To address this, I put all of the code associated with the Home Page functionaltiy into a setTimeout() function. The issue was resolved after this.
+    The bug turned out to be two separate issues. The first issue seems to be that the "load" event listener that was put on each of the elements in the home page wasn't being read on Mac browsers. The .swoop class, which is designed to bring the elements onto the page was automatically being added to the elements, before the "load" event listener was read. To address this, I put all of the code associated with the Home Page functionality into a setTimeout() function. The issue was resolved after this.
 
     The second issue had to do with how I was targeting elements in my functions. I was using the path attribute of events to target specific elements (eg: el = e.path[1]). It turns out that events in Safari don't have the path attribute. Instead, I used attributes such as srcElement and offsetParent to target elements. This resolved the issue.
 
-* Another issue involved the resize() function. After initially completing the resiz() function, I realised that all of the images on the canvas would be resized along with the image that was being targeted. To remedy this, I specifically set el to e.target.parentElement.
+* Another issue involved the resize() function. After initially completing the resize() function, I realised that all of the images on the canvas would be resized along with the image that was being targeted. To remedy this, I specifically set el to e.target.parentElement.
 
 * While this next bug didn’t affect the function it was located (move()), it prevented the function that followed it (resize()) from running, which is how I discovered it. After writing the resize() function and not being able to make it work, I checked to console for errors. One error that repeatedly popped up was that moveImg and rectVal could not be read. 
     
     Although this didn’t affect the running of the function itself, I tried to remedy it to see if it would help the resize() function to work. I nested my if statements inside the onContact() function (which is inside the move() function). After this, the resize() function began to work.
 
-* The insertImg() function caused an issue on smaller screens where two images were being inserted onto the canvas at once. This was because the broswer was registering both "mousedown" and "touchend" events. I thought it would be possible to simple insert the || operator in the if statement so the browser would choose one or the other. in the end I had to write the following code.
+* The insertImg() function caused an issue on smaller screens where two images were being inserted onto the canvas at once. This was because the browser was registering both "mousedown" and "touchend" events. I thought it would be possible to simple insert the || operator in the if statement so the browser would choose one or the other. in the end I had to write the following code.
 
 ![mouse touch bug](assets/images/testing-imgs/mouse-touch.png)
 
-* Another persistent bug arose in the resize() function. The images would not resize on touch screens. I realized that I had to create separate variables for the cursor position and finger position. After much trial and error, the following code succeeded in creating separate variables for both the cursor and finger.
+* Another persistent bug arose in the resize() function. The images would not resize on touch screens. I realised that I had to create separate variables for the cursor position and finger position. After much trial and error, the following code succeeded in creating separate variables for both the cursor and finger.
 
-* An early bug that I discovered was the moveable functionaltiy not working on the elements inserted into the canvas. I quickly discovered that this was because the JavaScript code had been read before these new elements had been inserted into the DOM. To remedy this, I called the move() and resize() functions inside the insertImg() function so the JavaScript code would run on the new elements.
+* An early bug that I discovered was the moveable functionality not working on the elements inserted into the canvas. I quickly discovered that this was because the JavaScript code had been read before these new elements had been inserted into the DOM. To remedy this, I called the move() and resize() functions inside the insertImg() function so the JavaScript code would run on the new elements.
 
 ![cursor finger bug](assets/images/testing-imgs/cursor-finger.png)
