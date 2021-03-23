@@ -286,18 +286,15 @@ which greatly helped in my understanding of how to target elements on touch scre
 
 As is evident from comparing my code to the code from the sources above, my code is very different. 
 
-    This is partly because of the complexity of my project as opposed to the explanatory code referenced above. Of course, 
-    all functions, variables, classes and ids have been changed. However, much more needed to be done to implement moveable 
-    and resizeable functionality into my project, as well as to include the removable functionality. An added layer of complexity 
-    of the functionality being written for elements that don't yet exist in the DOM also had to be dealt with.
+This is partly because of the complexity of my project as opposed to the explanatory code referenced above. Of course, all functions, variables, classes and ids have been changed. However, much more needed to be done to implement moveable and resizeable functionality into my project, as well as to include the removable functionality. An added layer of complexity of the functionality being written for elements that don't yet exist in the DOM also had to be dealt with.
 
-    Further details of the bugs encountered in the project can be found in the Known Bugs Section of the [TESTING.md](/TESTING.md)
+Further details of the bugs encountered in the project can be found in the Known Bugs Section of the [TESTING.md](/TESTING.md)
 
 ### Content 
-* All content is was created by the developer.
+* All content was created by the developer.
 
 ### Media
-* All videos and images were created by the developer.
+* As mentioned in the [Features Section](#features), all images on this site were sourced from sites which provide images for free. They are referenced in the Features Section, as well as in [index.html](/index.html). As previously discussed, some images were edited by the developer to suit the needs of the site.
 
 ### Acknowledgements
 I would like to thank my mentor Gurjot Singh for his continuous support throughout the project.
