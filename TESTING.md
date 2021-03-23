@@ -77,14 +77,14 @@ More details about the Lighthouse report can be seen below:
         * Upon page load, a garden scene builds itself in front of the user. A prominent heading concisely explains the purpose of the site. A call-to-action button displaying "Design Your Eden" leads the user directly to the Studio where they can begin designing.
     ![First Time User Goals 1](assets/images/testing-imgs/user-stories-2.png)
 
-    ![First Time User Goals 2](assets/images/testing-imgs/user-stories-1 .png)
+    ![First Time User Goals 1](assets/images/testing-imgs/user-stories-1.png)
 
     2. As a first time user, I want to be able to easily navigate through the site to find what I'm looking for.
         * The Home Page contains two clearly visible and self-explanatory links (one in navigation bar, the other a call-to-action btton) that lead to the Studio section. The Home Page also has two links (one in navigation bar, the other the logo) which reaffirm to the user that they are on the Home Page.
         * The footer, which shares the viewport with the Studio, contains two clearly visible links which lead directly to the Home Page.
-    ![First Time User Goals 3](assets/images/testing-imgs/nav.png)
+    ![First Time User Goals 2](assets/images/testing-imgs/nav.png)
 
-    ![First Time User Goals 4](assets/images/testing-imgs/nav-1 .png)
+    ![First Time User Goals 2](assets/images/testing-imgs/nav-1.png)
 
     3. As a first time user, I want to instinctively know what to do in order to get started on designing my garden.
         * The studio is designed to be maximally intuitive. It was designed with an image-first approach, with minimal text. The user should instinctively know to press the images in the menu to get started on designing their garden.
@@ -208,6 +208,7 @@ More details about the Lighthouse report can be seen below:
 * In the Studio, on smaller screens, tap and drag an image on the canvas and validate that it moves along with your finger.
 
     Both of the above tests resulted in a pass.
+
     NOTE: 
     * The image makes an initial "jump" downwards before it follows the direction of the cursor/finger.
     * When clicking an image that is placed on top of another image, it can happen that the "mouseup"/"touchend" functionality is not registered. In this case, the user must tap or click anywhere on the screen to stop the image from following the cursor/finger.
@@ -228,9 +229,11 @@ More details about the Lighthouse report can be seen below:
 [Eden](https://darraghreid.github.io/eden/) site was tested across a range of devices and intenet browsers to assess the responsiveness of the site. The site was also tested on all available devices in Google Dev Tools to ensure it was visually appropriate on all screen sizes.
 
     NOTE:
+
     * Each element in the Home Screen has its own transition period set in style.css. Please allow a few seconds for each element to transition to its appropriate size and position when inspecting it Dev Tools.
 
 The site was tested on the following devices: 
+
     * MacBook Pro (Retina, 13-inch, Early 2015)
     * iPhone 8 Plus
     * Samsung Galaxy S10
@@ -252,28 +255,28 @@ The site was also tested by members of the Slack community who also experessed a
 
 ## Known Bugs and issues
 
-    * The biggest and most persistent bug encountered in this project involved some CSS and JS features and functionality not working on Apple Devices (specifically Safari on Mac, all broswers on iPad and iPhone). When the page loaded on one of these devices, the images of the Home Page were already on the screen and did not transition on. Also, in the Studio, the images wouldn't appear on the canvas when the menu items were clicked.
+* The biggest and most persistent bug encountered in this project involved some CSS and JS features and functionality not working on Apple Devices (specifically Safari on Mac, all broswers on iPad and iPhone). When the page loaded on one of these devices, the images of the Home Page were already on the screen and did not transition on. Also, in the Studio, the images wouldn't appear on the canvas when the menu items were clicked.
 
-        To remedy this, I used [Autoprefixer](http://autoprefixer.github.io/) to add prefixes to my CSS to ensure that my code was as readable on all browsers as possible. I also transpiled by code to ES5 using [babel](https://babeljs.io/) to ensure that my JavaScript code was maximally readable across all browsers. Neither of these fixes worked.
+    To remedy this, I used [Autoprefixer](http://autoprefixer.github.io/) to add prefixes to my CSS to ensure that my code was as readable on all browsers as possible. I also transpiled by code to ES5 using [babel](https://babeljs.io/) to ensure that my JavaScript code was maximally readable across all browsers. Neither of these fixes worked.
 
-        I consulted my mentor, tutor support, the Slack community and Apple Support multiple times. I also posted in Apple developer forums and consulted other developers. I was unsuccessful in finding an answer. After about a week and a half of failed attempts to address the bug, I finally solved the issue.
+    I consulted my mentor, tutor support, the Slack community and Apple Support multiple times. I also posted in Apple developer forums and consulted other developers. I was unsuccessful in finding an answer. After about a week and a half of failed attempts to address the bug, I finally solved the issue.
 
-        The bug turned out to be two separate issues. The first issue seems to be that the "load" event listener that was put on each of the elements in the home page wasn't being read on Mac broswers. The .swoop class, which is designed to bring the elements onto the page was automatically being added to the elements, bofore the "load" event listener was read. To address this, I put all of the code associated with the Home Page functionaltiy into a setTimeout() function. The issue was resolved after this.
+    The bug turned out to be two separate issues. The first issue seems to be that the "load" event listener that was put on each of the elements in the home page wasn't being read on Mac broswers. The .swoop class, which is designed to bring the elements onto the page was automatically being added to the elements, bofore the "load" event listener was read. To address this, I put all of the code associated with the Home Page functionaltiy into a setTimeout() function. The issue was resolved after this.
 
-        The second issue had to do with how I was targeting elements in my functions. I was using the path attribute of events to target specific elements (eg: el = e.path[1]). It turns out that events in Safari don't have the path attribute. Instead, I used attributes such as srcElement and offsetParent to target elements. This resolved the issue.
+    The second issue had to do with how I was targeting elements in my functions. I was using the path attribute of events to target specific elements (eg: el = e.path[1]). It turns out that events in Safari don't have the path attribute. Instead, I used attributes such as srcElement and offsetParent to target elements. This resolved the issue.
 
-    * Another issue involved the resize() function. After initially completing the resiz() function, I realised that all of the images on the canvas would be resized along with the image that was being targeted. To remedy this, I specifically set el to e.target.parentElement.
+* Another issue involved the resize() function. After initially completing the resiz() function, I realised that all of the images on the canvas would be resized along with the image that was being targeted. To remedy this, I specifically set el to e.target.parentElement.
 
-    * While this next bug didn’t affect the function it was located (move()), it prevented the function that followed it (resize()) from running, which is how I discovered it. After writing the resize() function and not being able to make it work, I checked to console for errors. One error that repeatedly popped up was that moveImg and rectVal could not be read. 
+* While this next bug didn’t affect the function it was located (move()), it prevented the function that followed it (resize()) from running, which is how I discovered it. After writing the resize() function and not being able to make it work, I checked to console for errors. One error that repeatedly popped up was that moveImg and rectVal could not be read. 
     
-        Although this didn’t affect the running of the function itself, I tried to remedy it to see if it would help the resize() function to work. I nested my if statements inside the onContact() function (which is inside the move() function). After this, the resize() function began to work.
+    Although this didn’t affect the running of the function itself, I tried to remedy it to see if it would help the resize() function to work. I nested my if statements inside the onContact() function (which is inside the move() function). After this, the resize() function began to work.
 
-    * The insertImg() function caused an issue on smaller screens where two images were being inserted onto the canvas at once. This was because the broswer was registering both "mousedown" and "touchend" events. I thought it would be possible to simple insert the || operator in the if statement so the browser would choose one or the other. in the end I had to write the following code.
+* The insertImg() function caused an issue on smaller screens where two images were being inserted onto the canvas at once. This was because the broswer was registering both "mousedown" and "touchend" events. I thought it would be possible to simple insert the || operator in the if statement so the browser would choose one or the other. in the end I had to write the following code.
 
-    ![mouse touch bug](assets/images/testing-imgs/mouse-touch.png)
+![mouse touch bug](assets/images/testing-imgs/mouse-touch.png)
 
-    * Another persistent bug arose in the resize() function. The images would not resize on touch screens. I realized that I had to create separate variables for the cursor position and finger position. After much trial and error, the following code succeeded in creating separate variables for both the cursor and finger.
+* Another persistent bug arose in the resize() function. The images would not resize on touch screens. I realized that I had to create separate variables for the cursor position and finger position. After much trial and error, the following code succeeded in creating separate variables for both the cursor and finger.
 
-    * An early bug that I discovered was the moveable functionaltiy not working on the elements inserted into the canvas. I quickly discovered that this was because the JavaScript code had been read before these new elements had been inserted into the DOM. To remedy this, I called the move() and resize() functions inside the insertImg() function so the JavaScript code would run on the new elements.
+* An early bug that I discovered was the moveable functionaltiy not working on the elements inserted into the canvas. I quickly discovered that this was because the JavaScript code had been read before these new elements had been inserted into the DOM. To remedy this, I called the move() and resize() functions inside the insertImg() function so the JavaScript code would run on the new elements.
 
-    ![cursor finger bug](assets/images/testing-imgs/cursor-finger.png)
+![cursor finger bug](assets/images/testing-imgs/cursor-finger.png)
