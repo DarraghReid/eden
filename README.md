@@ -17,7 +17,6 @@
 * [Technologies Used](#Technologies-Used)
     * [Languages Used](#Languages-Used)
     * [Frameworks, Libraries & Programs Used](#Frameworks-,-Libraries-&-Programs-Used)
-    * [Other Technologies](#Other-Technologies)
 * [Testing](#Testing)
 * [Deployment](#Deployment)
     * [Project Creation](#Project-Creation)
@@ -215,7 +214,7 @@ that could be implemented in future versions of the site came to mind throughout
 * [Bootstrap 5.0.0](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
     * Bootstrap was used in conjunction with [jQuery](https://jquery.com/) on the Navbar to make it responsive and to collapse the menu items into a single button at smaller screen sizes. Some edits were made to successfully implement the navbar into the site. For examplem me-auto was replaced with ms-auto to push the menu items to the right of the screen, .navbar-collapse was targeted in [style.css](assets/css/style.css) to push the dropdown menu items to the right, and bg-light was also removed to ensure the navbar was transparent.
 
-* [Font Awesome](https://fontawesome.com/)
+* [Fontawesome](https://fontawesome.com/)
     * As mentioned in the [Features Section](#features), the dropdown menu button in the navbar is represented by a fontawesome icon. There is also a fontawesome icon used in the "back to top" link in the footer.
     
 * [Git](https://git-scm.com/)
@@ -224,19 +223,22 @@ that could be implemented in future versions of the site came to mind throughout
 * [GitHub](https://github.com/)
     * Github was used to store the code from the project.
 
+* [Google Dev Tools](https://developer.chrome.com/docs/devtools/)
+    * Google Dev Tools was extensively used throughout the project, especially for testing code, and addressing bug.
+
 * [Google Fonts](https://fonts.google.com/)
     * The two fonts used in the project (Roboto and Great Vibes) were imported from Google Fonts.
 
 * [jQuery](https://jquery.com/)
     * jQuery was used in conjunction with Bootstrap on the Navbar.
 
-### Other Technologies
-* [Babel](https://babeljs.io/) compiler was used while trouble-shooting a bug where the site functionality wouldn't work on
-Apple devices. I used babel to convert my JavaScript code ES5. This was unsuccessful in solving the issue, and the ES5 code 
-was ultimately removed.
+* [Am I Responsive](http://ami.responsivedesign.is/)
+    * Am I Responsive was used to produce the image displaying the website on different screen sizes at the beginning of this document.
 
-* [Autoprefixer](http://autoprefixer.github.io/) was used for the same reason as babel. I used Autoprefixer to add vendor prefixes to make it more compatible with various browsers and devices. It was also unsuccessful in addressing the bug. As well as this, as you will see in the Known Bugs section of [TESTING.md](/TESTING.md), it caused errors when put through the W3C CSS Validator. For these reasons,
-the prefixes were removed.
+* [Babel](https://babeljs.io/) compiler was used while trouble-shooting a bug where the site functionality wouldn't work on
+Apple devices. I used babel to convert my JavaScript code ES5. This was unsuccessful in solving the issue, and the ES5 code was ultimately removed.
+
+* [Autoprefixer](http://autoprefixer.github.io/) was used for the same reason as babel. I used Autoprefixer to add vendor prefixes to make it more compatible with various browsers and devices. It was also unsuccessful in addressing the bug. As well as this, as you will see in the Known Bugs section of [TESTING.md](/TESTING.md), it caused errors when put through the W3C CSS Validator. For these reasons, the prefixes were removed.
 
 ## Testing
 Information on testing can be found in a separate [TESTING.md](/TESTING.md) file
