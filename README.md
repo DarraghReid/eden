@@ -305,9 +305,9 @@ which greatly helped in my understanding of how to target elements on touch scre
 
 As is evident from comparing my code to the code from the sources above, my code is very different. 
 
-This is partly because of the complexity of my project as opposed to the explanatory code referenced above. Of course, all functions, variables, classes and ids have been changed. However, much more needed to be done to implement moveable and resizable functionality into my project, as well as to include the removable functionality. Added layers of complexity included the functionality being written for elements that don't yet exist in the DOM and also that the moveable a resizable elements were nested inside other elements.
+This is partly because of the complexity of my project as opposed to the explanatory code referenced above. Of course, all functions, variables, classes and ids have been changed. However, much more needed to be done to implement moveable and resizable functionality into my project, as well as to include the removable functionality. Added layers of complexity included the functionality being written for elements that don't yet exist in the DOM and also that the moveable and resizable elements were nested inside other elements.
 
-Further details of the bugs encountered in the project can be found in the Known Bugs Section of the [TESTING.md](/TESTING.md)
+Further details of the bugs encountered in the project can be found in the Known Bugs Section of the [TESTING.md](/TESTING.md).
 
 ### Content 
 * All content was created by the developer.
