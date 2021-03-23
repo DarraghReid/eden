@@ -112,7 +112,7 @@ function move()
 // Remove img if cancel icon is clicked
 function onContact(e)
 {
-    if(e.target.className == "canvas-img" || e.target.className == "img-container") {
+    if(e.target.className == "canvas-img") {
         moveImg = e.target.offsetParent;
         let rectVal = moveImg.getBoundingClientRect();
         

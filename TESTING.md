@@ -281,4 +281,10 @@ The site was also tested by members of the Slack community who also expressed ap
 
 * An early bug that I discovered was the moveable functionality not working on the elements inserted into the canvas. I quickly discovered that this was because the JavaScript code had been read before these new elements had been inserted into the DOM. To remedy this, I called the move() and resize() functions inside the insertImg() function so the JavaScript code would run on the new elements.
 
-![cursor finger bug](assets/images/testing-imgs/cursor-finger.png)
+![Cursor Finger Bug](assets/images/testing-imgs/cursor-finger.png)
+
+* A bug where the #canvas element moved when trying to resize an image was caused by the user selecting the border of the .img-container, rather than a .mover element. This meant that the moveImg variable in the onContact() function became the canvas. To remedy this. I removed "e.target.className == "img-container" from the "if(e.target.className == "canvas-img" || e.target.className == "img-container")" condition. This issue was resolved.
+
+    See [index.js](assets/js/index.js) for more details on the onContact() function.
+
+![Border bug](assets/images/testing-imgs/cursor-finger.png)
