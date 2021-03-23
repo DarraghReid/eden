@@ -8,12 +8,9 @@ and [JSHint](https://jshint.com/) were used to validate this project's code and 
 
 Two warnings arose from the W3C validator:
 
-* Starting with the second warning; it stated that the section element with the id "home-screen" lacked a heading. 
-It doesn't seem to recognise that the h1 callout is the heading for this section. This may be because I opted to 
-implement the background garden images before I wrote and positioned the callout in the foreground.
+* Starting with the second warning; it stated that the section element with the id "home-screen" lacked a heading. It didn't seem to recognise that the h1 callout is the heading for this section. 
 
-* Relating to the second warning, the first warning suggested that the callout was not an appropriate use of a h1 tag.
-However, this is the most important, indeed, the only, heading on the Home Page.
+* Relating to the second warning, the first warning suggested that the callout was not an appropriate use of a h1 tag. However, this is the most important, indeed, the only, heading on the Home Page.
 
 ![W3C Markup Validator](assets/images/testing-imgs/html-val.png)
 
@@ -21,7 +18,7 @@ I figured the issue lay in the fact that I had enclosed the callout in article t
 
 ![Callout with article tags](assets/images/testing-imgs/callout.png)
 
-I changed the article tags to div tags ran the site through the validator again. It passed without issue.
+I changed the article tags to div tags and ran the site through the validator again. It passed without issue.
 
 ![W3C Markup Validator](assets/images/testing-imgs/html-val-1.png)
 
@@ -88,7 +85,7 @@ More details about the Lighthouse report can be seen below:
 
     3. As a first time user, I want to instinctively know what to do in order to get started on designing my garden.
         * The studio is designed to be maximally intuitive. It was designed with an image-first approach, with minimal text. The user should instinctively know to press the images in the menu to get started on designing their garden.
-        * The images that appear on the canvas have visual cues for the user to follow in order to manipulate the images including a dashed border, highlighted corners with specific resizing cursors, and a cancel/delete icon to indicate that the image is removable.
+        * The images that appear on the canvas have visual cues for the user to follow in order to manipulate the images, including a dashed border, highlighted corners with specific resizing cursors, and a cancel/delete icon to indicate that the image is removable.
     ![Intuitive Menu](assets/images/testing-imgs/intu-menu.png)
     ![Image Cues](assets/images/testing-imgs/img-cues.png)
 
@@ -99,6 +96,7 @@ More details about the Lighthouse report can be seen below:
         * Each garden element can be resized by clicking and dragging their corners.
         * Each garden element can be moved by clicking and dragging them.
         * Each garden element can be removed by clicking on the cancel/delete icon.
+    ![Manipulate Image](assets/images/testing-imgs/item-hover-1.png)
 
     6. As a first time user, I want to have the choice of adding and removing different garden elements from my design.
         * The user can add and remove as many garden elements as they like.
@@ -187,12 +185,16 @@ More details about the Lighthouse report can be seen below:
 
 ### Click-and-Appear Functionality
 
+![Click-and-Appear](assets/images/testing-imgs/click-appear.png)
+
 * In the studio, click each of the menu items and validate the the image of the clicked menu item appears on the canvas below.
 * In the studio, on smaller screens, tap each of the menu items and validate the the image of the clicked menu item appears on the canvas below.
 
     Both of the above tests resulted in a pass.
 
 ### Removable Functionality 
+
+![Removable](assets/images/testing-imgs/removable.png)
 
 * In the studio, click the cancel/delete icon on an image on the canvas and validate that it is removed from the canvas.
 * In the studio, on smaller screens, tap the cancel/delete icon on an image on the canvas and validate that it is removed from the canvas.
@@ -226,10 +228,10 @@ More details about the Lighthouse report can be seen below:
 
 ![Responsive](assets/images/testing-imgs/responsive-1.png)
 
-[Eden](https://darraghreid.github.io/eden/) site was tested across a range of devices and internet browsers to assess the responsiveness of the site. The site was also tested on all available devices in Google Dev Tools to ensure it was visually appropriate on all screen sizes.
+[Eden](https://darraghreid.github.io/eden/) was tested across a range of devices and internet browsers to assess the responsiveness of the site. The site was also tested on all available devices in Google Dev Tools to ensure it was visually appropriate on all screen sizes.
 
 NOTE:
-* Each element in the Home Screen has its own transition period set in style.css. Please allow a few seconds for each element to transition to its appropriate size and position when inspecting it Dev Tools.
+* Each element in the Home Screen has its own transition period set in [style.css](assets/css/style.css). Please allow a few seconds for each element to transition to its appropriate size and position when inspecting it Dev Tools.
 
 The site was tested on the following devices: 
 
@@ -249,31 +251,31 @@ And on the following browsers:
 
 ## User Testing
 
-The site was tested by the landscape gardening student who inspired by the idea. He appreciated the simplicity of the site, its accessibility, that the software uses coloured elements, and noted that there would be demand for such software.
+The site was tested by the landscape gardening student who inspired the idea for the site. He appreciated the simplicity of the site, its accessibility, that the software uses coloured elements, and noted that there would be demand for such software.
 
-The site was also tested by members of the Slack community who also expressed appreciation for the project and confirmed some bugs that had been appearing. For more details on bugs, please see the [bugs](#Known Bugs and issues) section.
+The site was also tested by members of the Slack community who also expressed appreciation for the project and confirmed some bugs that had been appearing. For more details on bugs, please see the [Known Bugs and Issues Section](#Known).
 
-## Known Bugs and issues
+## Known Bugs and Issues
 
-* The biggest and most persistent bug encountered in this project involved some CSS and JS features and functionality not working on Apple Devices (specifically Safari on Mac, all browsers on iPad and iPhone). When the page loaded on one of these devices, the images of the Home Page were already on the screen and did not transition on. Also, in the Studio, the images wouldn't appear on the canvas when the menu items were clicked.
+* The biggest and most persistent bug encountered in this project involved some CSS and JS features and functionality not working on Apple Devices (specifically Safari on Mac, all browsers on iPad and iPhone). When the page loaded on one of these devices, the images of the Home Page were already on the screen and did not transition on from outside of the viewport. Also, in the Studio, the images wouldn't appear on the canvas when the menu items were clicked.
 
-    To remedy this, I used [Autoprefixer](http://autoprefixer.github.io/) to add prefixes to my CSS to ensure that my code was as readable on all browsers as possible. I also transpiled by code to ES5 using [babel](https://babeljs.io/) to ensure that my JavaScript code was maximally readable across all browsers. Neither of these fixes worked.
+    To remedy this, I used [Autoprefixer](http://autoprefixer.github.io/) to add prefixes to my CSS to ensure that my code was as readable on all browsers as possible. I also transpiled my code to ES5 using [babel](https://babeljs.io/) to ensure that my JavaScript code was maximally readable across all browsers. Neither of these fixes worked.
 
     I consulted my mentor, tutor support, the Slack community and Apple Support multiple times. I also posted in Apple developer forums and consulted other developers. I was unsuccessful in finding an answer. After about a week and a half of failed attempts to address the bug, I finally solved the issue.
 
-    The bug turned out to be two separate issues. The first issue seems to be that the "load" event listener that was put on each of the elements in the home page wasn't being read on Mac browsers. The .swoop class, which is designed to bring the elements onto the page was automatically being added to the elements, before the "load" event listener was read. To address this, I put all of the code associated with the Home Page functionality into a setTimeout() function. The issue was resolved after this.
+    The bug turned out to be two separate issues. The first issue seems to be that the "load" event listener that was put on each of the elements in the home page wasn't being read on Mac browsers. The .swoop class, which is designed to bring the elements onto the page was automatically being added to the elements, before the "load" event listener was read. To address this, I put all of the code associated with the Home Page functionality into a setTimeout() function, with a 500ms timeout. The issue was resolved after this.
 
-    The second issue had to do with how I was targeting elements in my functions. I was using the path attribute of events to target specific elements (eg: el = e.path[1]). It turns out that events in Safari don't have the path attribute. Instead, I used attributes such as srcElement and offsetParent to target elements. This resolved the issue.
+    The second issue had to do with how I was targeting elements in my functions. I was using the path property of events to target specific elements (eg: el = e.path[1]). It turns out that events in Safari don't have the path property. Instead, I used properties such as srcElement and offsetParent to target elements. This resolved the issue.
 
-* Another issue involved the resize() function. After initially completing the resize() function, I realised that all of the images on the canvas would be resized along with the image that was being targeted. To remedy this, I specifically set el to e.target.parentElement.
+* Another issue involved the resize() function. After initially completing the resize() function, I realised that all of the images on the canvas would be resized along with the image that was being targeted. To remedy this, I specifically set the element to e.target.parentElement.
 
-* While this next bug didn’t affect the function it was located (move()), it prevented the function that followed it (resize()) from running, which is how I discovered it. After writing the resize() function and not being able to make it work, I checked to console for errors. One error that repeatedly popped up was that moveImg and rectVal could not be read. 
+* While this next bug didn’t affect the function it was located, move(), it prevented the function that followed it. resize(), from running, which is how I discovered it. After writing the resize() function and not being able to make it work, I checked the console for errors. One error that repeatedly popped up was that moveImg and rectVal could not be read. 
     
-    Although this didn’t affect the running of the function itself, I tried to remedy it to see if it would help the resize() function to work. I nested my if statements inside the onContact() function (which is inside the move() function). After this, the resize() function began to work.
-
-* The insertImg() function caused an issue on smaller screens where two images were being inserted onto the canvas at once. This was because the browser was registering both "mousedown" and "touchend" events. I thought it would be possible to simple insert the || operator in the if statement so the browser would choose one or the other. in the end I had to write the following code.
+    Although this didn’t affect the running of the function in which it was located, I tried to remedy it to see if it would help the resize() function to work. I nested my if statements inside the onContact() function (which is inside the move() function). After this, the resize() function began to work.
 
 ![mouse touch bug](assets/images/testing-imgs/mouse-touch.png)
+
+* The insertImg() function caused an issue on smaller screens where two images were being inserted onto the canvas at once. This was because the browser was registering both "mousedown" and "touchend" events. I thought it would be possible to simply insert the || operator in the if statement so the browser would choose one or the other. In the end I had to write the following code to erase the bug.
 
 * Another persistent bug arose in the resize() function. The images would not resize on touch screens. I realised that I had to create separate variables for the cursor position and finger position. After much trial and error, the following code succeeded in creating separate variables for both the cursor and finger.
 

@@ -4,14 +4,10 @@
 
 View the live project [here](https://darraghreid.github.io/eden/)
 
-This website was created for Code Institute's Milestone 2 Project as part of the Diploma in Full Stack Web Development. 
-The purpose of this project is to demonstrate the student's knowledge and skills acquired thus far in the course. 
-This includes skills in HTML, CSS, JavaScript as well as other User Centric Design skills as outlined in the [Technologies Used](#Technologies-Used) section.
-This project marks my first time writing JavaScript.
+This website was created for Code Institute's Milestone 2 Project as part of the Diploma in Full Stack Web Development. The purpose of this project is to demonstrate the student's knowledge and skills acquired thus far in the course. This includes skills in HTML, CSS, JavaScript as well as other User Centric Design skills as outlined in the [Technologies Used](#Technologies-Used) section.
+This project marks the developer's first time writing JavaScript.
 
-The purpose of this site is to be a platform on which users can experiment with garden designs. The idea was given to me by landscape gardening student who expressed a desire
-for an application on which he could make rough garden designs in front of customers in real time. I decided to create [Eden](https://darraghreid.github.io/eden/) with him
-in mind as the site owner where both he and potential customers could use this software to experiment with their ideas.
+The purpose of this site is to be a platform on which users can experiment with garden designs. The idea was inspired by landscape gardening student who expressed a desirefor an application on which he could make rough garden designs in front of customers in real time. I decided to create [Eden](https://darraghreid.github.io/eden/) with him in mind as the site owner, where both he and potential customers could use this software to experiment with their ideas.
 
 ## User Experience (UX)
 * User Stories
@@ -44,8 +40,7 @@ This makes it so each section is never more than a click away and results in fas
 ## Design
 * Colour Scheme
     * The colours used in this project are rgb(0, 105, 78), rgb(68, 153, 94), rgb(201, 197, 197), and white. I found that these shades of green
-    represented the garden design ethos of the site well, while the white offered a good contrast to the text. I also found that the light grey 
-    provided a sufficient dulling effect to the clickable text while hovered over.
+    represented the garden design ethos of the site well, while the white gave the text a good contrast. I also found that the light grey provided a sufficient dulling effect to the clickable text while hovered over.
 
         I chose the colour palette using [coolers.co](https://coolors.co/)
 
@@ -59,9 +54,7 @@ This makes it so each section is never more than a click away and results in fas
         The fonts were chosen from [Google Fonts](https://fonts.google.com/)
 
 * Imagery
-    * All images were sourced from websites which provide images for free.
-    These websites are listed below along with the images that were sourced from them 
-    as well as photographer details (where applicable):
+    * All images were sourced from websites which provide images for free. These websites are listed below along with the images that were sourced from them, as well as photographer details (where applicable):
         * [pngjoy.com](https://www.pngjoy.com/)
             * https://www.pngjoy.com/preview/w3z5l3p1l6j9b4_palm-palm-tree-top-view-png-hd-png/ (photographer unnamed)
             * https://www.pngjoy.com/preview/u9f1d4c1b0f6v1_hanging-plants-scientific-names-of-plants-animals-and/ (photographer unnamed)
@@ -87,7 +80,7 @@ This makes it so each section is never more than a click away and results in fas
         * gravel-4.png was edited from https://pixabay.com/photos/pebbles-decking-texture-model-3212192/ (photographer: _Alicja_)
         * soil-1.png was edited from https://www.freeimages.com/photo/fresh-soil-1468423 (photographer: Mike Berg)
 
-        These images were edited by cutting and pasting different parts of the images to create a larger image using [Google Slides](https://www.google.com/slides/about/)
+        These images were edited by cutting and pasting different parts of the images to create a larger image using [Google Slides](https://www.google.com/slides/about/).
     
     * It was important to find png images without any backgrounds in order for users to seamlessly place images on top of one another
     to give the impression that the garden elements are real.
@@ -103,9 +96,7 @@ This makes it so each section is never more than a click away and results in fas
 ![Wireframe of Studio](assets/images/readme-imgs/wireframe-tutorial.png)
 
 ### Difference between wireframes and final product
-* The most obvious difference between the wireframes and the final product is that the Tutorial section in the final product.
-I had originally planned to record a tutorial of how to use the software. Upon completion of the software, however, I found that
-it was intuitive enough that a tutorial was not required. 
+* The most obvious difference between the wireframes and the final product is that the Tutorial section in the final product has been omitted. I had originally planned to record a tutorial of how to use the software. Upon completion of the software, however, I found that it was intuitive enough that a tutorial was not required. 
 
     I felt a tutorial section would have been of no benefit to the product and would not have contributed to the requirements set out 
     in the Assessment Handbook.
@@ -141,18 +132,18 @@ The Home Page is where the user is introduced to the site and takes up 100vh.
     NOTE: 
     * Each image in the garden scene has a different CSS transition period. Therefore, when resizing in Dev Tools, allow a few seconds for each image to transition to its appropriate size and position.
 
-* The callout, which along with the call-to-action button, is brought on screen by the transition mentioned above, provides further affirmation as to the purpose of the site.
+* The callout, which along with the call-to-action button, is brought on screen by the transition mentioned above, and provides further affirmation as to the purpose of the site.
 
 * The call-to-action button brings the user straight to the Studio section where they can immediately begin designing.
 
 #### Studio Section
 
 The Studio section is where users can design their gardens. It takes up 90vh, with the remaining 10vh being occupied by the footer.
-* At the very top of the Studio section is the header which introduces and concisely details the purpose of the section.
+* At the very top of the Studio section is the header, which introduces and concisely details the purpose of the section.
 
 * Beneath the header is a visually appealing, scrollable, image-based menu comprised of images of each of the garden elements available for the user to experiment with.
 
-    This menu was designed to be intuitive for the user. The user should immediately understand that these images are clickable.Once clicked, the image displayed on that menu item should appear on the canvas below, ready to be manipulated.
+    This menu was designed to be intuitive for the user. The user should immediately understand that these images are clickable. Once clicked, the image displayed on that menu item should appear on the canvas below, ready to be manipulated.
 
     The menu is responsive. On larger screens the menu items are centred within the menu section. On smaller screens, it is laterally scrollable.
 
@@ -160,7 +151,7 @@ The Studio section is where users can design their gardens. It takes up 90vh, wi
 
     Aside from all classes and ids being renamed, there are major structural differences. For example, the w3schools example is simply a list of anchor tags. Each menu item in the Studio section of Eden is comprised of four different elements including a two divs, and anchor tag, an image, and a paragraph tag. This required significantly more editing in style.css.
 
-* The canvas section of the Studio is where users can manipulate the various garden elements that they have selected from the menu above. Each element that appears on the canvas is removable, moveable, and resizable. This allows the user to be creative in their designs. The canvas section has an overflow of hidden, thus the images cannot be moved onto other section of the site.
+* The canvas section of the Studio is where users can manipulate the various garden elements that they have selected from the menu above. Each element that appears on the canvas is removable, moveable, and resizable. This allows the user to be creative in their designs. The canvas section has an overflow of hidden, thus the images cannot be moved onto other sections of the site.
 
 #### Footer
 
@@ -174,7 +165,7 @@ that could be implemented in future versions of the site came to mind throughout
 * The ability of the user to crop images.
 * The ability of the user to increase or decrease the z-index of the elements.
 * The ability of the user to save their work. This could possibly involve the creation of an account.
-* The ability of the user to shape their garden to suit their preference.
+* The ability of the user to shape their garden to match their own.
 
 
 ## Technologies Used 
@@ -189,11 +180,10 @@ that could be implemented in future versions of the site came to mind throughout
     * Balsamiq was used to make the wireframes for the project
 
 * [Bootstrap 5.0.0](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-    * Bootstrap was used in conjunction with [jQuery](https://jquery.com/) on the Navbar to make it responsive and to collapse the menu items into a single button at smaller screen sizes.  
+    * Bootstrap was used in conjunction with [jQuery](https://jquery.com/) on the Navbar to make it responsive and to collapse the menu items into a single button at smaller screen sizes. Some edits were made to successfully implement the navbar into the site. For examplem me-auto was replaced with ms-auto to push the menu items to the right of the screen, .navbar-collapse was targeted in [style.css](assets/css/style.css) to push the dropdown menu items to the right, and bg-light was also removed to ensure the navbar was transparent.
 
 * [Font Awesome](https://fontawesome.com/)
-    * As mentioned in the [features](#features) section, the dropdown menu button in the navbar is represented by a fontawesome icon.
-    There is also a fontawesome icon used in the "back to top" link in the footer.
+    * As mentioned in the [Features Section](#features), the dropdown menu button in the navbar is represented by a fontawesome icon. There is also a fontawesome icon used in the "back to top" link in the footer.
     
 * [Git](https://git-scm.com/)
     * The Gitpod terminal was used to commit to Git and push to Github.
@@ -208,13 +198,11 @@ that could be implemented in future versions of the site came to mind throughout
     * jQuery was used in conjunction with Bootstrap on the Navbar.
 
 ### Other Technologies
-* [babel](https://babeljs.io/) compiler was used while trouble-shooting a bug where the site functionality wouldn't work on
+* [Babel](https://babeljs.io/) compiler was used while trouble-shooting a bug where the site functionality wouldn't work on
 Apple devices. I used babel to convert my JavaScript code ES5. This was unsuccessful in solving the issue, and the ES5 code 
 was ultimately removed.
 
-* [Autoprefixer](http://autoprefixer.github.io/) was used for the same reason as babel. I used Autoprefixer to add vendor 
-prefixes to make it more compatible with various browsers and devices. It was also unsuccessful in addressing the bug. As well as this, 
-as you will see in the Known Bugs section of [TESTING.md](/TESTING.md) section, it caused errors when put through the W3C CSS Validator. For these reasons,
+* [Autoprefixer](http://autoprefixer.github.io/) was used for the same reason as babel. I used Autoprefixer to add vendor prefixes to make it more compatible with various browsers and devices. It was also unsuccessful in addressing the bug. As well as this, as you will see in the Known Bugs section of [TESTING.md](/TESTING.md), it caused errors when put through the W3C CSS Validator. For these reasons,
 the prefixes were removed.
 
 ## Testing
@@ -283,7 +271,7 @@ which greatly helped in my understanding of how to target elements on touch scre
 
 As is evident from comparing my code to the code from the sources above, my code is very different. 
 
-This is partly because of the complexity of my project as opposed to the explanatory code referenced above. Of course, all functions, variables, classes and ids have been changed. However, much more needed to be done to implement moveable and resizable functionality into my project, as well as to include the removable functionality. An added layer of complexity of the functionality being written for elements that don't yet exist in the DOM also had to be dealt with.
+This is partly because of the complexity of my project as opposed to the explanatory code referenced above. Of course, all functions, variables, classes and ids have been changed. However, much more needed to be done to implement moveable and resizable functionality into my project, as well as to include the removable functionality. Added layers of complexity included the functionality being written for elements that don't yet exist in the DOM and also that the moveable a resizable elements were nested inside other elements.
 
 Further details of the bugs encountered in the project can be found in the Known Bugs Section of the [TESTING.md](/TESTING.md)
 
@@ -296,4 +284,4 @@ Further details of the bugs encountered in the project can be found in the Known
 ### Acknowledgements
 I would like to thank my mentor Gurjot Singh for his continuous support throughout the project.
 I would like to thank friend John Brett for his hands-off advice.
-I would like to thank the slack community for their assistance, particularly Daisy Mc Girr who was always willing to share her wisdom and advice.
+I would like to thank the slack community for their assistance, particularly Daisy Mc Girr who is always willing to share her wisdom and advice.
