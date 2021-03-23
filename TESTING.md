@@ -228,24 +228,24 @@ More details about the Lighthouse report can be seen below:
 
 [Eden](https://darraghreid.github.io/eden/) site was tested across a range of devices and intenet browsers to assess the responsiveness of the site. The site was also tested on all available devices in Google Dev Tools to ensure it was visually appropriate on all screen sizes.
 
-    NOTE:
-
-    * Each element in the Home Screen has its own transition period set in style.css. Please allow a few seconds for each element to transition to its appropriate size and position when inspecting it Dev Tools.
+NOTE:
+* Each element in the Home Screen has its own transition period set in style.css. Please allow a few seconds for each element to transition to its appropriate size and position when inspecting it Dev Tools.
 
 The site was tested on the following devices: 
 
-    * MacBook Pro (Retina, 13-inch, Early 2015)
-    * iPhone 8 Plus
-    * Samsung Galaxy S10
-    * Huawei LYO-L01
-    * Windows 10(desktop)
-    * iPad Air
+* MacBook Pro (Retina, 13-inch, Early 2015)
+* iPhone 8 Plus
+* Samsung Galaxy S10
+* Huawei LYO-L01
+* Windows 10(desktop)
+* iPad Air
 
 And on the following browsers: 
-    * Google Chrome 
-    * Safari 
-    * Opera 
-    * Samsung Internet
+
+* Google Chrome 
+* Safari 
+* Opera 
+* Samsung Internet
 
 ## User Testing
 
