@@ -253,7 +253,7 @@ And on the following browsers:
 
 The site was tested by the landscape gardening student who inspired the idea for the site. He appreciated the simplicity of the site, its accessibility, that the software uses coloured elements, and noted that there would be demand for such software.
 
-The site was also tested by members of the Slack community who also expressed appreciation for the project and confirmed some bugs that had been appearing. For more details on bugs, please see the [Known Bugs and Issues Section](#Known).
+The site was also tested by members of the Slack community who also expressed appreciation for the project and confirmed some bugs that had been appearing. For more details on bugs, please see the [Known Bugs and Issues Section](#known-bugs-and-issues).
 
 ## Known Bugs and Issues
 
@@ -287,4 +287,4 @@ The site was also tested by members of the Slack community who also expressed ap
 
     See [index.js](assets/js/index.js) for more details on the onContact() function.
 
-![Border bug](assets/images/testing-imgs/cursor-finger.png)
+![Border bug](assets/images/testing-imgs/border.png)
