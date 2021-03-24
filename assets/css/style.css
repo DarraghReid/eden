@@ -651,67 +651,6 @@ header {
 }
 
 /*---------------------------------------------------404*/
-#page-not-found {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#error {
-    width: 50%;
-    height: 40%;
-    background-image: url(../images/decking-1.jpg);
-    display: flex;
-    justify-content: center;
-}
-
-#title {
-    font-family: 'Great Vibes', cursive;
-    font-size: 30px;
-    color: white;
-    width: 100%;
-    text-align: center;
-}
-
-#error-type {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    width: 100%;
-    text-align: center;
-}
-
-#oops {
-    font-size: 15px;
-    width: 100%;
-    text-align: center;
-    color: white;
-}
-
-#quip {
-    font-size: 15px;
-    width: 100%;
-    text-align: center;
-    color: white;
-}
-
-#back-home-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#back-home-container a {
-    text-decoration: none;
-    color: white;
-    background-image: linear-gradient(to bottom right, rgb(0, 105, 78), rgb(68, 153, 94) 75%);
-    border: 1px solid white;
-    border-radius: 23px;
-    padding: 10px 20px;
-}
 
 
 
