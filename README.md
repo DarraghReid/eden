@@ -17,7 +17,7 @@
     * [Potential Future Features](#Potential-Future-Features)
 * [Technologies Used](#Technologies-Used)
     * [Languages Used](#Languages-Used)
-    * [Frameworks, Libraries & Programs Used](#Frameworks-,-Libraries-&-Programs-Used)
+    * [Frameworks, Libraries and Programs Used](#Frameworks-Libraries-and-Programs-Used)
 * [Testing](#Testing)
 * [Deployment](#Deployment)
     * [Project Creation](#Project-Creation)
@@ -216,7 +216,7 @@ that could be implemented in future versions of the site came to mind throughout
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-### Frameworks, Libraries & Programs Used
+### Frameworks Libraries and Programs Used
 * [Balsamiq](https://balsamiq.com/)
     * Balsamiq was used to make the wireframes for the project
 

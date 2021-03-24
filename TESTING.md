@@ -35,7 +35,7 @@ Two warnings arose from the W3C validator:
 
 * Starting with the second warning; it stated that the section element with the id "home-screen" lacked a heading. It didn't seem to recognise that the h1 callout is the heading for this section. 
 
-* Relating to the second warning, the first warning suggested that the callout was not an appropriate use of a h1 tag. However, this is the most important, indeed, the only, heading on the Home Page.
+* The first warning suggested that the callout was not an appropriate use of a h1 tag. However, this is the most important, indeed, the only, heading on the Home Page.
 
 ![W3C Markup Validator](assets/images/testing-imgs/html-val.png)
 
