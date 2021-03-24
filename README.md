@@ -13,6 +13,7 @@
     * [Home Page](#Home-Page)
     * [Studio Section](#Studio-Section)
     * [Footer](#Footer)
+    * [404 Page](#404-Page)
     * [Potential Future Features](#Potential-Future-Features)
 * [Technologies Used](#Technologies-Used)
     * [Languages Used](#Languages-Used)
@@ -188,6 +189,14 @@ The Studio section is where users can design their gardens. It takes up 90vh, wi
 #### Footer
 
 The footer occupies the remaining 10vh and is comprised of two links, the Logo, and a back-to-top link, which encompasses an "up" fontawesome arrow icon. These links are located at the left and right of the footer, respectively. Both links lead to the Home Page.
+
+#### 404 Page
+
+The 404 Page is where users are led in the case that they direct to a non existent page. It is designed to inform them that the page they are on does not exist, and offers a means for them to return to the original site.
+
+The page is a stripped back version of the Home Page, with no animations or imagery. Three links (the logo, the Home button, and the call-to-action button) lead to the Home Page of Eden. The Design button leads to the Studio section of the site.
+
+Styling this page was challenging due to none of the ports in Gitpod working (exept for port 8000). This wasn't much of a problem throughout the rest of the project as port 8000 was sufficient. However, when it came to designing [404.html](/404.html) (as well as writing this README.md and TESTING.md), I had to commit and push to the repository before I could see the results of my code. It is for this reason that I chose to model the 404 Page after the Home Page.
 
 #### Potential Future Features
 Although the initial goal of creating a platform on which users can create rough garden designs has been achieved, a few possible additional features 

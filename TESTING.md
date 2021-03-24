@@ -45,6 +45,8 @@ I figured the issue lay in the fact that I had enclosed the callout in article t
 
 I changed the article tags to div tags and ran the site through the validator again. It passed without issue.
 
+Likewise, the code for the 404 page also passed without issue.
+
 ![W3C Markup Validator](assets/images/testing-imgs/html-val-1.png)
 
 ### W3C CSS Validator Services
@@ -177,6 +179,13 @@ More details about the Lighthouse report can be seen below:
 * On the Home Page, on smaller screens, click the burger icon to validate that the navigation links drop down.
 * On the Home Page, on smaller screens, click the burger icon, then click the "Home" button and validate that it navigates to the Home Page.
 * On the Home Page, on smaller screens, click the burger icon, then click the "Design" button and validate that it navigates to the Studio.
+* On the 404 Page, click to logo and validate that it navigates to the Home page.
+* On the 404 Page, click the "Home" button in the menu and validate that it navigates to the Home Page.
+* On the 404 Page, click the "Design" button in the menu and validate that it navigates to the Studio.
+* On the 404 Page, click the "Go Back Home" call-to-action button and validate that it navigates to the Studio.
+* On the 404 Page, on smaller screens, click the burger icon to validate that the navigation links drop down.
+* On the 404 Page, on smaller screens, click the burger icon, then click the "Home" button and validate that it navigates to the Home Page.
+* On the 404 Page, on smaller screens, click the burger icon, then click the "Design" button and validate that it navigates to the Studio.
 * In the footer, click the logo and validate that it navigates to the Home Page.
 * In the footer, click the "back to top" button and validate that it navigates to the Home Page.
 
@@ -207,6 +216,14 @@ More details about the Lighthouse report can be seen below:
 * On the Home Page, on smaller screens, tap the "Home" button and validate that it dulls to the expected rgb(201, 197, 197) colour.
 * On the Home Page, on smaller screens, tap the "Design" button and validate that it dulls to the expected rgb(201, 197, 197) colour.
 * On the Home Page, on smaller screens, tap the "Design Your Eden" call-to-action button and validate that it changes its background image to "linear-gradient(to bottom right, rgb(68, 153, 94), rgb(0, 105, 78) 75%)".
+* On the 404 Page, hover over the logo and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* On the 404 Page, hover over the "Home" button and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* On the 404 Page, hover over the "Design" and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* On the 404 Page, hover over the "Go Back Home" call-to-action button and validate that it changes its background image to "linear-gradient(to bottom right, rgb(68, 153, 94), rgb(0, 105, 78) 75%)".
+* On the 404 Page, on smaller screens, tap the burger icon and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* On the 404 Page, on smaller screens, tap the "Home" button and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* On the 404 Page, on smaller screens, tap the "Design" button and validate that it dulls to the expected rgb(201, 197, 197) colour.
+* On the 404 Page, on smaller screens, tap the "Go Back Home" call-to-action button and validate that it changes its background image to "linear-gradient(to bottom right, rgb(68, 153, 94), rgb(0, 105, 78) 75%)".
 * In the Studio, hover over each of the menu items, and validate that the label and image overlay appear.
 * In the Studio, hover over an image on the canvas and validate that the border, and ".mover" divs appear.
 * In the Studio, hover over the ".tl", ".tr", ".bl" and ".br" divs and validate that the appropriate cursor appears
